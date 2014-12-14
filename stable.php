@@ -3,6 +3,8 @@
  * @file: Collect and store site useage stats from pingbacks
  *        Display current stable version
  */
+require_once 'vendor/autoload.php';
+use GeoIp2\Database\Reader;
 
 $user = $pass = false;
 require_once 'config.php';
@@ -28,7 +30,7 @@ print file_get_contents('stable.txt');
 function flood_control_check() {
   $sql = "SELECT id FROM `stats`
     WHERE `hash` = '" . mysql_real_escape_string($_REQUEST['hash']) . "'
-    AND `time` > " . (time() - 6 * 24 * 60 * 60);
+    AND `time` > '" . date_format(date_create('-1 week'), 'Y-m-d H:i:s')."'";
   $res = mysql_query($sql);
   if (mysql_num_rows($res)) {
     return FALSE;
@@ -90,6 +92,13 @@ function process_get_request() {
 function insert_stats() {
   global $link;
   $fields = get_fields('stats');
+  try {
+    $reader = new Reader('/usr/share/GeoIP/GeoLite2-Country.mmdb');
+    $geoloc = $reader->country($_SERVER['REMOTE_ADDR']);
+    $_REQUEST['geoip_country'] = $geoloc->country->name;
+  } catch (Exception $e) {
+    $_REQUEST['geoip_country'] = 'GeoIP Error';
+  }
   $params = format_params($fields, $_REQUEST);
   $sql = insert_clause('stats', $params) . 'VALUES (' . implode(', ', $params) . ')';
   mysql_query($sql, $link);
@@ -98,13 +107,9 @@ function insert_stats() {
 
 /**
  * Insert the child records
- *
- * @param $table
- * @param $data
- * @param $id
- *
- * @internal param $table : table name
- * @internal param $id : primary record id
+ * @param string $table - table name
+ * @param array $data
+ * @param int $id - primary record id
  */
 function insert_children($table, $data, $id) {
   global $link;
