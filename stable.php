@@ -20,7 +20,7 @@ if ($link && @mysql_select_db('stats', $link) && !empty($_REQUEST['hash'])) {
     }
   }
 }
-print file_get_contents('stable.txt');
+print send_version_info();
 
 /**
  * Make sure we don't get pingbacks from a site more than once a day
@@ -177,4 +177,33 @@ function format_params($fields, $input, $pad = FALSE) {
  */
 function insert_clause($table, $fields) {
   return "INSERT INTO `$table` (`" . implode('`, `', array_keys($fields)) . '`) ';
+}
+
+/**
+ * Output version info in requested format
+ * @return string
+ */
+function send_version_info() {
+  // json format
+  if (!empty($_GET['format']) && $_GET['format'] == 'json') {
+    $rawJson = file_get_contents('versions.json');
+    // If a version has been specified, we only return info >= to that version
+    $versionParts = empty($_REQUEST['version']) ? array() : explode('.', $_REQUEST['version']);
+    if (empty($versionParts[0]) || empty($versionParts[1]) || !is_numeric($versionParts[0]) || !is_numeric($versionParts[1])) {
+      // No valid version specified, just return all info
+      return $rawJson;
+    }
+    $version = $versionParts[0] . '.' . $versionParts[1];
+    $versionInfo = json_decode($rawJson, TRUE);
+    ksort($versionInfo);
+    $output = array();
+    foreach ($versionInfo as $majorVersion => $info) {
+      if ($majorVersion >= $version) {
+        $output[$majorVersion] = $info;
+      }
+    }
+    return json_encode($output);
+  }
+  // plain text format - just return the latest stable release
+  return file_get_contents('stable.txt');
 }
