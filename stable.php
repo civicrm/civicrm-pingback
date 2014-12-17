@@ -23,14 +23,14 @@ if ($link && @mysql_select_db('stats', $link) && !empty($_REQUEST['hash'])) {
 print file_get_contents('stable.txt');
 
 /**
- * Make sure we don't get pingbacks from a site more than once a week
+ * Make sure we don't get pingbacks from a site more than once a day
  *
- * @return bool - true if this site hasn't pinged us in a while
+ * @return bool - true if this site hasn't pinged us today
  */
 function flood_control_check() {
   $sql = "SELECT id FROM `stats`
     WHERE `hash` = '" . mysql_real_escape_string($_REQUEST['hash']) . "'
-    AND `time` > '" . date_format(date_create('-1 week'), 'Y-m-d H:i:s')."'";
+    AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s')."'";
   $res = mysql_query($sql);
   if (mysql_num_rows($res)) {
     return FALSE;
