@@ -25,7 +25,7 @@ print file_get_contents('stable.txt');
 /**
  * Make sure we don't get pingbacks from a site more than once a week
  *
- * @return bool: true if this site hasn't pinged us in a while
+ * @return bool - true if this site hasn't pinged us in a while
  */
 function flood_control_check() {
   $sql = "SELECT id FROM `stats`
@@ -87,7 +87,7 @@ function process_get_request() {
 
 /**
  * Insert the primary record into the stats table
- * @return int: primary record id
+ * @return int - primary record id
  */
 function insert_stats() {
   global $link;
@@ -126,6 +126,8 @@ function insert_children($table, $data, $id) {
 
 /**
  * Returns available fields and their data type from table schema
+ * @param string $table
+ * @return array
  */
 function get_fields($table) {
   global $link;
@@ -143,6 +145,11 @@ function get_fields($table) {
 
 /**
  * Build a list of sanitized params ready for insert
+ *
+ * @param array $fields
+ * @param array $input
+ * @param bool $pad
+ * @return array
  */
 function format_params($fields, $input, $pad = FALSE) {
   $params = array();
@@ -164,6 +171,9 @@ function format_params($fields, $input, $pad = FALSE) {
 
 /**
  * Build the insert clause of the sql query
+ * @param string $table
+ * @param array $fields
+ * @return string
  */
 function insert_clause($table, $fields) {
   return "INSERT INTO `$table` (`" . implode('`, `', array_keys($fields)) . '`) ';
