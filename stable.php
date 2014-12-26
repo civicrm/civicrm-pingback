@@ -184,18 +184,19 @@ function insert_clause($table, $fields) {
  * @return string
  */
 function send_version_info() {
+  $requestVersion = empty($_REQUEST['version']) ? '' : $_REQUEST['version'];
   // json format
   if (!empty($_GET['format']) && $_GET['format'] == 'json') {
     $rawJson = file_get_contents('versions.json');
     // If a version has been specified, we only return info >= to that version
-    $versionParts = empty($_REQUEST['version']) ? array() : explode('.', $_REQUEST['version']);
+    $versionParts = explode('.', $requestVersion);
     if (empty($versionParts[0]) || empty($versionParts[1]) || !is_numeric($versionParts[0]) || !is_numeric($versionParts[1])) {
       // No valid version specified, just return all info
       return $rawJson;
     }
     $version = $versionParts[0] . '.' . $versionParts[1];
     $versionInfo = json_decode($rawJson, TRUE);
-    ksort($versionInfo);
+    ksort($versionInfo, SORT_NUMERIC);
     $output = array();
     foreach ($versionInfo as $majorVersion => $info) {
       if ($majorVersion >= $version) {
@@ -204,6 +205,6 @@ function send_version_info() {
     }
     return json_encode($output);
   }
-  // plain text format - just return the latest stable release
-  return file_get_contents('stable.txt');
+  // plain text format - just return the latest stable/testing release number
+  return file_get_contents(strpos($requestVersion, 'a') ? 'latest.txt' : 'stable.txt');
 }
