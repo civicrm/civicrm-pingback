@@ -39,7 +39,7 @@ function flood_control_check() {
 }
 
 /**
- * CiviCRM 4.3 and later uses a json encoded POST
+ * CiviCRM 4.3 and later sends a POST request in array format
  * Which includes stats on installed components/extensions
  */
 function process_post_request() {
@@ -184,10 +184,15 @@ function insert_clause($table, $fields) {
  * @return string
  */
 function send_version_info() {
-  $requestVersion = empty($_REQUEST['version']) ? '' : $_REQUEST['version'];
-  // json format
+  // Load version info
+  $rawJson = file_get_contents('versions.json');
+  $versionInfo = json_decode($rawJson, TRUE);
+  ksort($versionInfo, SORT_NUMERIC);
+
+  // Supply JSON format if requested
   if (!empty($_GET['format']) && $_GET['format'] == 'json') {
-    $rawJson = file_get_contents('versions.json');
+    $output = array();
+    $requestVersion = empty($_REQUEST['version']) ? '' : $_REQUEST['version'];
     // If a version has been specified, we only return info >= to that version
     $versionParts = explode('.', $requestVersion);
     if (empty($versionParts[0]) || empty($versionParts[1]) || !is_numeric($versionParts[0]) || !is_numeric($versionParts[1])) {
@@ -195,9 +200,6 @@ function send_version_info() {
       return $rawJson;
     }
     $version = $versionParts[0] . '.' . $versionParts[1];
-    $versionInfo = json_decode($rawJson, TRUE);
-    ksort($versionInfo, SORT_NUMERIC);
-    $output = array();
     foreach ($versionInfo as $majorVersion => $info) {
       if ($majorVersion >= $version) {
         $output[$majorVersion] = $info;
@@ -205,6 +207,11 @@ function send_version_info() {
     }
     return json_encode($output);
   }
-  // plain text format - just return the latest stable/testing release number
-  return file_get_contents(strpos($requestVersion, 'a') ? 'latest.txt' : 'stable.txt');
+  // Legacy support: CiviCRM < 4.6 expect latest release number in plain text
+  foreach ($versionInfo as $majorVersion => $info) {
+    if ($info['status'] == 'stable') {
+      $latest = end($info['releases']);
+      return $latest['version'];
+    }
+  }
 }
