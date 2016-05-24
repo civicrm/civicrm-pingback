@@ -95,9 +95,9 @@ function insert_stats() {
   try {
     $reader = new Reader('/usr/share/GeoIP/GeoLite2-Country.mmdb');
     $geoloc = $reader->country($_SERVER['REMOTE_ADDR']);
-    $_REQUEST['geoip_country'] = $geoloc->country->name;
+    $_REQUEST['geoip_isoCode'] = $geoloc->country->isoCode;
   } catch (Exception $e) {
-    $_REQUEST['geoip_country'] = 'GeoIP Error';
+    // Nothing to do, we just don't want a fatal error.
   }
   $params = format_params($fields, $_REQUEST);
   $sql = insert_clause('stats', $params) . 'VALUES (' . implode(', ', $params) . ')';
