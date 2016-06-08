@@ -60,7 +60,8 @@ CREATE TABLE `stats` (
   `PHP` text COLLATE utf8_unicode_ci,
   `PPTypes` text COLLATE utf8_unicode_ci,
   `hash` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `geoip_country` varchar(50) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `geoip_isoCode` char(2) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `domain_isoCode` char(2) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `co` int(10) unsigned DEFAULT NULL,
   `communityMessagesUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -68,7 +69,7 @@ CREATE TABLE `stats` (
   UNIQUE KEY `id` (`id`),
   KEY `hash` (`hash`),
   KEY `time` (`time`)
-) ENGINE=MyISAM AUTO_INCREMENT=2156524 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
