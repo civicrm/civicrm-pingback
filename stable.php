@@ -8,9 +8,9 @@ use GeoIp2\Database\Reader;
 
 $user = $pass = false;
 require_once 'config.php';
-$link = @mysql_connect('localhost', $user, $pass, TRUE);
+$link = @mysqli_connect('localhost', $user, $pass, TRUE);
 
-if ($link && @mysql_select_db('stats', $link) && !empty($_REQUEST['hash'])) {
+if ($link && @mysqli_select_db('stats', $link) && !empty($_REQUEST['hash'])) {
   if (flood_control_check()) {
     if (!empty($_POST['hash'])) {
       process_post_request();
