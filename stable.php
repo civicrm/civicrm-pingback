@@ -8,9 +8,9 @@ use GeoIp2\Database\Reader;
 
 $user = $pass = false;
 require_once 'config.php';
-$link = @mysqli_connect('localhost', $user, $pass, TRUE);
+$link = @mysqli_connect('localhost', $user, $pass, 'stats');
 
-if ($link && @mysqli_select_db('stats', $link) && !empty($_REQUEST['hash'])) {
+if ($link && !empty($_REQUEST['hash'])) {
   if (flood_control_check()) {
     if (!empty($_POST['hash'])) {
       process_post_request();
@@ -28,11 +28,13 @@ print send_version_info();
  * @return bool - true if this site hasn't pinged us today
  */
 function flood_control_check() {
+  global $link;
+
   $sql = "SELECT id FROM `stats`
-    WHERE `hash` = '" . mysql_real_escape_string($_REQUEST['hash']) . "'
+    WHERE `hash` = '" . mysqli_real_escape_string($link, $_REQUEST['hash']) . "'
     AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s')."'";
-  $res = mysql_query($sql);
-  if (mysql_num_rows($res)) {
+  $res = mysqli_query($link, $sql);
+  if (mysqli_num_rows($res)) {
     return FALSE;
   }
   return TRUE;
@@ -91,6 +93,7 @@ function process_get_request() {
  */
 function insert_stats() {
   global $link;
+
   $fields = get_fields('stats');
   try {
     $reader = new Reader('/usr/share/GeoIP/GeoLite2-Country.mmdb');
@@ -101,8 +104,10 @@ function insert_stats() {
   }
   $params = format_params($fields, $_REQUEST);
   $sql = insert_clause('stats', $params) . 'VALUES (' . implode(', ', $params) . ')';
-  mysql_query($sql, $link);
-  return mysql_insert_id($link);
+  if (!mysqli_query($link, $sql)) {
+    file_put_contents('/tmp/latest.log', mysqli_error($link), FILE_APPEND);
+  }
+  return mysqli_insert_id($link);
 }
 
 /**
@@ -113,6 +118,7 @@ function insert_stats() {
  */
 function insert_children($table, $data, $id) {
   global $link;
+
   $fields = get_fields($table);
   $sql = insert_clause($table, $fields);
   $prefix = 'VALUES';
@@ -121,7 +127,9 @@ function insert_children($table, $data, $id) {
     $sql .= "$prefix (" . implode(', ', format_params($fields, $input, TRUE)) . ')';
     $prefix = ',';
   }
-  mysql_query($sql, $link);
+  if (!mysqli_query($link, $sql)) {
+    file_put_contents('/tmp/latest.log', mysqli_error($link), FILE_APPEND);
+  }
 }
 
 /**
@@ -131,9 +139,10 @@ function insert_children($table, $data, $id) {
  */
 function get_fields($table) {
   global $link;
+
   $info = array();
-  $res = mysql_query("DESCRIBE $table", $link);
-  while ($row = mysql_fetch_array($res)) {
+  $res = mysqli_query($link, "DESCRIBE $table");
+  while ($row = mysqli_fetch_array($res)) {
     // Skip autofilled fields
     if ($row['Extra'] == 'auto_increment' || $row['Default'] == 'CURRENT_TIMESTAMP') {
       continue;
@@ -152,6 +161,8 @@ function get_fields($table) {
  * @return array
  */
 function format_params($fields, $input, $pad = FALSE) {
+  global $link;
+
   $params = array();
   foreach ($fields as $field => $type) {
     if (isset($input[$field])) {
@@ -159,7 +170,7 @@ function format_params($fields, $input, $pad = FALSE) {
         $params[$field] = (int) $input[$field];
       }
       else {
-        $params[$field] = "'" . mysql_real_escape_string($input[$field]) . "'";
+        $params[$field] = "'" . mysqli_real_escape_string($link, $input[$field]) . "'";
       }
     }
     elseif ($pad) {
