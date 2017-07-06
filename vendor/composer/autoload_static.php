@@ -20,6 +20,7 @@ class ComposerStaticInitc81cb838bcab53ef00f27bfde2ef70ee
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'Pingback\\' => 9,
         ),
     );
 
@@ -39,6 +40,10 @@ class ComposerStaticInitc81cb838bcab53ef00f27bfde2ef70ee
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Pingback\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
