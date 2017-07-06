@@ -9,3 +9,22 @@ Requirements:
 - a recent version of PHP with the mysqli extension enabled
 - a copy of the GeoLite2 Country database, available at http://dev.maxmind.com/geoip/geoip2/geolite2/, stored at: /usr/share/GeoIP/GeoLite2-Country.mmdb
 - a script to regularely update the GeoIP database - such as https://github.com/maxmind/geoipupdate or a much simpler shell script
+
+### CLI: Listing releases
+
+```
+./bin/pb release:list
+```
+
+### CLI: Adding a new release
+
+```
+### Add a new security release
+./bin/pb release:add 4.7.99 --date=2017-01-01 --security=true
+
+## Add a new non-security release
+./bin/pb release:add 4.7.99 --date=2017-01-01 --security=false
+
+## Add a new release. (Default: Non-security, today's date)
+./bin/pb release:add 4.7.99
+```
