@@ -6,7 +6,7 @@
 require_once 'vendor/autoload.php';
 use GeoIp2\Database\Reader;
 
-$user = $pass = false;
+$user = $pass = FALSE;
 require_once 'config.php';
 $link = @mysqli_connect('localhost', $user, $pass, 'stats');
 
@@ -32,7 +32,7 @@ function flood_control_check() {
 
   $sql = "SELECT id FROM `stats`
     WHERE `hash` = '" . mysqli_real_escape_string($link, $_REQUEST['hash']) . "'
-    AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s')."'";
+    AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s') . "'";
   $res = mysqli_query($link, $sql);
   if (mysqli_num_rows($res)) {
     return FALSE;
@@ -99,7 +99,8 @@ function insert_stats() {
     $reader = new Reader('/usr/share/GeoIP/GeoLite2-Country.mmdb');
     $geoloc = $reader->country($_SERVER['REMOTE_ADDR']);
     $_REQUEST['geoip_isoCode'] = $geoloc->country->isoCode;
-  } catch (Exception $e) {
+  }
+  catch (Exception $e) {
     // Nothing to do, we just don't want a fatal error.
   }
   $params = format_params($fields, $_REQUEST);
