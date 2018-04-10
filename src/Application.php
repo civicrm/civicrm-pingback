@@ -33,6 +33,8 @@ class Application extends \Symfony\Component\Console\Application {
     $commands = array();
     $commands[] = new \Pingback\Command\ReleaseAddCommand();
     $commands[] = new \Pingback\Command\ReleaseListCommand();
+    $commands[] = new \Pingback\Command\BranchStatusCommand();
+    $commands[] = new \Pingback\Command\BranchListCommand();
     return $commands;
   }
 
