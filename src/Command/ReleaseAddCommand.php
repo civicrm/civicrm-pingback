@@ -1,6 +1,7 @@
 <?php
 namespace Pingback\Command;
 
+use Pingback\VersionNumber;
 use Pingback\VersionsFile;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -23,53 +24,42 @@ class ReleaseAddCommand extends Command {
 
   protected function execute(InputInterface $input, OutputInterface $output) {
     $versions = VersionsFile::read(VersionsFile::getFileName());
-    $minorVer = $input->getArgument('version');
-    $majorVer = $this->parseMajorVersion($minorVer);
-    $newRelease = $this->createReleaseRecord($minorVer,
+    $releaseVer = $input->getArgument('version');
+    VersionNumber::assertWellFormed($releaseVer);
+    $branchVer = VersionNumber::getMinor($releaseVer);
+    $newRelease = $this->createReleaseRecord($releaseVer,
       $input->getOption('date'),
       $input->getOption('security'));
 
-    if (!isset($versions[$majorVer])) {
-      throw new \Exception("versions.json does not have major version $majorVer");
+    if (!isset($versions[$branchVer])) {
+      throw new \Exception("versions.json does not have branch $branchVer");
     }
 
     $output->writeln("<info>Release</info>: " . json_encode($newRelease));
-    $result = $this->addUpdateRelease($versions, $majorVer, $minorVer, $newRelease);
+    $result = $this->addUpdateRelease($versions, $newRelease);
     $output->writeln("... $result");
 
     VersionsFile::write(VersionsFile::getFileName(), $versions);
   }
 
   /**
-   * @param $minorVersion
-   * @param $matches
-   * @return mixed
-   * @throws \Exception
-   */
-  protected function parseMajorVersion($minorVersion) {
-    if (!preg_match('/^(\d+\.\d+)\./', $minorVersion, $matches)) {
-      throw new \Exception("Malformed version");
-    }
-    $majorVer = $matches[1];
-    return $majorVer;
-  }
-
-  /**
-   * @param $minorVersion
-   * @param $date
-   * @param $security
+   * @param string $releaseVer
+   *   Ex: '5.1.2'
+   * @param string $date
+   *   Ex: '2018-01-02'
+   * @param string $security
+   *   Ex: 'true' or 'false'
    * @return array
    * @throws \Exception
    */
-  protected function createReleaseRecord($minorVersion, $date, $security) {
+  protected function createReleaseRecord($releaseVer, $date, $security) {
     $release = array(
-      'version' => $minorVersion,
+      'version' => $releaseVer,
       'date' => $date == 'now' ? date('Y-m-d') : $date,
     );
 
     if ($security === 'true') {
       $release['security'] = 'true';
-      return $release;
     }
     elseif ($security === 'false') {
       // OK.
@@ -84,19 +74,20 @@ class ReleaseAddCommand extends Command {
 
   protected function addUpdateRelease(
     &$versions,
-    $majorVer,
-    $minorVer,
     $newRelease
   ) {
-    foreach ($versions[$majorVer]['releases'] as $k => $release) {
-      if ($release['version'] == $minorVer) {
-        $versions[$majorVer]['releases'][$k] = $newRelease;
+    $releaseVer = $newRelease['version'];
+    $branchVer = VersionNumber::getMinor($releaseVer);
+
+    foreach ($versions[$branchVer]['releases'] as $k => $release) {
+      if ($release['version'] == $releaseVer) {
+        $versions[$branchVer]['releases'][$k] = $newRelease;
         return 'updated';
       }
 
     }
 
-    $versions[$majorVer]['releases'][] = $newRelease;
+    $versions[$branchVer]['releases'][] = $newRelease;
     return 'added';
   }
 
