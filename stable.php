@@ -6,21 +6,52 @@
 require_once 'vendor/autoload.php';
 use GeoIp2\Database\Reader;
 
+// ------ Configuration options ------
 $user = $pass = FALSE;
+$dbhost = 'localhost';
+$dbport = '';
+$dbname = 'stats';
+$verbose = FALSE;
 require_once 'config.php';
-$link = @mysqli_connect('localhost', $user, $pass, 'stats');
 
-if ($link && !empty($_REQUEST['hash'])) {
+// ----- Main ------
+$link = @mysqli_connect($dbhost, $user, $pass, $dbname, $dbport);
+
+verbose_log("Received request: " . print_r(['METHOD' => $_SERVER['REQUEST_METHOD'], 'GET' => $_GET, 'POST' => $_POST], 1));
+
+if (!$link) {
+  error_log("Cannot record request: Database not available");
+}
+elseif (!empty($_REQUEST['hash'])) {
   if (flood_control_check()) {
     if (!empty($_POST['hash'])) {
+      verbose_log("Record POST request");
       process_post_request();
     }
     else {
+      verbose_log("Record GET request");
       process_get_request();
     }
   }
+  else {
+    verbose_log("Cannot record request: Recent data already recorded.");
+  }
 }
+else {
+  verbose_log("Cannot record request: No hash provided.");
+}
+
 create_response(\Symfony\Component\HttpFoundation\Request::createFromGlobals())->send();
+
+/**
+ * Optionally log
+ * @param $message
+ */
+function verbose_log($message) {
+  if (!empty($GLOBALS['verbose'])) {
+    error_log($message);
+  }
+}
 
 /**
  * Make sure we don't get pingbacks from a site more than once a day
