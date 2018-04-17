@@ -202,6 +202,7 @@ function create_response($request) {
   $formatHandlers = [
     'json' => ['\Pingback\Report\FullJsonReport', 'generate'],
     'summary' => ['\Pingback\Report\SummaryReport', 'generate'],
+    'devPreview' => ['\Pingback\Report\DevPreviewReport', 'generate'],
     'plain' => ['\Pingback\Report\BasicReport', 'generate'],
     '' => ['\Pingback\Report\BasicReport', 'generate'],
   ];
