@@ -3,7 +3,6 @@ namespace Pingback\Report;
 
 use Pingback\E as E;
 use Pingback\VersionAnalyzer;
-use Pingback\VersionsFile;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,8 +16,23 @@ class SummaryReport {
    * @return \Symfony\Component\HttpFoundation\Response
    */
   public static function generate(Request $request) {
-    $sr = new SummaryReport($request, \Pingback\VersionsFile::getFileName());
-    return $sr->handleRequest();
+    try {
+      $sr = new SummaryReport($request, \Pingback\VersionsFile::getFileName());
+      return $sr->handleRequest();
+    }
+    catch (\Exception $e) {
+      error_log(sprintf("SummaryReport failed (%s): %s\n%s", get_class($e), $e->getMessage(), $e->getTraceAsString()));
+      $response = self::createJson([
+        'malformed' => [
+          'name' => 'malformed',
+          'severity' => 'warning',
+          'title' => 'Version Check Failed',
+          'message' => E::ts('The server failed to report on available versions. Perhaps the request was malformed.'),
+        ],
+      ]);
+      $response->setStatusCode(500);
+      return $response;
+    }
   }
 
   /**
@@ -39,57 +53,23 @@ class SummaryReport {
   }
 
   public function handleRequest() {
-    list ($severity, $title) = $this->createTitle();
+    $msgs = [];
 
-    return self::createJson([
-      [
-        'name' => 'main',
-        'severity' => $severity,
-        'title' => $title,
-        'message' => $this->createPatchMessage() . $this->createBranchMessage(),
-      ],
-    ]);
+    if ($msg = $this->createPatchMessage()) {
+      $msgs[$msg['name']] = $msg;
+    }
+
+    if ($msg = $this->createUpgradeMessage()) {
+      $msgs[$msg['name']] = $msg;
+    }
+
+    return self::createJson($msgs);
   }
 
   /**
-   * Determine the overall message (i.e. severity and title).
+   * Create advice about whether to upgrade to the next X.Y.Z.
    *
    * @return array
-   *   Ex: ['critical', 'System be totally whack, yo'].
-   */
-  public function createTitle() {
-    $va = $this->va;
-    $userVer = $this->userVer;
-    $userBranch = VersionNumber::getMinor($this->userVer);
-
-    if (!$va->isCurrentInBranch($userVer)) {
-      if (!$va->isSecureVersion($userVer)) {
-        return ['critical', E::ts('CiviCRM Security Patch Needed')];
-      }
-      else {
-        return ['warning', E::ts('CiviCRM Patch Available')];
-      }
-    }
-    else {
-      if ($va->findBranchStatus($userBranch) === 'eol') {
-        return ['warning', E::ts('CiviCRM Patch Available')];
-      }
-      $latestStableBranch = $va->findLatestBranchByStatus('stable');
-      if (version_compare($userBranch, $latestStableBranch, '<')) {
-        return ['notice', E::ts('CiviCRM Release Available')];
-      }
-      else {
-        return ['info', E::ts('CiviCRM Up-to-Date')];
-      }
-    }
-  }
-
-  /**
-   * Create an HTML formatted explanation about the current patch-level release
-   * (e.g. are we current within the branch or are we behind?).
-   *
-   * @return string
-   *   Ex: '<p>Your version is OLD AND SCARY because:</p><ul><li>It jaywalks all the time.</li></ul>'
    */
   public function createPatchMessage() {
     $va = $this->va;
@@ -100,16 +80,96 @@ class SummaryReport {
     ];
 
     if ($va->isCurrentInBranch($userVer)) {
-      return _para(E::ts('The site is running {userVer}, the latest increment of {userBranch}.', $tsVars));
+      return NULL;
+      //      return [
+      //        'name' => 'patch',
+      //        'severity' => 'info',
+      //        'title' => E::ts('CiviCRM Up-to-Date'),
+      //        'message' => _para(E::ts('The site is running {userVer}.', $tsVars)),
+      //      ];
+    }
+    elseif (!$va->isSecureVersion($userVer)) {
+      return [
+        'name' => 'patch',
+        'severity' => 'critical',
+        'title' => E::ts('CiviCRM Security Patch Needed'),
+        'message' => _para(E::ts('The site is running {userVer}. Additional patches are available:', $tsVars))
+          . $this->createPatchList(),
+      ];
     }
     else {
-      return _para(E::ts('The site is running {userVer}. The following patches are available:', $tsVars))
-          . $this->createPatchList();
+      return [
+        'name' => 'patch',
+        'severity' => 'warning',
+        'title' => E::ts('CiviCRM Patch Available'),
+        'message' => _para(E::ts('The site is running {userVer}. Additional patches are available:', $tsVars))
+          . $this->createPatchList(),
+      ];
     }
   }
 
   /**
-   * Create an HTML formatted list of patches.
+   * @return array|NULL
+   */
+  public function createUpgradeMessage() {
+    $va = $this->va;
+    $userVer = $this->userVer;
+    $userBranch = VersionNumber::getMinor($userVer);
+    $latestStableBranch = $va->findLatestBranchByStatus('stable');
+    $latestStableVer = $va->findLatestRelease($latestStableBranch);
+
+    $tsVars = [
+      '{userVer}' => htmlentities($userVer),
+      '{userBranch}' => htmlentities($userBranch),
+      '{latestStableVer}' => htmlentities($latestStableVer['version']),
+      '{latestStableBranch}' => htmlentities($latestStableBranch),
+    ];
+
+    if ($userBranch === $latestStableBranch) {
+      return NULL;
+    }
+
+    switch ($va->findBranchStatus($userBranch)) {
+      case 'testing':
+        return NULL;
+
+      case 'eol':
+        $result = [
+          'name' => 'upgrade',
+          'severity' => 'warning',
+          'title' => E::ts('CiviCRM Version End-of-Life'),
+          'message' =>
+            _para(E::ts('CiviCRM {userBranch} has reached its end-of-life. Security updates are not provided anymore. Please upgrade to the latest stable release.', $tsVars))
+            . _para(E::ts('<strong>Release history</strong>'))
+            . $this->createBranchList(),
+        ];
+        break;
+
+      case 'deprecated':
+        $result = [
+          'name' => 'upgrade',
+          'severity' => 'warning',
+          'title' => E::ts('CiviCRM Upgrade Available'),
+          'message' => $this->createBranchList(),
+        ];
+        break;
+
+      case 'stable':
+      default:
+        $result = [
+          'name' => 'upgrade',
+          'severity' => 'notice',
+          'title' => E::ts('CiviCRM Upgrade Available'),
+          'message' => $this->createBranchList(),
+        ];
+        break;
+    }
+    return $result;
+  }
+
+  /**
+   * Create an HTML formatted list of patches, starting from userVer
+   * [exclusive] up to the latest release in the same X.Y (inclusive).
    *
    * @return string
    *   HTML <UL> listing which identifies each of the patches
@@ -128,55 +188,47 @@ class SummaryReport {
       ];
 
       if (empty($release['message'])) {
-        $parts[] = _li(E::ts('<em>{version} released on {date}</em>', $tsVars));
+        $parts[] = _li(E::ts('{version} ({date})', $tsVars));
       }
       else {
-        $parts[] = _li(E::ts('<em>{version} released on {date}</em>: {message}', $tsVars));
+        $parts[] = _li(E::ts('{version} ({date}): {message}', $tsVars));
       }
     }
     return _list($parts);
 
   }
 
-  public function createBranchMessage() {
+  public function createBranchList() {
     $va = $this->va;
     $userVer = $this->userVer;
-    $parts = [];
-
-    $userBranch = VersionNumber::getMinor($userVer);
-    $latestStableBranch = $va->findLatestBranchByStatus('stable');
-    $latestTestingBranch = $va->findLatestBranchByStatus('testing');
-
-    //    $tsVars = [
-    //      '{userVer}' => htmlentities($userVer),
-    //      '{userBranch}' => htmlentities($userBranch),
-    //    ];
-    //    if ($latestStableBranch && $userBranch === $latestStableBranch) {
-    //      $parts[] = _para(E::ts('{userBranch} is the current stable release.', $tsVars));
-    //    }
-    //    elseif ($latestTestingBranch && $userBranch === $latestTestingBranch) {
-    //      $parts[] = _para(E::ts('{userBranch} is the current testing release.', $tsVars));
-    //    }
 
     $branchVers = $va->findNewerBranches($userVer);
-    if ($branchVers) {
-      $branchVerSnippets = [];
-      foreach ($branchVers as $branchVer) {
-        $release = $va->findLatestRelease($branchVer);
-        $tsVars = [
-          '{branch}' => htmlentities($branchVer),
-          '{version}' => htmlentities($release['version']),
-          '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
-        ];
-
-        $branchVerSnippets[] = _li(E::ts('<em>{branch}</em> (The latest version is {version} from {date}.)</em>', $tsVars));
-      }
-
-      $parts[] = _para(E::ts('Newer releases are available:'));
-      $parts[] = _list($branchVerSnippets);
+    if (!$branchVers) {
+      return '';
     }
 
-    return implode(' ', $parts);
+    $branchVerSnippets = [];
+    foreach ($branchVers as $branchVer) {
+      $firstRelease = $va->findReleaseByVersion($branchVer . ".0");
+      $latestRelease = $va->findLatestRelease($branchVer);
+      $tsVars = [
+        '{branch}' => htmlentities($branchVer),
+        '{firstVersion}' => htmlentities($firstRelease['version']),
+        '{firstDate}' => htmlentities($firstRelease['date']),
+        '{latestVersion}' => htmlentities($latestRelease['version']),
+        '{latestDate}' => isset($latestRelease['date']) ? htmlentities($latestRelease['date']) : '',
+      ];
+
+      if ($firstRelease['version'] === $latestRelease['version']) {
+        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}.', $tsVars));
+      }
+      else {
+        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}).', $tsVars));
+      }
+    }
+
+    ksort($branchVerSnippets, SORT_NUMERIC);
+    return implode('', $branchVerSnippets);
   }
 
   protected static function createJson($output) {
@@ -198,7 +250,7 @@ function _list($s) {
   if (is_array($s)) {
     $s = implode(' ', $s);
   }
-  return "<ul>$s</ul>";
+  return "<ul>\n$s</ul>";
 }
 
 function _li($s) {
@@ -206,4 +258,11 @@ function _li($s) {
     $s = implode(' ', $s);
   }
   return "<li>$s</li>";
+}
+
+function _br($s) {
+  if (is_array($s)) {
+    $s = implode(' ', $s);
+  }
+  return "$s<br/>";
 }

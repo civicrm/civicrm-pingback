@@ -2,6 +2,7 @@
 
 namespace Pingback\Report;
 
+use Pingback\VersionsFile;
 use Symfony\Component\HttpFoundation\Request;
 
 class SummaryReportTest extends \PHPUnit_Framework_TestCase {
@@ -9,32 +10,42 @@ class SummaryReportTest extends \PHPUnit_Framework_TestCase {
   public function getExamples() {
     $es = [];
 
-    // $es[] = ['mockDataFile.json', 'userVersion', 'expectedSeverity', 'expectedTitle', 'expectedMessage'];
+    // $es[] = ['mockDataFile.json', 'userVersion', 'msgName', 'expectedSeverity', 'expectedTitle'];
 
-    $es[] = ['ex1.json', '5.0.0', 'info', 'CiviCRM Up-to-Date', '<p>The site is running 5.0.0, the latest increment of 5.0.</p>'];
+    $es[] = ['ex1.json', '5.0.0', 'patch', NULL, NULL];
+    $es[] = ['ex1.json', '5.0.alpha1', 'patch', 'warning', 'CiviCRM Patch Available'];
 
-    $es[] = ['ex1.json', '4.7.31', 'notice', 'CiviCRM Release Available', '<p>The site is running 4.7.31, the latest increment of 4.7.</p><p>Newer releases are available:</p> <ul><li><em>5.0</em> (The latest version is 5.0.0 from 2018-04-04.)</em></li></ul>'];
-    $es[] = ['ex1.json', '4.7.29', 'warning', 'CiviCRM Patch Available', '<p>The site is running 4.7.29. The following patches are available:</p><ul><li><em>4.7.30 released on 2018-02-07</em></li> <li><em>4.7.31 released on 2018-03-07</em></li></ul><p>Newer releases are available:</p> <ul><li><em>5.0</em> (The latest version is 5.0.0 from 2018-04-04.)</em></li></ul>'];
-    $es[] = ['ex1.json', '4.7.25', 'critical', 'CiviCRM Security Patch Needed', '<p>The site is running 4.7.25. The following patches are available:</p><ul><li><em>4.7.26 (security) released on 2017-11-01</em></li> <li><em>4.7.27 released on 2017-11-01</em></li> <li><em>4.7.28 released on 2017-12-06</em></li> <li><em>4.7.29 released on 2017-12-20</em></li> <li><em>4.7.30 released on 2018-02-07</em></li> <li><em>4.7.31 released on 2018-03-07</em></li></ul><p>Newer releases are available:</p> <ul><li><em>5.0</em> (The latest version is 5.0.0 from 2018-04-04.)</em></li></ul>'];
+    $es[] = ['ex1.json', '4.7.31', 'patch', NULL, NULL];
+    $es[] = ['ex1.json', '4.7.29', 'patch', 'warning', 'CiviCRM Patch Available'];
+    $es[] = ['ex1.json', '4.7.25', 'patch', 'critical', 'CiviCRM Security Patch Needed'];
 
-    $es[] = ['ex1.json', '4.6.36', 'notice', 'CiviCRM Release Available', '<p>The site is running 4.6.36, the latest increment of 4.6.</p><p>Newer releases are available:</p> <ul><li><em>4.7</em> (The latest version is 4.7.31 from 2018-03-07.)</em></li> <li><em>5.0</em> (The latest version is 5.0.0 from 2018-04-04.)</em></li></ul>'];
-    $es[] = ['ex1.json', '4.6.34', 'warning', 'CiviCRM Patch Available', '<p>The site is running 4.6.34. The following patches are available:</p><ul><li><em>4.6.35 released on 2018-02-07</em></li> <li><em>4.6.36 released on 2018-03-07</em></li></ul><p>Newer releases are available:</p> <ul><li><em>4.7</em> (The latest version is 4.7.31 from 2018-03-07.)</em></li> <li><em>5.0</em> (The latest version is 5.0.0 from 2018-04-04.)</em></li></ul>'];
-    $es[] = ['ex1.json', '4.6.32', 'critical', 'CiviCRM Security Patch Needed', '<p>The site is running 4.6.32. The following patches are available:</p><ul><li><em>4.6.33 (security) released on 2017-11-01</em></li> <li><em>4.6.34 released on 2017-12-20</em></li> <li><em>4.6.35 released on 2018-02-07</em></li> <li><em>4.6.36 released on 2018-03-07</em></li></ul><p>Newer releases are available:</p> <ul><li><em>4.7</em> (The latest version is 4.7.31 from 2018-03-07.)</em></li> <li><em>5.0</em> (The latest version is 5.0.0 from 2018-04-04.)</em></li></ul>'];
+    $es[] = ['ex1.json', '4.6.36', 'patch', NULL, NULL];
+    $es[] = ['ex1.json', '4.6.34', 'patch', 'warning', 'CiviCRM Patch Available'];
+    $es[] = ['ex1.json', '4.6.32', 'patch', 'critical', 'CiviCRM Security Patch Needed'];
+
+    $es[] = ['ex1.json', '5.0.0', 'upgrade', NULL, NULL];
+    $es[] = ['ex1.json', '5.0.alpha1', 'upgrade', NULL, NULL];
+
+    $es[] = ['ex1.json', '4.7.31', 'upgrade', 'notice', 'CiviCRM Upgrade Available'];
+    $es[] = ['ex1.json', '4.7.29', 'upgrade', 'notice', 'CiviCRM Upgrade Available'];
+    $es[] = ['ex1.json', '4.6.36', 'upgrade', 'notice', 'CiviCRM Upgrade Available'];
+    $es[] = ['ex1.json', '4.5.10', 'upgrade', 'warning', 'CiviCRM Version End-of-Life'];
 
     return $es;
   }
 
   /**
-   * @param $version
-   * @param $severity
-   * @param $title
-   * @param $message
+   * @param string $jsonFile
+   * @param string $version
+   * @param string $msgName
+   * @param string $expectSeverity
+   * @param string $expectTitle
    * @dataProvider getExamples
    */
-  public function testGenerate($jsonFile, $version, $severity, $title, $message) {
+  public function testSeverityAndTitle($jsonFile, $version, $msgName, $expectSeverity, $expectTitle) {
     $request = new Request([
       'format' => 'summary',
-      'version' => $version
+      'version' => $version,
     ]);
     $report = new SummaryReport($request, dirname(__DIR__) . DIRECTORY_SEPARATOR . $jsonFile);
     $response = $report->handleRequest();
@@ -42,9 +53,64 @@ class SummaryReportTest extends \PHPUnit_Framework_TestCase {
 
     $msg = sprintf('(fullResponse=%s)', $response->getContent());
 
-    $this->assertEquals($severity, $output[0]['severity'], $msg);
-    $this->assertEquals($title, $output[0]['title'], $msg);
-    $this->assertEquals($message, $output[0]['message'], $msg);
+    if ($expectSeverity === NULL && $expectTitle === NULL) {
+      $this->assertTrue(!isset($output[$msgName]));
+    }
+    else {
+      $this->assertEquals($msgName, $output[$msgName]['name'], $msg);
+      $this->assertEquals($expectSeverity, $output[$msgName]['severity'], $msg);
+      $this->assertEquals($expectTitle, $output[$msgName]['title'], $msg);
+    }
+  }
+
+  /**
+   * @return array
+   */
+  public function getVersionNumbers() {
+    return [
+      ['4.5.beta1'],
+      ['4.5.0'],
+      ['4.5.10'],
+      ['4.6.alpha1'],
+      ['4.6.0'],
+      ['4.6.99'],
+      ['4.7.alpha2'],
+      ['4.7.0'],
+      ['4.7.28'],
+      ['5.0.beta1'],
+      ['5.0.0'],
+      ['5.0.1'],
+      ['5.999.beta1'],
+      ['5.999.0'],
+    ];
+  }
+
+  /**
+   * This is a superficial test to ensure that everything is well-formed
+   * and not crashy (when using the default `versions.json` config).
+   *
+   * @param string $version
+   * @dataProvider getVersionNumbers
+   */
+  public function testWellFormedWithDefaultData($version) {
+    $validSeverities = ['info', 'notice', 'warning', 'critical'];
+
+    $request = new Request([
+      'format' => 'summary',
+      'version' => $version,
+    ]);
+    $report = new SummaryReport($request, VersionsFile::getFileName());
+    $response = $report->handleRequest();
+    $this->assertTrue(!empty($response->getContent()));
+    $this->assertEquals(200, $response->getStatusCode());
+    $msgs = json_decode($response->getContent(), 1);
+    $this->assertTrue(is_array($msgs));
+    foreach ($msgs as $msgName => $msg) {
+      $this->assertEquals($msgName, $msg['name']);
+      $this->assertTrue(!empty($msg['title']));
+      $this->assertTrue(!empty($msg['message']));
+      $this->assertTrue(in_array($msg['severity'], $validSeverities));
+    }
   }
 
 }
