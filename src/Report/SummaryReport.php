@@ -17,94 +17,166 @@ class SummaryReport {
    * @return \Symfony\Component\HttpFoundation\Response
    */
   public static function generate(Request $request) {
-    return self::_generate($request, \Pingback\VersionsFile::getFileName());
+    $sr = new SummaryReport($request, \Pingback\VersionsFile::getFileName());
+    return $sr->handleRequest();
   }
 
-  public static function _generate(Request $request, $fileName) {
-    $va = new VersionAnalyzer(\Pingback\VersionsFile::read($fileName));
+  /**
+   * @var \Pingback\VersionAnalyzer
+   */
+  protected $va;
 
-    $userVer = VersionNumber::getPatch($request->get('version', ''));
-    VersionNumber::assertWellFormed($userVer);
-    $userBranch = VersionNumber::getMinor($userVer);
-    $userBranchStatus = $va->findBranchStatus($userBranch);
+  /**
+   * @var string
+   *   Ex: '4.7.29'
+   */
+  protected $userVer;
 
-    $latestUserRelease = $va->findLatestRelease($userBranch);
+  public function __construct(Request $request, $fileName) {
+    $this->va = new VersionAnalyzer(\Pingback\VersionsFile::read($fileName));
+    $this->userVer = VersionNumber::getPatch($request->get('version', ''));
+    VersionNumber::assertWellFormed($this->userVer);
+  }
 
-    $latestStableBranch = $va->findLatestBranchByStatus('stable');
-    $latestStableRelease = $va->findLatestRelease($latestStableBranch);
+  public function handleRequest() {
+    list ($severity, $title) = $this->createTitle();
 
-    $latestTestingBranch = $va->findLatestBranchByStatus('testing');
-    $latestTestingRelease = $va->findLatestRelease($latestTestingBranch);
+    return self::createJson([
+      [
+        'name' => 'main',
+        'severity' => $severity,
+        'title' => $title,
+        'message' => $this->createPatchMessage() . $this->createBranchMessage(),
+      ],
+    ]);
+  }
 
-    $hasPatch = version_compare($latestUserRelease['version'], $userVer, '>');
-    $hasSecurityPatch = $hasPatch && !$va->isSecureVersion($userVer);
+  /**
+   * Determine the overall message (i.e. severity and title).
+   *
+   * @return array
+   *   Ex: ['critical', 'System be totally whack, yo'].
+   */
+  public function createTitle() {
+    $va = $this->va;
+    $userVer = $this->userVer;
+    $userBranch = VersionNumber::getMinor($this->userVer);
 
-    //    $hasNewerStableBranch = version_compare($latestStableBranch, $userBranch, '>');
-    //    $hasNewerTestingBranch = version_compare($latestTestingBranch, $userBranch, '>');
+    if (!$va->isCurrentInBranch($userVer)) {
+      if (!$va->isSecureVersion($userVer)) {
+        return ['critical', E::ts('CiviCRM Security Patch Needed')];
+      }
+      else {
+        return ['warning', E::ts('CiviCRM Patch Available')];
+      }
+    }
+    else {
+      if ($va->findBranchStatus($userBranch) === 'eol') {
+        return ['warning', E::ts('CiviCRM Patch Available')];
+      }
+      $latestStableBranch = $va->findLatestBranchByStatus('stable');
+      if (version_compare($userBranch, $latestStableBranch, '<')) {
+        return ['notice', E::ts('CiviCRM Release Available')];
+      }
+      else {
+        return ['info', E::ts('CiviCRM Up-to-Date')];
+      }
+    }
+  }
 
-    // TODO: Make hyperlinks to release announcements.
-    $vars = [
+  /**
+   * Create an HTML formatted explanation about the current patch-level release
+   * (e.g. are we current within the branch or are we behind?).
+   *
+   * @return string
+   *   Ex: '<p>Your version is OLD AND SCARY because:</p><ul><li>It jaywalks all the time.</li></ul>'
+   */
+  public function createPatchMessage() {
+    $va = $this->va;
+    $userVer = $this->userVer;
+    $tsVars = [
       '{userVer}' => htmlentities($userVer),
-      '{userBranch}' => htmlentities($userBranch . '.x'),
-      '{latestUserVer}' => htmlentities($latestUserRelease['version']),
-      '{latestStableBranch}' => htmlentities($latestStableBranch . '.x'),
-      '{latestStableVer}' => htmlentities($latestStableRelease['version']),
-      '{latestTestingBranch}' => htmlentities($latestTestingBranch . '.x'),
-      '{latestTestingVer}' => htmlentities($latestTestingRelease['version']),
+      '{userBranch}' => htmlentities(VersionNumber::getMinor($userVer)),
     ];
 
-    $id = ($hasPatch ? 'has_patch__' : 'no_patch__') . $userBranchStatus;
-    switch ($id) {
-      case 'no_patch__stable':
-      case 'no_patch__lts':
-      case 'no_patch__testing':
-        $result = self::createJson([
-          'severity' => 'info',
-          'title' => E::ts('CiviCRM Up-to-Date'),
-          'message' => E::ts('CiviCRM version {userVer} is up-to-date.', $vars),
-        ]);
-        return $result;
-
-      case 'no_patch__deprecated':
-        $result = self::createJson([
-          'severity' => 'warning',
-          'title' => E::ts('CiviCRM Update Available'),
-          'message' => E::ts('New version {latestStableVer} is available. This site is currently running {userVer}, but {userBranch} is deprecated.', $vars),
-        ]);
-        return $result;
-
-      case 'has_patch__stable':
-      case 'has_patch__lts':
-      case 'has_patch__testing':
-        $result = self::createJson([
-          'severity' => $hasSecurityPatch ? 'critical' : 'notice',
-          'title' => $hasSecurityPatch ? E::ts('CiviCRM Security Update Needed') : E::ts('CiviCRM Update Available'),
-          'message' => $hasSecurityPatch
-            ? E::ts('New security release {latestUserVer} is available. The site is currently running {userVer}.', $vars)
-            : E::ts('New version {latestUserVer} is available. The site is currently running {userVer}.', $vars),
-        ]);
-        return $result;
-
-      case 'has_patch__deprecated':
-        $result = self::createJson([
-          'severity' => $hasSecurityPatch ? 'critical' : 'warning',
-          'title' => $hasSecurityPatch ? E::ts('CiviCRM Security Update Needed') : E::ts('CiviCRM Update Available'),
-          'message' => E::ts('New versions {latestUserVer} and {latestStableVer} are available. This site currently running {userVer}, but {userBranch} is deprecated.', $vars),
-        ]);
-        return $result;
-
-      case 'has_patch__eol':
-      case 'no_patch__eol':
-        $result = self::createJson([
-          'severity' => 'warning',
-          'title' => E::ts('CiviCRM Update Needed'),
-          'message' => E::ts("New version {latestStableVer} is available. The site is currently running {userVer}, but {userBranch} has reached its end of life.", $vars),
-        ]);
-        return $result;
-
-      default:
-        throw new \Exception("Unrecognized message id: $id");
+    if ($va->isCurrentInBranch($userVer)) {
+      return _para(E::ts('The site is running {userVer}, the latest increment of {userBranch}.', $tsVars));
     }
+    else {
+      return _para(E::ts('The site is running {userVer}. The following patches are available:', $tsVars))
+          . $this->createPatchList();
+    }
+  }
+
+  /**
+   * Create an HTML formatted list of patches.
+   *
+   * @return string
+   *   HTML <UL> listing which identifies each of the patches
+   */
+  public function createPatchList() {
+    $va = $this->va;
+    $userVer = $this->userVer;
+
+    $parts = [];
+    foreach ($va->findPatchReleases($userVer) as $release) {
+      $tsVars = [
+        '{version}' => htmlentities($release['version'])
+          . (empty($release['security']) ? '' : ' ' . E::ts('(security)')),
+        '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
+        '{message}' => isset($release['message']) ? $release['message'] : '',
+      ];
+
+      if (empty($release['message'])) {
+        $parts[] = _li(E::ts('<em>{version} released on {date}</em>', $tsVars));
+      }
+      else {
+        $parts[] = _li(E::ts('<em>{version} released on {date}</em>: {message}', $tsVars));
+      }
+    }
+    return _list($parts);
+
+  }
+
+  public function createBranchMessage() {
+    $va = $this->va;
+    $userVer = $this->userVer;
+    $parts = [];
+
+    $userBranch = VersionNumber::getMinor($userVer);
+    $latestStableBranch = $va->findLatestBranchByStatus('stable');
+    $latestTestingBranch = $va->findLatestBranchByStatus('testing');
+
+    //    $tsVars = [
+    //      '{userVer}' => htmlentities($userVer),
+    //      '{userBranch}' => htmlentities($userBranch),
+    //    ];
+    //    if ($latestStableBranch && $userBranch === $latestStableBranch) {
+    //      $parts[] = _para(E::ts('{userBranch} is the current stable release.', $tsVars));
+    //    }
+    //    elseif ($latestTestingBranch && $userBranch === $latestTestingBranch) {
+    //      $parts[] = _para(E::ts('{userBranch} is the current testing release.', $tsVars));
+    //    }
+
+    $branchVers = $va->findNewerBranches($userVer);
+    if ($branchVers) {
+      $branchVerSnippets = [];
+      foreach ($branchVers as $branchVer) {
+        $release = $va->findLatestRelease($branchVer);
+        $tsVars = [
+          '{branch}' => htmlentities($branchVer),
+          '{version}' => htmlentities($release['version']),
+          '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
+        ];
+
+        $branchVerSnippets[] = _li(E::ts('<em>{branch}</em> (The latest version is {version} from {date}.)</em>', $tsVars));
+      }
+
+      $parts[] = _para(E::ts('Newer releases are available:'));
+      $parts[] = _list($branchVerSnippets);
+    }
+
+    return implode(' ', $parts);
   }
 
   protected static function createJson($output) {
@@ -113,4 +185,25 @@ class SummaryReport {
     ]);
   }
 
+}
+
+function _para($s) {
+  if (is_array($s)) {
+    $s = implode(' ', $s);
+  }
+  return "<p>$s</p>";
+}
+
+function _list($s) {
+  if (is_array($s)) {
+    $s = implode(' ', $s);
+  }
+  return "<ul>$s</ul>";
+}
+
+function _li($s) {
+  if (is_array($s)) {
+    $s = implode(' ', $s);
+  }
+  return "<li>$s</li>";
 }
