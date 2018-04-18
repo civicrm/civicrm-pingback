@@ -6,21 +6,52 @@
 require_once 'vendor/autoload.php';
 use GeoIp2\Database\Reader;
 
+// ------ Configuration options ------
 $user = $pass = FALSE;
+$dbhost = 'localhost';
+$dbport = '';
+$dbname = 'stats';
+$verbose = FALSE;
 require_once 'config.php';
-$link = @mysqli_connect('localhost', $user, $pass, 'stats');
 
-if ($link && !empty($_REQUEST['hash'])) {
+// ----- Main ------
+$link = @mysqli_connect($dbhost, $user, $pass, $dbname, $dbport);
+
+verbose_log("Received request: " . print_r(['METHOD' => $_SERVER['REQUEST_METHOD'], 'GET' => $_GET, 'POST' => $_POST], 1));
+
+if (!$link) {
+  error_log("Cannot record request: Database not available");
+}
+elseif (!empty($_REQUEST['hash'])) {
   if (flood_control_check()) {
     if (!empty($_POST['hash'])) {
+      verbose_log("Record POST request");
       process_post_request();
     }
     else {
+      verbose_log("Record GET request");
       process_get_request();
     }
   }
+  else {
+    verbose_log("Cannot record request: Recent data already recorded.");
+  }
 }
-print send_version_info();
+else {
+  verbose_log("Cannot record request: No hash provided.");
+}
+
+create_response(\Symfony\Component\HttpFoundation\Request::createFromGlobals())->send();
+
+/**
+ * Optionally log
+ * @param $message
+ */
+function verbose_log($message) {
+  if (!empty($GLOBALS['verbose'])) {
+    error_log($message);
+  }
+}
 
 /**
  * Make sure we don't get pingbacks from a site more than once a day
@@ -193,37 +224,27 @@ function insert_clause($table, $fields) {
 
 /**
  * Output version info in requested format
- * @return string
+ *
+ * @param \Symfony\Component\HttpFoundation\Request $request
+ * @return \Symfony\Component\HttpFoundation\Response
  */
-function send_version_info() {
-  // Load version info
-  $rawJson = file_get_contents('versions.json');
-  $versionInfo = json_decode($rawJson, TRUE);
-  ksort($versionInfo, SORT_NUMERIC);
+function create_response($request) {
+  $format = $request->query->getAlnum('format', 'plain');
+  $formatHandlers = [
+    'json' => ['\Pingback\Report\FullJsonReport', 'generate'],
+    'summary' => ['\Pingback\Report\SummaryReport', 'generate'],
+    'devPreview' => ['\Pingback\Report\DevPreviewReport', 'generate'],
+    'plain' => ['\Pingback\Report\BasicReport', 'generate'],
+    '' => ['\Pingback\Report\BasicReport', 'generate'],
+  ];
 
-  // Supply JSON format if requested
-  if (!empty($_GET['format']) && $_GET['format'] == 'json') {
-    $output = array();
-    $requestVersion = empty($_REQUEST['version']) ? '' : $_REQUEST['version'];
-    // If a version has been specified, we only return info >= to that version
-    $versionParts = explode('.', $requestVersion);
-    if (empty($versionParts[0]) || empty($versionParts[1]) || !is_numeric($versionParts[0]) || !is_numeric($versionParts[1])) {
-      // No valid version specified, just return all info
-      return $rawJson;
-    }
-    $version = $versionParts[0] . '.' . $versionParts[1];
-    foreach ($versionInfo as $majorVersion => $info) {
-      if ($majorVersion >= $version) {
-        $output[$majorVersion] = $info;
-      }
-    }
-    return json_encode($output);
+  $response = NULL;
+  if (isset($formatHandlers[$format])) {
+    $response = call_user_func($formatHandlers[$format], $request);
   }
-  // Legacy support: CiviCRM < 4.6 expect latest release number in plain text
-  foreach ($versionInfo as $majorVersion => $info) {
-    if ($info['status'] == 'stable') {
-      $latest = end($info['releases']);
-      return $latest['version'];
-    }
+  if (!$response) {
+    $response = \Symfony\Component\HttpFoundation\Response::create('Internal server error: failed to prepare response.', 500);
   }
+
+  return $response;
 }

@@ -5,5 +5,14 @@
  */
 
 $dbhost = 'mysql_host';
+$dbport = '';
+$dbname = 'pingbackcm_71whg';
 $user   = 'mysql_user';
 $pass   = 'mysql_pass';
+
+/**
+ * @var $verbose
+ *   Enable detailed logging. To track request handling, follow the
+ *   PHP error log.
+ */
+$verbose = FALSE;
