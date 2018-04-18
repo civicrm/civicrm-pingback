@@ -184,7 +184,8 @@
          },
          {
             "date" : "2018-02-07",
-            "version" : "4.7.30"
+            "version" : "4.7.30",
+            "message": "Fix regression in the Dedupe screen for all WordPress deployments."
          },
          {
             "version" : "4.7.31",

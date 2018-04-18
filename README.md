@@ -68,5 +68,5 @@ After making any changes to the HTML messages/markup in `SummaryReport` or `DevP
 It will highlight the HTML changes.  If the changes look good, then update the example file, e.g.
 
 ```
-curl 'http://localhost/stable.php?format=devPreview' > tests/Report/DevPreview-ex1-a.html
+curl 'http://localhost/stable.php?format=devPreview&versionsFile=ex1.json&versions=5.0.0,5.0.beta1,4.7.31,4.7.29,4.6.36,4.6.32,4.5.10' > tests/Report/DevPreview-ex1-a.html
 ```

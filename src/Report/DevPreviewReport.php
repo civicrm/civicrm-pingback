@@ -24,7 +24,7 @@ class DevPreviewReport {
    * @return \Symfony\Component\HttpFoundation\Response
    */
   public static function generate(Request $request) {
-    $report = new static($request, VersionsFile::getFileName());
+    $report = new static($request);
     return $report->handleRequest();
   }
 
@@ -34,12 +34,26 @@ class DevPreviewReport {
   protected $request;
 
   /**
-   * @var string
+   * @param string $file
+   *   Ex: '' or 'ex1.json'
+   * @return string
+   *   Ex: '/var/foo/bar.json'.
+   * @throws \Exception
    */
-  protected $versionsFile;
+  public function findVersionsFile($file) {
+    switch ($file) {
+      case 'ex1.json':
+        return dirname(dirname(__DIR__)) . '/tests/ex1.json';
 
-  public function __construct(Request $request, $fileName) {
-    $this->versionsFile = $fileName;
+      case '':
+        return VersionsFile::getFileName();
+
+      default:
+        throw new \Exception('Invalid versionsFile');
+    }
+  }
+
+  public function __construct(Request $request) {
     $this->request = $request;
   }
 
@@ -55,13 +69,13 @@ class DevPreviewReport {
         'version' => $version,
       ]);
 
-      $sr = new SummaryReport($fakeRequest, \Pingback\VersionsFile::getFileName());
+      $sr = new SummaryReport($fakeRequest, $this->findVersionsFile($this->request->get('versionsFile', '')));
       $msgs = json_decode($sr->handleRequest()->getContent(), 1);
       $buf[] = self::renderMessages($version, $msgs);
     }
 
     return new Response(
-      sprintf('<html><body>%s</body></html>', implode("\n<br/><hr/><br/>\n", $buf))
+      sprintf('<html><body>\n%s\n</body></html>', implode("\n<br/><hr/><br/>\n", $buf))
     );
   }
 
