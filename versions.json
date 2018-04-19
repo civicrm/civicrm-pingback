@@ -411,6 +411,11 @@
             {
                 "version": "5.0.0",
                 "date": "2018-04-04"
+            },
+            {
+                "version": "5.0.1",
+                "date": "2018-04-19",
+                "message": "Fix recent regression causing Dedupe screen to fail on WordPress. Update in-app version messaging."
             }
         ]
     }
