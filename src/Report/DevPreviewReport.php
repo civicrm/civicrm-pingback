@@ -58,7 +58,7 @@ class DevPreviewReport {
   }
 
   public function handleRequest() {
-    $versions = explode(',', $this->request->get('versions', '5.0.0,5.0.beta1,4.7.31,4.7.29,4.6.36,4.6.32,4.5.10'));
+    $versions = explode(',', $this->request->get('versions', '5.0.0,5.0.beta1,4.7.32,4.7.29,4.6.36,4.6.32,4.5.10'));
 
     $buf = [];
 

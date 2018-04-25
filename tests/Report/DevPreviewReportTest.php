@@ -9,7 +9,7 @@ class DevPreviewReportTest extends \PHPUnit_Framework_TestCase {
   public function getExamples() {
     $es = [];
 
-    $es[] = ['format=devPreview&versionsFile=ex1.json&versions=5.0.0,5.0.beta1,4.7.31,4.7.29,4.6.36,4.6.32,4.5.10', 'DevPreview-ex1-a.html'];
+    $es[] = ['format=devPreview&versionsFile=ex1.json&versions=5.0.0,5.0.beta1,4.7.32,4.7.31,4.7.29,4.6.36,4.6.32,4.5.10', 'DevPreview-ex1-a.html'];
 
     return $es;
   }
