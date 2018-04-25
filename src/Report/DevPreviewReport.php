@@ -75,7 +75,7 @@ class DevPreviewReport {
     }
 
     return new Response(
-      sprintf('<html><body>\n%s\n</body></html>', implode("\n<br/><hr/><br/>\n", $buf))
+      sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf))
     );
   }
 
