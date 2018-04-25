@@ -16,6 +16,21 @@ class VersionAnalyzerTest extends \PHPUnit_Framework_TestCase {
     $this->assertTrue(version_compare($latestPointRelease['version'], '4.8.0', '<'));
   }
 
+  public function testFindReleaseSeverity() {
+    $this->assertEquals('notice', $this->createVA()->findReleaseSeverity('4.7.32'));
+    $this->assertEquals('warning', $this->createVA()->findReleaseSeverity('4.7.30'));
+    $this->assertEquals('critical', $this->createVA()->findReleaseSeverity('4.7.26'));
+    $this->assertEquals('warning', $this->createVA()->findReleaseSeverity('4.7.25'));
+  }
+
+  public function testFindHighestPatchSeverity() {
+    $this->assertEquals('notice', $this->createVA()->findHighestPatchSeverity('4.7.31'));
+    $this->assertEquals('warning', $this->createVA()->findHighestPatchSeverity('4.7.30'));
+    $this->assertEquals('warning', $this->createVA()->findHighestPatchSeverity('4.7.26'));
+    $this->assertEquals('critical', $this->createVA()->findHighestPatchSeverity('4.7.25'));
+  }
+
+
   public function testIsSecureVersion() {
     $this->assertFalse($this->createVA()->isSecureVersion('4.7.10'));
     $this->assertTrue($this->createVA()->isSecureVersion('4.7.1000'));

@@ -171,6 +171,36 @@ class VersionAnalyzer {
   }
 
   /**
+   * Find the highest patch severity among all PATCH releases for this
+   * version.
+   *
+   * @param string $userVer
+   *   Ex: '4.7.25'.
+   *   The user's current version. We'll be checking for newer
+   *   patches ('4.7.26', '4.7.27' etc) and gauging their severity.
+   * @return string
+   *   Ex: 'info', 'warning', 'notice', 'critical'.
+   */
+  public function findHighestPatchSeverity($userVer) {
+    $weights = [
+      'info' => 10,
+      'notice' => 20,
+      'warning' => 30,
+      'critical' => 40,
+    ];
+
+    $max = NULL;
+    foreach ($this->findPatchReleases($userVer) as $release) {
+      $releaseSeverity = $this->findReleaseSeverity($release);
+      if ($max === NULL || $max < $weights[$releaseSeverity]) {
+        $max = $weights[$releaseSeverity];
+      }
+    }
+
+    return array_search($max, $weights);
+  }
+
+  /**
    * Find the last date on which security updates were issued.
    *
    * @return string|NULL
@@ -212,6 +242,33 @@ class VersionAnalyzer {
       }
     }
     return TRUE;
+  }
+
+  /**
+   * Determine the severity of a particular release.
+   *
+   * @param array|string $release
+   *   If a string, it's the version-number.
+   *   If an array, it's the actual release record.
+   * @return string
+   */
+  public function findReleaseSeverity($release) {
+    if (is_string($release)) {
+      $release = $this->findReleaseByVersion($release);
+    }
+
+    if (isset($release['severity'])) {
+      $releaseSeverity = $release['severity'];
+      return $releaseSeverity;
+    }
+    elseif (isset($release['security']) && $release['security'] === 'true') {
+      $releaseSeverity = 'critical';
+      return $releaseSeverity;
+    }
+    else {
+      $releaseSeverity = 'warning';
+      return $releaseSeverity;
+    }
   }
 
 }

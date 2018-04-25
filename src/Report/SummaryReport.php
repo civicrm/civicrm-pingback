@@ -100,7 +100,7 @@ class SummaryReport {
     else {
       return [
         'name' => 'patch',
-        'severity' => 'warning',
+        'severity' => $va->findHighestPatchSeverity($userVer),
         'title' => E::ts('CiviCRM Patch Available'),
         'message' => _para(E::ts('The site is running {userVer}. Additional patches are available:', $tsVars))
           . $this->createPatchList(),
@@ -195,7 +195,6 @@ class SummaryReport {
       }
     }
     return _list($parts);
-
   }
 
   public function createBranchList() {

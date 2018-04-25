@@ -190,6 +190,12 @@
          {
             "version" : "4.7.31",
             "date" : "2018-03-07"
+         },
+         {
+            "date" : "2018-04-20",
+            "version" : "4.7.32",
+            "message": "Fix release notes",
+            "severity": "notice"
          }
       ]
    },
