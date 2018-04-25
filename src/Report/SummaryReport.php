@@ -181,8 +181,10 @@ class SummaryReport {
     $parts = [];
     foreach ($va->findPatchReleases($userVer) as $release) {
       $tsVars = [
-        '{version}' => htmlentities($release['version'])
-          . (empty($release['security']) ? '' : ' ' . E::ts('(security)')),
+        '{version}' => _link(
+          $release['version'] . (empty($release['security']) ? '' : ' ' . E::ts('(security)')),
+          'https://download.civicrm.org/about/' . $release['version']
+        ),
         '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
         '{message}' => isset($release['message']) ? $release['message'] : '',
       ];
@@ -264,4 +266,8 @@ function _br($s) {
     $s = implode(' ', $s);
   }
   return "$s<br/>";
+}
+
+function _link($label, $url, $target = '_blank') {
+  return sprintf("<a href=\"%s\" target=\"%s\">%s</a>", htmlentities($url), htmlentities($target), htmlentities($label));
 }
