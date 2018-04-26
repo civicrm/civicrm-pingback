@@ -48,8 +48,8 @@ one site. Ex:
    "patch" : {
       "name" : "patch",
       "severity" : "warning",
-      "title" : "CiviCRM Patch Available"
-      "message" : "<p>The site is running 5.0.alpha1. Additional patches are available:</p><ul>\n<li>5.0.0 (2018-04-04)</li></ul>",
+      "title" : "CiviCRM Patch Available",
+      "message" : "<p>The site is running 5.0.alpha1. Additional patches are available:</p><ul>\n<li>5.0.0 (2018-04-04)</li></ul>"
    }
 }
 ```
