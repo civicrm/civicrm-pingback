@@ -424,5 +424,14 @@
                 "message": "Fix broken link to release notes."
             }
         ]
+    },
+    "5.1": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.1.0",
+                "date": "2018-05-02"
+            }
+        ]
     }
 }
