@@ -5,7 +5,7 @@
  */
 
 $dbhost = 'mysql_host';
-$dbport = '';
+$dbport = 3306;              // NOTE: If you want to omit, then NULL better than '', but check for yourself.
 $dbname = 'pingbackcm_71whg';
 $user   = 'mysql_user';
 $pass   = 'mysql_pass';
