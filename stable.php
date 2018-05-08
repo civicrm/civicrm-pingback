@@ -38,7 +38,8 @@ elseif (!empty($_REQUEST['hash'])) {
   }
 }
 else {
-  verbose_log("Cannot record request: No hash provided.");
+  // FIXME: Record some kind of nonce/fallback record so we can measure these; then make the log a bit quieter.
+  error_log("Cannot record request: No hash provided.");
 }
 
 create_response(\Symfony\Component\HttpFoundation\Request::createFromGlobals())->send();
