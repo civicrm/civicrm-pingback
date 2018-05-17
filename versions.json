@@ -436,6 +436,11 @@
                 "version": "5.1.1",
                 "date": "2018-05-15",
                 "message": "Fix recent regressions relating to address searching and email invoices. Add utility to correct multilingual issues."
+            },
+            {
+                "version": "5.1.2",
+                "date": "2018-05-16",
+                "message": "Fix recent regression in 5.1.1 due to incomplete backport"
             }
         ]
     }
