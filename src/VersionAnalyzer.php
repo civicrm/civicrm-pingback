@@ -266,7 +266,7 @@ class VersionAnalyzer {
       return $releaseSeverity;
     }
     else {
-      $releaseSeverity = 'warning';
+      $releaseSeverity = 'notice';
       return $releaseSeverity;
     }
   }
