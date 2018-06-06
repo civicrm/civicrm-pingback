@@ -213,7 +213,7 @@
         ]
     },
     "4.7": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "4.7.alpha1",
@@ -441,6 +441,15 @@
                 "version": "5.1.2",
                 "date": "2018-05-16",
                 "message": "Fix recent regression in 5.1.1 due to incomplete backport"
+            }
+        ]
+    },
+    "5.2": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.2.0",
+                "date": "2018-06-06"
             }
         ]
     }
