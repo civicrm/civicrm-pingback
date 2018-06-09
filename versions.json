@@ -454,6 +454,12 @@
             {
                 "version": "5.2.0",
                 "date": "2018-06-06"
+            },
+            {
+                "version": "5.2.1",
+                "date": "2018-06-08",
+                "severity": "notice",
+                "message": "Fix recent regression in 5.2.0 when contribution reports include soft-credit column"
             }
         ]
     }
