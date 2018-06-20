@@ -460,6 +460,12 @@
                 "date": "2018-06-08",
                 "severity": "notice",
                 "message": "Fix recent regression in 5.2.0 when contribution reports include soft-credit column"
+            },
+            {
+                "version": "5.2.2",
+                "date": "2018-06-19",
+                "severity": "notice",
+                "message": "Fix recent regression in 5.2.0 where backoffce event registration failed to load on WordPress"
             }
         ]
     }
