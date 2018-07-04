@@ -468,5 +468,14 @@
                 "message": "Fix recent regression in 5.2.0 where backoffce event registration failed to load on WordPress"
             }
         ]
+    },
+    "5.3": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.3.0",
+                "date": "2018-07-04"
+            }
+        ]
     }
 }
