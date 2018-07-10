@@ -45,6 +45,9 @@ class DevPreviewReport {
       case 'ex1.json':
         return dirname(dirname(__DIR__)) . '/tests/ex1.json';
 
+      case 'staging.json':
+        return dirname(dirname(__DIR__)) . '/versions.staging.json';
+
       case '':
         return VersionsFile::getFileName();
 
