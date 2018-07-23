@@ -214,9 +214,9 @@ class SummaryReport {
       $latestRelease = $va->findLatestRelease($branchVer);
       $tsVars = [
         '{branch}' => htmlentities($branchVer),
-        '{firstVersion}' => htmlentities($firstRelease['version']),
+        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']),// htmlentities($firstRelease['version']),
         '{firstDate}' => htmlentities($firstRelease['date']),
-        '{latestVersion}' => htmlentities($latestRelease['version']),
+        '{latestVersion}' => _link($latestRelease['version'], 'https://download.civicrm.org/about/' . $latestRelease['version']), // htmlentities($latestRelease['version']),
         '{latestDate}' => isset($latestRelease['date']) ? htmlentities($latestRelease['date']) : '',
       ];
 
