@@ -13,7 +13,7 @@ class SummaryReportTest extends \PHPUnit_Framework_TestCase {
     // $es[] = ['mockDataFile.json', 'userVersion', 'msgName', 'expectedSeverity', 'expectedTitle'];
 
     $es[] = ['ex1.json', '5.0.0', 'patch', NULL, NULL];
-    $es[] = ['ex1.json', '5.0.alpha1', 'patch', 'warning', 'CiviCRM Patch Available'];
+    $es[] = ['ex1.json', '5.0.alpha1', 'patch', 'notice', 'CiviCRM Patch Available'];
 
     $es[] = ['ex1.json', '4.7.32', 'patch', NULL, NULL];
     $es[] = ['ex1.json', '4.7.31', 'patch', 'notice', 'CiviCRM Patch Available'];
@@ -21,7 +21,7 @@ class SummaryReportTest extends \PHPUnit_Framework_TestCase {
     $es[] = ['ex1.json', '4.7.25', 'patch', 'critical', 'CiviCRM Security Patch Needed'];
 
     $es[] = ['ex1.json', '4.6.36', 'patch', NULL, NULL];
-    $es[] = ['ex1.json', '4.6.34', 'patch', 'warning', 'CiviCRM Patch Available'];
+    $es[] = ['ex1.json', '4.6.34', 'patch', 'notice', 'CiviCRM Patch Available'];
     $es[] = ['ex1.json', '4.6.32', 'patch', 'critical', 'CiviCRM Security Patch Needed'];
 
     $es[] = ['ex1.json', '5.0.0', 'upgrade', NULL, NULL];
