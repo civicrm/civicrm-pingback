@@ -493,5 +493,14 @@
                 "message": "Fix regressions in PCP events, merge screen, and 'Check for Matching Contact'"
             }
         ]
+    },
+    "5.4": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.4.0",
+                "date": "2018-08-01"
+            }
+        ]
     }
 }
