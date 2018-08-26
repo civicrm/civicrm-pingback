@@ -18,7 +18,9 @@ class ReleaseAddCommand extends Command {
       ->addOption('date', NULL, InputOption::VALUE_REQUIRED, 'Release date',
         'now')
       ->addOption('security', NULL, InputOption::VALUE_REQUIRED,
-        'Is this a  security release? (true/false)', 'false')
+        'Is this a security release? (true/false)', 'false')
+      ->addOption('message', 'm', InputOption::VALUE_REQUIRED,
+        'A brief description of what has been fixed', '')
       ->addArgument('version', InputArgument::REQUIRED);
   }
 
@@ -29,7 +31,8 @@ class ReleaseAddCommand extends Command {
     $branchVer = VersionNumber::getMinor($releaseVer);
     $newRelease = $this->createReleaseRecord($releaseVer,
       $input->getOption('date'),
-      $input->getOption('security'));
+      $input->getOption('security'),
+      $input->getOption('message'));
 
     if (!isset($versions[$branchVer])) {
       throw new \Exception("versions.json does not have branch $branchVer");
@@ -49,14 +52,19 @@ class ReleaseAddCommand extends Command {
    *   Ex: '2018-01-02'
    * @param string $security
    *   Ex: 'true' or 'false'
+   * @param string $message
    * @return array
    * @throws \Exception
    */
-  protected function createReleaseRecord($releaseVer, $date, $security) {
+  protected function createReleaseRecord($releaseVer, $date, $security, $message = NULL) {
     $release = array(
       'version' => $releaseVer,
       'date' => $date == 'now' ? date('Y-m-d') : $date,
     );
+
+    if (!empty($message)) {
+      $release['message'] = $message;
+    }
 
     if ($security === 'true') {
       $release['security'] = 'true';
