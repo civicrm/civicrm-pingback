@@ -21,6 +21,8 @@ class ReleaseAddCommand extends Command {
         'Is this a security release? (true/false)', 'false')
       ->addOption('message', 'm', InputOption::VALUE_REQUIRED,
         'A brief description of what has been fixed', '')
+      ->addOption('severity', 's', InputOption::VALUE_REQUIRED,
+        'The overall significance of this revision (' . implode(',', $this->getSeverities()) . ')', '')
       ->addArgument('version', InputArgument::REQUIRED);
   }
 
@@ -32,7 +34,9 @@ class ReleaseAddCommand extends Command {
     $newRelease = $this->createReleaseRecord($releaseVer,
       $input->getOption('date'),
       $input->getOption('security'),
-      $input->getOption('message'));
+      $input->getOption('message'),
+      strtolower($input->getOption('severity'))
+    );
 
     if (!isset($versions[$branchVer])) {
       throw new \Exception("versions.json does not have branch $branchVer");
@@ -56,7 +60,7 @@ class ReleaseAddCommand extends Command {
    * @return array
    * @throws \Exception
    */
-  protected function createReleaseRecord($releaseVer, $date, $security, $message = NULL) {
+  protected function createReleaseRecord($releaseVer, $date, $security, $message = NULL, $severity = NULL) {
     $release = array(
       'version' => $releaseVer,
       'date' => $date == 'now' ? date('Y-m-d') : $date,
@@ -64,6 +68,12 @@ class ReleaseAddCommand extends Command {
 
     if (!empty($message)) {
       $release['message'] = $message;
+    }
+    if (!empty($severity)) {
+      if (!in_array($severity, $this->getSeverities())) {
+        throw new \Exception("Invalid severity. Please specify one of these: " . implode(', ', $this->getSeverities()));
+      }
+      $release['severity'] = $severity;
     }
 
     if ($security === 'true') {
@@ -97,6 +107,10 @@ class ReleaseAddCommand extends Command {
 
     $versions[$branchVer]['releases'][] = $newRelease;
     return 'added';
+  }
+
+  protected function getSeverities() {
+    return ['info', 'notice', 'warning', 'critical'];
   }
 
 }
