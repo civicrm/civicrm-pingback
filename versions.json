@@ -500,6 +500,11 @@
             {
                 "version": "5.4.0",
                 "date": "2018-08-01"
+            },
+            {
+                "version": "5.4.1",
+                "date": "2018-08-25",
+                "message": "Fixes regressions affecting SMS and Memcache users. Fix upgrade issues."
             }
         ]
     }
