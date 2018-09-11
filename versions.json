@@ -507,5 +507,14 @@
                 "message": "Fixes regressions affecting SMS and Memcache users. Fix upgrade issues."
             }
         ]
+    },
+    "5.5": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.5.0",
+                "date": "2018-09-11"
+            }
+        ]
     }
 }
