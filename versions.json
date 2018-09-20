@@ -520,6 +520,12 @@
                 "date": "2018-09-12",
                 "message": "Fix recent regression affecting relationship-based smart-groups which predate 5.5.0",
                 "severity": "notice"
+            },
+            {
+                "version": "5.5.2",
+                "date": "2018-09-20",
+                "message": "Fix regression which prevents editing CiviCase configuration on new sites",
+                "severity": "notice"
             }
         ]
     }
