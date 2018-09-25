@@ -526,6 +526,12 @@
                 "date": "2018-09-20",
                 "message": "Fix regression which prevents editing CiviCase configuration on new sites",
                 "severity": "notice"
+            },
+            {
+                "version": "5.5.3",
+                "date": "2018-09-25",
+                "message": "Fix regressions affecting (a) editing newly created option groups and (b) editing tags via profile",
+                "severity": "notice"
             }
         ]
     }
