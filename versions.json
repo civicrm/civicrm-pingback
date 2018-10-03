@@ -534,5 +534,14 @@
                 "severity": "notice"
             }
         ]
+    },
+    "5.6": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.6.0",
+                "date": "2018-10-03"
+            }
+        ]
     }
 }
