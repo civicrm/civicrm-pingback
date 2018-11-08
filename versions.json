@@ -548,5 +548,14 @@
                 "message": "Fix regressions affecting certain reports, certain smart groups, menu alignment on Joomla, and an overzealous permission."
             }
         ]
+    },
+    "5.7": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.7.0",
+                "date": "2018-11-07"
+            }
+        ]
     }
 }
