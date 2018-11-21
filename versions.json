@@ -555,6 +555,11 @@
             {
                 "version": "5.7.0",
                 "date": "2018-11-07"
+            },
+            {
+                "version": "5.7.1",
+                "date": "2018-11-20",
+                "message": "Fix regression in search task \"Tag Contacts\"."
             }
         ]
     }
