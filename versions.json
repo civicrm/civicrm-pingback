@@ -560,6 +560,11 @@
                 "version": "5.7.1",
                 "date": "2018-11-20",
                 "message": "Fix regression in search task \"Tag Contacts\"."
+            },
+            {
+                "version": "5.7.2",
+                "date": "2018-11-20",
+                "message": "Fix regression in displaying UTF-8 in some dropdowns."
             }
         ]
     }
