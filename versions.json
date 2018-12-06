@@ -569,7 +569,16 @@
             {
                 "version": "5.7.3",
                 "date": "2018-12-05",
-                "message": "Fix regressions in (a) recalculating edited net-amount and (b) loading unnecessary/nonexistent file."
+                "message": "Fix regressions in (a) recalculating edited net-amount and (b) loading unnecessary\/nonexistent file."
+            }
+        ]
+    },
+    "5.8": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.8.0",
+                "date": "2018-12-05"
             }
         ]
     }
