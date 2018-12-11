@@ -230,6 +230,8 @@ function insert_clause($table, $fields) {
  * @return \Symfony\Component\HttpFoundation\Response
  */
 function create_response($request) {
+  \Pingback\Date::set($request->query->get('today', date('Y-m-d')));
+
   $format = $request->query->getAlnum('format', 'plain');
   $formatHandlers = [
     'json' => ['\Pingback\Report\FullJsonReport', 'generate'],

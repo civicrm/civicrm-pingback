@@ -45,15 +45,65 @@ class VersionsFile {
    *   Updated list of versions, sorted in normal order.
    */
   protected static function normalize($versions) {
+    // Sort branches
     uksort($versions, function ($a, $b) {
       return version_compare($a, $b);
     });
+
+    // Sort each release for each branch
     foreach (array_keys($versions) as $mv) {
       usort($versions[$mv]['releases'], function ($a, $b) {
         return version_compare($a['version'], $b['version']);
       });
     }
+
+    // Evaluate 'schedule' and update 'status' of each branch.
+    foreach (array_keys($versions) as $mv) {
+      if (!empty($versions[$mv]['schedule'])) {
+        $versions[$mv]['status'] = self::pickStatus($versions[$mv]);
+      }
+    }
+
     return $versions;
+  }
+
+  /**
+   * @param array $verRec
+   *   Ex: [
+   *     'status' => 'stable',
+   *     'schedule' => ['eol' => '2019-01-01'],
+   * @return string
+   *   Ex: 'stable' (if before eol date) or 'eol' (if after date)
+   */
+  protected static function pickStatus($verRec) {
+    $actualStatus = $verRec['status'];
+    foreach ($verRec['schedule'] as $tgtStatus => $tgtDate) {
+      if (
+        self::cmpStatus($tgtStatus, $actualStatus) > 0
+        && strtotime($tgtDate) <= strtotime(Date::get())
+      ) {
+        $actualStatus = $tgtStatus;
+      }
+    }
+    return $actualStatus;
+  }
+
+  protected function cmpStatus($a, $b) {
+    $val = [
+      'stable' => 10,
+      'lts' => 20,
+      'deprecated' => 30,
+      'eol' => 40,
+    ];
+
+    if (!isset($val[$a])) {
+      throw new \RuntimeException("Unrecognized status: $a");
+    }
+    if (!isset($val[$b])) {
+      throw new \RuntimeException("Unrecognized status: $b");
+    }
+
+    return $val[$a] - $val[$b];
   }
 
 }

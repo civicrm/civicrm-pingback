@@ -1,0 +1,65 @@
+{
+    "5.2": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.2.0",
+                "date": "2018-06-06"
+            },
+            {
+                "version": "5.2.1",
+                "date": "2018-06-08",
+                "severity": "notice",
+                "message": "Fix recent regression in 5.2.0 when contribution reports include soft-credit column"
+            },
+            {
+                "version": "5.2.2",
+                "date": "2018-06-19",
+                "severity": "notice",
+                "message": "Fix recent regression in 5.2.0 where backoffce event registration failed to load on WordPress"
+            }
+        ]
+    },
+    "5.3": {
+        "status": "stable",
+        "schedule": {
+          "deprecated": "2018-12-10",
+          "eol": "2019-01-10"
+        },
+        "releases": [
+            {
+                "version": "5.3.0",
+                "date": "2018-07-04"
+            },
+            {
+                "version": "5.3.1",
+                "date": "2018-07-18",
+                "security": "true",
+                "message": "Fix seven security issues, including at least one highly critical"
+            },
+            {
+                "version": "5.3.2",
+                "date": "2018-07-25",
+                "message": "Fix regressions in PCP events, merge screen, and 'Check for Matching Contact'"
+            }
+        ]
+    },
+    "5.4": {
+        "status": "stable",
+        "schedule": {
+          "deprecated": "2018-12-15",
+          "eol": "2019-01-15"
+        },
+        "releases": [
+            {
+                "version": "5.4.0",
+                "date": "2018-08-01"
+            },
+            {
+                "version": "5.4.1",
+                "date": "2018-08-25",
+                "message": "Fixes regressions affecting SMS and Memcache users. Fix upgrade issues."
+            }
+        ]
+    }
+}
