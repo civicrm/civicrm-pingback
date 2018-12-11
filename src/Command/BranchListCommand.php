@@ -29,11 +29,13 @@ class BranchListCommand extends Command {
         $branchVer,
         $branchRec['status'],
         sprintf('%s (%s)', $latestRelease['date'], $latestRelease['version']),
+        isset($branchRec['schedule']['deprecated']) ? $branchRec['schedule']['deprecated'] : '',
+        isset($branchRec['schedule']['eol']) ? $branchRec['schedule']['eol'] : '',
       ];
     }
 
     $table = new Table($output);
-    $table->setHeaders(array('Branch', 'Status', 'Last Release'));
+    $table->setHeaders(array('Branch', 'Current Status', 'Last Release', 'Deprecated Date', 'EOL Date'));
     $table->setRows($rows);
     $table->render();
   }
