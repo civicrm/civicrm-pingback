@@ -48,19 +48,19 @@ class FullJsonReport {
    * @return array
    */
   public static function downgradeStatuses($versions) {
+    // Older clients won't recognize these statuses...
     $map = array(
       'deprecated' => 'stable',
     );
 
     $result = [];
     foreach ($versions as $k => $v) {
-      $result[$k] = $v;
       if (isset($map[$v['status']])) {
         $v['status'] = $map[$v['status']];
       }
+      $result[$k] = $v;
     }
     return $result;
   }
-
 
 }
