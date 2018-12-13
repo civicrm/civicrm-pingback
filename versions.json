@@ -475,7 +475,7 @@
         ]
     },
     "5.3": {
-        "status": "stable",
+        "status": "deprecated",
         "releases": [
             {
                 "version": "5.3.0",
@@ -492,10 +492,14 @@
                 "date": "2018-07-25",
                 "message": "Fix regressions in PCP events, merge screen, and 'Check for Matching Contact'"
             }
-        ]
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10",
+            "eol": "2019-01-09"
+        }
     },
     "5.4": {
-        "status": "stable",
+        "status": "deprecated",
         "releases": [
             {
                 "version": "5.4.0",
@@ -506,10 +510,14 @@
                 "date": "2018-08-25",
                 "message": "Fixes regressions affecting SMS and Memcache users. Fix upgrade issues."
             }
-        ]
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10",
+            "eol": "2019-01-09"
+        }
     },
     "5.5": {
-        "status": "stable",
+        "status": "deprecated",
         "releases": [
             {
                 "version": "5.5.0",
@@ -533,10 +541,14 @@
                 "message": "Fix regressions affecting (a) editing newly created option groups and (b) editing tags via profile",
                 "severity": "notice"
             }
-        ]
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10",
+            "eol": "2019-01-09"
+        }
     },
     "5.6": {
-        "status": "stable",
+        "status": "deprecated",
         "releases": [
             {
                 "version": "5.6.0",
@@ -547,7 +559,11 @@
                 "date": "2018-10-23",
                 "message": "Fix regressions affecting certain reports, certain smart groups, menu alignment on Joomla, and an overzealous permission."
             }
-        ]
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10",
+            "eol": "2019-01-09"
+        }
     },
     "5.7": {
         "status": "stable",
