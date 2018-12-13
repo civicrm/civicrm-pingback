@@ -567,7 +567,7 @@
     },
     "5.7": {
         "status": "stable",
-        "message": "5.7.x is an <strong><a href=\"https://civicrm.org/blog/josh/civicrm-version-57-candidate-for-extended-security-release\">Extended Security Release</a>.</strong>",
+        "message": "5.7.x is an <strong><a href=\"https:\/\/civicrm.org\/blog\/josh\/civicrm-version-57-candidate-for-extended-security-release\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.7.0",
