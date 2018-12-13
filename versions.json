@@ -600,7 +600,7 @@
             {
                 "version": "5.8.1",
                 "date": "2018-12-12",
-                "message": "Fix regressions involving a date icon, a search setting, and an email subject line."
+                "message": "Fix regressions involving a date icon, a search setting, an email subject line, and an unnecessary warning."
             }
         ]
     }
