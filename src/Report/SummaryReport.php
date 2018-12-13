@@ -222,10 +222,10 @@ class SummaryReport {
       ];
 
       if ($firstRelease['version'] === $latestRelease['version']) {
-        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}. {branchMessage}', $tsVars));
+        $branchVerSnippets[$branchVer] = _br(trim(E::ts('{firstVersion} was released on {firstDate}. {branchMessage}', $tsVars)));
       }
       else {
-        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}). {branchMessage}', $tsVars));
+        $branchVerSnippets[$branchVer] = _br(trim(E::ts('{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}). {branchMessage}', $tsVars)));
       }
     }
 
