@@ -214,17 +214,18 @@ class SummaryReport {
       $latestRelease = $va->findLatestRelease($branchVer);
       $tsVars = [
         '{branch}' => htmlentities($branchVer),
-        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']),// htmlentities($firstRelease['version']),
+        '{branchMessage}' => $va->findBranchMessage($branchVer, ''),
+        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']), // htmlentities($firstRelease['version']),
         '{firstDate}' => htmlentities($firstRelease['date']),
         '{latestVersion}' => _link($latestRelease['version'], 'https://download.civicrm.org/about/' . $latestRelease['version']), // htmlentities($latestRelease['version']),
         '{latestDate}' => isset($latestRelease['date']) ? htmlentities($latestRelease['date']) : '',
       ];
 
       if ($firstRelease['version'] === $latestRelease['version']) {
-        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}.', $tsVars));
+        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}. {branchMessage}', $tsVars));
       }
       else {
-        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}).', $tsVars));
+        $branchVerSnippets[$branchVer] = _br(E::ts('{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}). {branchMessage}', $tsVars));
       }
     }
 

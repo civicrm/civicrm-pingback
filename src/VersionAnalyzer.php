@@ -244,6 +244,11 @@ class VersionAnalyzer {
     return TRUE;
   }
 
+  public function findBranchMessage($version, $default = NULL) {
+    $branch = VersionNumber::getMinor($version);
+    return empty($this->versions[$branch]['message']) ? $default : $this->versions[$branch]['message'];
+  }
+
   /**
    * Determine the severity of a particular release.
    *
