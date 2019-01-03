@@ -601,6 +601,11 @@
                 "version": "5.8.1",
                 "date": "2018-12-12",
                 "message": "Fix regressions involving a date icon, a search setting, an email subject line, and an unnecessary warning."
+            },
+            {
+                "version": "5.8.2",
+                "date": "2018-12-17",
+                "message": "Fix regressions involving activity-sequences, quick search by email, an API filter option, and two backend forms for CiviContribute/CiviMember."
             }
         ]
     }
