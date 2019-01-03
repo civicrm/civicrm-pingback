@@ -605,7 +605,20 @@
             {
                 "version": "5.8.2",
                 "date": "2018-12-17",
-                "message": "Fix regressions involving activity-sequences, quick search by email, an API filter option, and two backend forms for CiviContribute/CiviMember."
+                "message": "Fix regressions involving activity-sequences, quick search by email, an API filter option, and two backend forms for CiviContribute\/CiviMember."
+            }
+        ],
+        "schedule": {
+            "deprecated": "2019-01-06",
+            "eol": "2019-01-10"
+        }
+    },
+    "5.9": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.9.0",
+                "date": "2019-01-02"
             }
         ]
     }
