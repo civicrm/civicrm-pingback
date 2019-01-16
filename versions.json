@@ -475,7 +475,7 @@
         ]
     },
     "5.3": {
-        "status": "deprecated",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.3.0",
@@ -499,7 +499,7 @@
         }
     },
     "5.4": {
-        "status": "deprecated",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.4.0",
@@ -589,7 +589,7 @@
         ]
     },
     "5.8": {
-        "status": "stable",
+        "status": "deprecated",
         "releases": [
             {
                 "version": "5.8.0",
@@ -616,6 +616,11 @@
             {
                 "version": "5.9.0",
                 "date": "2019-01-02"
+            },
+            {
+                "version": "5.9.1",
+                "date": "2019-01-16",
+                "message": "Fix regressions involving (1) anonymous users of contribution\/event-registration screens and (2) filters in \"Manage Case\" screen"
             }
         ]
     }
