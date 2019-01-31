@@ -148,9 +148,11 @@ class SummaryReport {
       case 'deprecated':
         $result = [
           'name' => 'upgrade',
-          'severity' => 'warning',
-          'title' => E::ts('CiviCRM Upgrade Available'),
-          'message' => $this->createBranchList(),
+          'severity' => 'notice',
+          'title' => E::ts('New CiviCRM Version Available'),
+          'message' =>
+            _para(E::ts('CiviCRM {latestStableBranch} is now available, and CiviCRM {userBranch} will no longer receive bug fixes or security updates. You should plan to upgrade in the coming months.', $tsVars))
+            . $this->createBranchList(),
         ];
         break;
 
