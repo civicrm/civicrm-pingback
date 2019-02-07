@@ -623,5 +623,14 @@
                 "message": "Fix regressions involving (1) anonymous users of contribution\/event-registration screens and (2) filters in \"Manage Case\" screen"
             }
         ]
+    },
+    "5.10": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.10.0",
+                "date": "2019-02-06"
+            }
+        ]
     }
 }
