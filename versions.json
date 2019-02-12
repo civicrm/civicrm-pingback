@@ -630,6 +630,11 @@
             {
                 "version": "5.10.0",
                 "date": "2019-02-06"
+            },
+            {
+                "version": "5.10.1",
+                "date": "2019-02-12",
+                "message": "Fix regression involving validation of backend credit card form"
             }
         ]
     }
