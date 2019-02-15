@@ -635,6 +635,11 @@
                 "version": "5.10.1",
                 "date": "2019-02-12",
                 "message": "Fix regression involving validation of backend credit card form"
+            },
+            {
+                "version": "5.10.2",
+                "date": "2019-02-14",
+                "message": "Fix regressions involving deletion of relationships, the \"Change Case Status\" form, and smart-groups on ACL-enabled systems."
             }
         ]
     }
