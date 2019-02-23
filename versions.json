@@ -517,7 +517,7 @@
         }
     },
     "5.5": {
-        "status": "deprecated",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.5.0",
@@ -547,7 +547,7 @@
         }
     },
     "5.6": {
-        "status": "deprecated",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.6.0",
@@ -585,6 +585,12 @@
                 "version": "5.7.3",
                 "date": "2018-12-05",
                 "message": "Fix regressions in (a) recalculating edited net-amount and (b) loading unnecessary\/nonexistent file."
+            },
+            {
+                "version": "5.7.4",
+                "date": "2019-02-20",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07</a>.",
+                "security": "true"
             }
         ]
     },
@@ -640,6 +646,12 @@
                 "version": "5.10.2",
                 "date": "2019-02-14",
                 "message": "Fix regressions involving deletion of relationships, the \"Change Case Status\" form, and smart-groups on ACL-enabled systems."
+            },
+            {
+                "version": "5.10.3",
+                "date": "2019-02-20",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07</a>.",
+                "security": "true"
             }
         ]
     }

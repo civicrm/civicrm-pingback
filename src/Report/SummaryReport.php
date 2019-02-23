@@ -139,7 +139,7 @@ class SummaryReport {
           'severity' => 'warning',
           'title' => E::ts('CiviCRM Version End-of-Life'),
           'message' =>
-            _para(E::ts('CiviCRM {userBranch} has reached its end-of-life. Security updates are not provided anymore. Please upgrade to the latest stable release.', $tsVars))
+            _para(E::ts('CiviCRM {userBranch} has reached its end-of-life. Security updates are not provided anymore. Please upgrade to the latest stable release (5.10) or an extended-security release (5.7).', $tsVars))
             . _para(E::ts('<strong>Release history</strong>'))
             . $this->createBranchList(),
         ];
