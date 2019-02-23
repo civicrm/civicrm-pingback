@@ -591,6 +591,11 @@
                 "date": "2019-02-20",
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
                 "security": "true"
+            },
+            {
+                "version": "5.7.5",
+                "date": "2019-02-22",
+                "message": "Fix regression involving contact images"
             }
         ]
     },
@@ -652,6 +657,11 @@
                 "date": "2019-02-20",
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
                 "security": "true"
+            },
+            {
+                "version": "5.10.4",
+                "date": "2019-02-22",
+                "message": "Fix regressions involving (1) contact images, (2) pagination in contribution report, and (3) multi-group filtering in Search Builder."
             }
         ]
     }
