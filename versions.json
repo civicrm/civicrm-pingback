@@ -589,13 +589,13 @@
             {
                 "version": "5.7.4",
                 "date": "2019-02-20",
-                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07</a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
                 "security": "true"
             }
         ]
     },
     "5.8": {
-        "status": "deprecated",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.8.0",
@@ -617,7 +617,7 @@
         }
     },
     "5.9": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.9.0",
@@ -650,7 +650,7 @@
             {
                 "version": "5.10.3",
                 "date": "2019-02-20",
-                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07</a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
                 "security": "true"
             }
         ]
