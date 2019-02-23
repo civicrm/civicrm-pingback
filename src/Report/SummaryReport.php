@@ -27,7 +27,7 @@ class SummaryReport {
           'name' => 'malformed',
           'severity' => 'warning',
           'title' => 'Version Check Failed',
-          'message' => E::ts('The server failed to report on available versions. Perhaps the request was malformed.'),
+          'message' => 'The server failed to report on available versions. Perhaps the request was malformed.',
         ],
       ]);
       $response->setStatusCode(500);
@@ -46,9 +46,15 @@ class SummaryReport {
    */
   protected $userVer;
 
+  /**
+   * @var E
+   */
+  protected $e;
+
   public function __construct(Request $request, $fileName) {
     $this->va = new VersionAnalyzer(\Pingback\VersionsFile::read($fileName));
     $this->userVer = VersionNumber::getPatch($request->get('version', ''));
+    $this->e = new E(dirname(dirname(__DIR__)) . '/messages', ['en_US']);
     VersionNumber::assertWellFormed($this->userVer);
   }
 
@@ -72,11 +78,13 @@ class SummaryReport {
    * @return array
    */
   public function createPatchMessage() {
+    $e = $this->e;
     $va = $this->va;
     $userVer = $this->userVer;
     $tsVars = [
       '{userVer}' => htmlentities($userVer),
       '{userBranch}' => htmlentities(VersionNumber::getMinor($userVer)),
+      '{patchList}' => $this->createPatchList(),
     ];
 
     if ($va->isCurrentInBranch($userVer)) {
@@ -84,26 +92,24 @@ class SummaryReport {
       //      return [
       //        'name' => 'patch',
       //        'severity' => 'info',
-      //        'title' => E::ts('CiviCRM Up-to-Date'),
-      //        'message' => _para(E::ts('The site is running {userVer}.', $tsVars)),
+      //        'title' => $this->e->ts('CiviCRM Up-to-Date'),
+      //        'message' => _para($this->e->ts('The site is running {userVer}.', $tsVars)),
       //      ];
     }
     elseif (!$va->isSecureVersion($userVer)) {
       return [
         'name' => 'patch',
         'severity' => 'critical',
-        'title' => E::ts('CiviCRM Security Patch Needed'),
-        'message' => _para(E::ts('The site is running {userVer}. Additional patches are available:', $tsVars))
-          . $this->createPatchList(),
+        'title' => $e->ts('{patch_insecure_title}'),
+        'message' => $e->ts('{patch_insecure_message}', $tsVars),
       ];
     }
     else {
       return [
         'name' => 'patch',
         'severity' => $va->findHighestPatchSeverity($userVer),
-        'title' => E::ts('CiviCRM Patch Available'),
-        'message' => _para(E::ts('The site is running {userVer}. Additional patches are available:', $tsVars))
-          . $this->createPatchList(),
+        'title' => $e->ts('{patch_normal_title}'),
+        'message' => $e->ts('{patch_normal_message}', $tsVars),
       ];
     }
   }
@@ -112,6 +118,7 @@ class SummaryReport {
    * @return array|NULL
    */
   public function createUpgradeMessage() {
+    $e = $this->e;
     $va = $this->va;
     $userVer = $this->userVer;
     $userBranch = VersionNumber::getMinor($userVer);
@@ -123,6 +130,7 @@ class SummaryReport {
       '{userBranch}' => htmlentities($userBranch),
       '{latestStableVer}' => htmlentities($latestStableVer['version']),
       '{latestStableBranch}' => htmlentities($latestStableBranch),
+      '{branchList}' => $this->createBranchList(),
     ];
 
     if ($userBranch === $latestStableBranch) {
@@ -137,11 +145,8 @@ class SummaryReport {
         $result = [
           'name' => 'upgrade',
           'severity' => 'warning',
-          'title' => E::ts('CiviCRM Version End-of-Life'),
-          'message' =>
-            _para(E::ts('CiviCRM {userBranch} has reached its end-of-life. Security updates are not provided anymore. Please upgrade to the latest stable release (5.10) or an extended-security release (5.7).', $tsVars))
-            . _para(E::ts('<strong>Release history</strong>'))
-            . $this->createBranchList(),
+          'title' => $e->ts('{branch_eol_title}'),
+          'message' => $e->ts('{branch_eol_message}', $tsVars),
         ];
         break;
 
@@ -149,8 +154,8 @@ class SummaryReport {
         $result = [
           'name' => 'upgrade',
           'severity' => 'warning',
-          'title' => E::ts('CiviCRM Upgrade Available'),
-          'message' => $this->createBranchList(),
+          'title' => $e->ts('{branch_deprecated_title}'),
+          'message' => $e->ts('{branch_deprecated_message}', $tsVars),
         ];
         break;
 
@@ -159,8 +164,8 @@ class SummaryReport {
         $result = [
           'name' => 'upgrade',
           'severity' => 'notice',
-          'title' => E::ts('CiviCRM Upgrade Available'),
-          'message' => $this->createBranchList(),
+          'title' => $e->ts('{branch_stable_title}'),
+          'message' => $e->ts('{branch_stable_message}', $tsVars),
         ];
         break;
     }
@@ -175,6 +180,7 @@ class SummaryReport {
    *   HTML <UL> listing which identifies each of the patches
    */
   public function createPatchList() {
+    $e = $this->e;
     $va = $this->va;
     $userVer = $this->userVer;
 
@@ -182,7 +188,7 @@ class SummaryReport {
     foreach ($va->findPatchReleases($userVer) as $release) {
       $tsVars = [
         '{version}' => _link(
-          $release['version'] . (empty($release['security']) ? '' : ' ' . E::ts('(security)')),
+          $release['version'] . (empty($release['security']) ? '' : ' ' . $this->e->ts('(security)')),
           'https://download.civicrm.org/about/' . $release['version']
         ),
         '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
@@ -190,10 +196,10 @@ class SummaryReport {
       ];
 
       if (empty($release['message'])) {
-        $parts[] = _li(E::ts('{version} ({date})', $tsVars));
+        $parts[] = _li($e->ts('{version} ({date})', $tsVars));
       }
       else {
-        $parts[] = _li(E::ts('{version} ({date}): {message}', $tsVars));
+        $parts[] = _li($e->ts('{version} ({date}): {message}', $tsVars));
       }
     }
     return _list($parts);
@@ -222,10 +228,10 @@ class SummaryReport {
       ];
 
       if ($firstRelease['version'] === $latestRelease['version']) {
-        $branchVerSnippets[$branchVer] = _br(trim(E::ts('{firstVersion} was released on {firstDate}. {branchMessage}', $tsVars)));
+        $branchVerSnippets[$branchVer] = _br(trim($this->e->ts('{branch_list_item}', $tsVars)));
       }
       else {
-        $branchVerSnippets[$branchVer] = _br(trim(E::ts('{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}). {branchMessage}', $tsVars)));
+        $branchVerSnippets[$branchVer] = _br(trim($this->e->ts('{branch_list_item_patched}', $tsVars)));
       }
     }
 

@@ -1,0 +1,22 @@
+{
+  "{esrBranch}": "5.7",
+
+  "{branch_eol_title}": "CiviCRM Version End-of-Life",
+  "{branch_eol_message}": "<p>CiviCRM {userBranch} has reached its end-of-life. Security updates are not provided anymore. Please upgrade to the latest stable release ({latestStableBranch}) or an extended-security release ({esrBranch}).</p><p><strong>Release history</strong></p>{branchList}",
+
+  "{branch_deprecated_title}": "CiviCRM Upgrade Available",
+  "{branch_deprecated_message}": "{branchList}",
+
+  "{branch_stable_title}": "CiviCRM Upgrade Available",
+  "{branch_stable_message}": "{branchList}",
+
+  "{branch_list_item}": "{firstVersion} was released on {firstDate}. {branchMessage}",
+  "{branch_list_item_patched}": "{firstVersion} was released on {firstDate}. The latest patch revision is {latestVersion} ({latestDate}). {branchMessage}",
+
+  "{patch_insecure_title}": "CiviCRM Security Patch Needed",
+  "{patch_insecure_message}": "<p>The site is running {userVer}. Additional patches are available:</p>{patchList}",
+
+  "{patch_normal_title}": "CiviCRM Patch Available",
+  "{patch_normal_message}": "<p>The site is running {userVer}. Additional patches are available:</p>{patchList}"
+
+}
