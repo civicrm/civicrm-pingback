@@ -664,5 +664,14 @@
                 "message": "Fix regressions involving (1) contact images, (2) pagination in contribution report, and (3) multi-group filtering in Search Builder."
             }
         ]
+    },
+    "5.11": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.11.0",
+                "date": "2019-03-06"
+            }
+        ]
     }
 }
