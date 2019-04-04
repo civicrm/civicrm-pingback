@@ -235,7 +235,9 @@ class SummaryReport {
       }
     }
 
-    ksort($branchVerSnippets, SORT_NUMERIC);
+    uksort($branchVerSnippets, function ($a, $b) {
+      return version_compare($a, $b);
+    });
     return implode('', $branchVerSnippets);
   }
 
