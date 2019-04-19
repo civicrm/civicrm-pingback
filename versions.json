@@ -685,6 +685,11 @@
                 "version": "5.12.1",
                 "date": "2019-04-15",
                 "message": "Fix regression involving dedupe. Restore default menu color and allow customization."
+            },
+            {
+                "version": "5.12.2",
+                "date": "2019-04-19",
+                "message": "Fix regressions involving menu presentation, contact dashboard, and mailing preview."
             }
         ]
     }
