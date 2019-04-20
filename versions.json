@@ -690,6 +690,11 @@
                 "version": "5.12.2",
                 "date": "2019-04-19",
                 "message": "Fix regressions involving menu presentation, contact dashboard, and mailing preview."
+            },
+            {
+                "version": "5.12.3",
+                "date": "2019-04-20",
+                "message": "Fix regression involving \"Find Pledges\"."
             }
         ]
     }
