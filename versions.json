@@ -695,6 +695,11 @@
                 "version": "5.12.3",
                 "date": "2019-04-20",
                 "message": "Fix regression involving \"Find Pledges\"."
+            },
+            {
+                "version": "5.12.4",
+                "date": "2019-04-25",
+                "message": "Fix regression involving CiviMail previews. Fix new installer diagnostic."
             }
         ]
     }
