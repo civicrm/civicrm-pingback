@@ -702,5 +702,14 @@
                 "message": "Fix regression involving CiviMail previews. Fix new installer diagnostic."
             }
         ]
+    },
+    "5.13": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.13.0",
+                "date": "2019-05-01"
+            }
+        ]
     }
 }
