@@ -709,6 +709,11 @@
             {
                 "version": "5.13.0",
                 "date": "2019-05-01"
+            },
+            {
+                "version": "5.13.1",
+                "date": "2019-05-02",
+                "message": "Fix regression involving WordPress & REST. Fix upgrade issue for multilingual sites."
             }
         ]
     }
