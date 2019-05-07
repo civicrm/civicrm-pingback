@@ -714,6 +714,11 @@
                 "version": "5.13.1",
                 "date": "2019-05-02",
                 "message": "Fix regression involving WordPress & REST. Fix upgrade issue for multilingual sites."
+            },
+            {
+                "version": "5.13.2",
+                "date": "2019-05-06",
+                "message": "Fix regressions involving \"Activities\" sort-order and CiviCase's inbound email attachments."
             }
         ]
     }
