@@ -719,6 +719,11 @@
                 "version": "5.13.2",
                 "date": "2019-05-06",
                 "message": "Fix regressions involving \"Activities\" sort-order and CiviCase's inbound email attachments."
+            },
+            {
+                "version": "5.13.3",
+                "date": "2019-05-14",
+                "message": "Fix regressions involving activity and event listings. Fix new warnings involving menus and profile creation."
             }
         ]
     }
