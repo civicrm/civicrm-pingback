@@ -596,6 +596,13 @@
                 "version": "5.7.5",
                 "date": "2019-02-22",
                 "message": "Fix regression involving contact images"
+            },
+            {
+                "version": "5.7.6",
+                "date": "2019-05-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -724,6 +731,13 @@
                 "version": "5.13.3",
                 "date": "2019-05-14",
                 "message": "Fix regressions involving activity and event listings. Fix new warnings involving menus and profile creation."
+            },
+            {
+                "version": "5.13.4",
+                "date": "2019-05-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>.",
+                "security": "true",
+                "severity": "critical"
             }
         ]
     }
