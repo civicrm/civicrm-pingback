@@ -738,6 +738,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>.",
                 "security": "true",
                 "severity": "critical"
+            },
+            {
+                "version": "5.13.5",
+                "date": "2019-05-29",
+                "message": "Fix regressions involving certain membership statuses, D7 htmlpurifier, D8 public Javascript, jQuery in monorepos, re-sorting participants, and a breadcrumb."
             }
         ]
     }
