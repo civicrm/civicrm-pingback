@@ -61,8 +61,8 @@ navigate to `http://localhost/stable.php?format=devPreview`. This page is handy 
 There is also PHPUnit test coverage for the summary report in `SummaryReportTest` and `DevPreviewReportTest`.
 
 One of the tests, `DevPreviewReportTest::testExampleFile()`, has a special workflow.  Its purpose is to monitor changes
-in the HTML output across a series of example version-numbers.  To do this, we store a copy of the `devPreview` and see
-if the HTML has changed.
+in the HTML output across a series of example version-numbers.  To do this, we store copies of the `devPreview`
+generated from hypothetical data-sets (`ex1.json`, `ex2-dates.json`, etc) and see if the HTML changes.
 
 After making any changes to the HTML messages/markup in `SummaryReport` or `DevPreviewReport`, you can run `phpunit4`.
 It will highlight the HTML changes.  If the changes look good, then update the example file, e.g.
