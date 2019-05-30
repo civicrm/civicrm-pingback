@@ -30,7 +30,11 @@ class SummaryReportTest extends \PHPUnit_Framework_TestCase {
     $es[] = ['ex1.json', '4.7.31', 'upgrade', 'notice', 'CiviCRM Upgrade Available'];
     $es[] = ['ex1.json', '4.7.29', 'upgrade', 'notice', 'CiviCRM Upgrade Available'];
     $es[] = ['ex1.json', '4.6.36', 'upgrade', 'notice', 'CiviCRM Upgrade Available'];
-    $es[] = ['ex1.json', '4.5.10', 'upgrade', 'warning', 'CiviCRM Version End-of-Life'];
+    $es[] = ['ex1.json', '4.5.10', 'upgrade', 'critical', 'CiviCRM Security Upgrade Needed'];
+
+    $es[] = ['ex3.json', '5.9.1', 'upgrade', 'critical', 'CiviCRM Security Upgrade Needed'];
+    $es[] = ['ex3.json', '5.10.4', 'upgrade', 'warning', 'CiviCRM Version End-of-Life'];
+    $es[] = ['ex3.json', '5.11.0', 'upgrade', 'warning', 'CiviCRM Upgrade Available'];
 
     return $es;
   }

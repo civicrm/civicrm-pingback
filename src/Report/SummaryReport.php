@@ -148,6 +148,7 @@ class SummaryReport {
           'title' => $e->ts('{branch_eol_title}'),
           'message' => $e->ts('{branch_eol_message}', $tsVars),
         ];
+        $this->checkLaterSecurity($result, $tsVars, TRUE);
         break;
 
       case 'deprecated':
@@ -157,6 +158,7 @@ class SummaryReport {
           'title' => $e->ts('{branch_deprecated_title}'),
           'message' => $e->ts('{branch_deprecated_message}', $tsVars),
         ];
+        $this->checkLaterSecurity($result, $tsVars);
         break;
 
       case 'stable':
@@ -170,6 +172,35 @@ class SummaryReport {
         break;
     }
     return $result;
+  }
+
+  /**
+   * See if a later version has a security release.
+   *
+   * Used on deprecated and EOL versions.
+   *
+   * @param array $result
+   *   The system check details to be potentially modified.
+   * @param array $tsVars
+   *   Prepared variables for the messages.
+   * @param bool $eol
+   *   Is the version already EOL.
+   */
+  protected function checkLaterSecurity(&$result, $tsVars, $eol = FALSE) {
+    $va = $this->va;
+    $e = $this->e;
+
+    $versionDetails = $va->findReleaseByVersion($this->userVer);
+    $secDate = $va->findLatestSecurityDate();
+
+    if (is_null($versionDetails)
+      || (strtotime($versionDetails['date']) < strtotime($secDate))) {
+      $result['severity'] = 'critical';
+      $result['title'] = $e->ts('{branch_insecure_title}');
+      if (!$eol) {
+        $result['message'] = $e->ts('{branch_dep_insecure_message}', $tsVars);
+      }
+    }
   }
 
   /**

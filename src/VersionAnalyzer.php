@@ -209,9 +209,12 @@ class VersionAnalyzer {
   public function findLatestSecurityDate() {
     $secDate = NULL;
     foreach ($this->versions as $branchVer => $branchDef) {
-      foreach ($branchVer['releases'] as $release) {
+      if (empty($branchDef['releases'])) {
+        continue;
+      }
+      foreach ($branchDef['releases'] as $release) {
         if (!empty($release['security'])) {
-          if ($secDate === NULL || $release['date'] > $secDate) {
+          if ($secDate === NULL || strtotime($release['date']) > strtotime($secDate)) {
             $secDate = $release['date'];
           }
         }

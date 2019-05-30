@@ -1,0 +1,730 @@
+{
+    "4.6": {
+        "status": "lts",
+        "releases": [
+            {
+                "version": "4.6.alpha1",
+                "date": "2015-01-07"
+            },
+            {
+                "version": "4.6.alpha2",
+                "date": "2015-01-14"
+            },
+            {
+                "version": "4.6.alpha3",
+                "date": "2015-01-21"
+            },
+            {
+                "version": "4.6.alpha4",
+                "date": "2015-01-28"
+            },
+            {
+                "version": "4.6.alpha5",
+                "date": "2015-02-04"
+            },
+            {
+                "version": "4.6.alpha6",
+                "date": "2015-02-11"
+            },
+            {
+                "version": "4.6.alpha7",
+                "date": "2015-02-18"
+            },
+            {
+                "version": "4.6.beta1",
+                "date": "2015-02-25"
+            },
+            {
+                "version": "4.6.beta2",
+                "date": "2015-03-04"
+            },
+            {
+                "version": "4.6.beta3",
+                "date": "2015-03-11"
+            },
+            {
+                "version": "4.6.beta4",
+                "date": "2015-03-18"
+            },
+            {
+                "version": "4.6.beta5",
+                "date": "2015-03-25"
+            },
+            {
+                "version": "4.6.0",
+                "date": "2015-04-03"
+            },
+            {
+                "version": "4.6.1",
+                "date": "2015-04-15"
+            },
+            {
+                "version": "4.6.2",
+                "date": "2015-04-15"
+            },
+            {
+                "version": "4.6.3",
+                "date": "2015-05-20"
+            },
+            {
+                "version": "4.6.4",
+                "date": "2015-06-17"
+            },
+            {
+                "version": "4.6.5",
+                "date": "2015-07-16"
+            },
+            {
+                "version": "4.6.6",
+                "date": "2015-08-05"
+            },
+            {
+                "version": "4.6.7",
+                "date": "2015-08-19",
+                "security": "true"
+            },
+            {
+                "version": "4.6.8",
+                "date": "2015-08-25",
+                "security": "true"
+            },
+            {
+                "version": "4.6.9",
+                "date": "2015-10-07",
+                "security": "true"
+            },
+            {
+                "version": "4.6.10",
+                "date": "2015-11-04",
+                "security": "true"
+            },
+            {
+                "version": "4.6.11",
+                "date": "2016-01-05"
+            },
+            {
+                "version": "4.6.12",
+                "date": "2016-02-03",
+                "security": "true"
+            },
+            {
+                "version": "4.6.13",
+                "date": "2016-02-16"
+            },
+            {
+                "version": "4.6.14",
+                "date": "2016-03-02",
+                "security": "true"
+            },
+            {
+                "version": "4.6.15",
+                "date": "2016-04-06"
+            },
+            {
+                "version": "4.6.16",
+                "date": "2016-05-04",
+                "security": "true"
+            },
+            {
+                "version": "4.6.17",
+                "date": "2016-06-01",
+                "security": "true"
+            },
+            {
+                "version": "4.6.18",
+                "date": "2016-06-06"
+            },
+            {
+                "version": "4.6.19",
+                "date": "2016-07-05"
+            },
+            {
+                "version": "4.6.20",
+                "date": "2016-08-03"
+            },
+            {
+                "version": "4.6.21",
+                "date": "2016-09-07",
+                "security": "true"
+            },
+            {
+                "version": "4.6.22",
+                "date": "2016-10-04"
+            },
+            {
+                "version": "4.6.23",
+                "date": "2016-11-02"
+            },
+            {
+                "version": "4.6.24",
+                "date": "2016-12-07",
+                "security": "true"
+            },
+            {
+                "version": "4.6.25",
+                "date": "2017-01-04"
+            },
+            {
+                "version": "4.6.26",
+                "date": "2017-02-02"
+            },
+            {
+                "version": "4.6.27",
+                "date": "2017-03-08"
+            },
+            {
+                "version": "4.6.28",
+                "date": "2017-05-03"
+            },
+            {
+                "version": "4.6.29",
+                "date": "2017-07-05",
+                "security": "true"
+            },
+            {
+                "version": "4.6.30",
+                "date": "2017-07-12"
+            },
+            {
+                "version": "4.6.31",
+                "date": "2017-08-02"
+            },
+            {
+                "version": "4.6.32",
+                "date": "2017-10-04"
+            },
+            {
+                "version": "4.6.33",
+                "date": "2017-11-01",
+                "security": "true"
+            },
+            {
+                "version": "4.6.34",
+                "date": "2017-12-20"
+            },
+            {
+                "version": "4.6.35",
+                "date": "2018-02-07"
+            },
+            {
+                "version": "4.6.36",
+                "date": "2018-03-07"
+            },
+            {
+                "version": "4.6.37",
+                "date": "2018-06-06"
+            },
+            {
+                "version": "4.6.38",
+                "date": "2018-07-18",
+                "security": "true"
+            }
+        ]
+    },
+    "4.7": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "4.7.alpha1",
+                "date": "2015-09-23"
+            },
+            {
+                "version": "4.7.alpha2",
+                "date": "2015-09-30"
+            },
+            {
+                "version": "4.7.alpha3",
+                "date": "2015-10-07"
+            },
+            {
+                "version": "4.7.alpha4",
+                "date": "2015-10-14"
+            },
+            {
+                "version": "4.7.alpha5",
+                "date": "2015-10-21"
+            },
+            {
+                "version": "4.7.beta1",
+                "date": "2015-12-03"
+            },
+            {
+                "version": "4.7.beta2",
+                "date": "2015-12-09"
+            },
+            {
+                "version": "4.7.beta3",
+                "date": "2015-12-15"
+            },
+            {
+                "version": "4.7.beta4",
+                "date": "2015-12-23"
+            },
+            {
+                "version": "4.7.beta5",
+                "date": "2015-12-30"
+            },
+            {
+                "version": "4.7.beta6",
+                "date": "2016-01-06"
+            },
+            {
+                "version": "4.7.beta7",
+                "date": "2016-01-12"
+            },
+            {
+                "version": "4.7.beta8",
+                "date": "2016-01-20"
+            },
+            {
+                "version": "4.7.0",
+                "date": "2016-01-27"
+            },
+            {
+                "version": "4.7.1",
+                "date": "2016-02-03",
+                "security": "true"
+            },
+            {
+                "version": "4.7.2",
+                "date": "2016-02-17"
+            },
+            {
+                "version": "4.7.3",
+                "date": "2016-03-02",
+                "security": "true"
+            },
+            {
+                "version": "4.7.4",
+                "date": "2016-03-16"
+            },
+            {
+                "version": "4.7.5",
+                "date": "2016-04-06"
+            },
+            {
+                "version": "4.7.6",
+                "date": "2016-04-07"
+            },
+            {
+                "version": "4.7.7",
+                "date": "2016-05-04",
+                "security": "true"
+            },
+            {
+                "version": "4.7.8",
+                "date": "2016-06-01",
+                "security": "true"
+            },
+            {
+                "version": "4.7.9",
+                "date": "2016-07-05"
+            },
+            {
+                "version": "4.7.10",
+                "date": "2016-08-03"
+            },
+            {
+                "version": "4.7.11",
+                "date": "2016-09-07",
+                "security": "true"
+            },
+            {
+                "version": "4.7.12",
+                "date": "2016-10-04"
+            },
+            {
+                "version": "4.7.13",
+                "date": "2016-11-02"
+            },
+            {
+                "version": "4.7.14",
+                "date": "2016-12-07",
+                "security": "true"
+            },
+            {
+                "version": "4.7.15",
+                "date": "2017-01-04"
+            },
+            {
+                "version": "4.7.16",
+                "date": "2017-02-08"
+            },
+            {
+                "version": "4.7.17",
+                "date": "2017-03-08"
+            },
+            {
+                "version": "4.7.18",
+                "date": "2017-04-05"
+            },
+            {
+                "version": "4.7.19",
+                "date": "2017-05-03"
+            },
+            {
+                "version": "4.7.20",
+                "date": "2017-06-10"
+            },
+            {
+                "version": "4.7.21",
+                "date": "2017-07-05",
+                "security": "true"
+            },
+            {
+                "version": "4.7.22",
+                "date": "2017-07-12"
+            },
+            {
+                "version": "4.7.23",
+                "date": "2017-08-02"
+            },
+            {
+                "version": "4.7.24",
+                "date": "2017-09-06"
+            },
+            {
+                "version": "4.7.25",
+                "date": "2017-10-04"
+            },
+            {
+                "version": "4.7.26",
+                "date": "2017-11-01",
+                "security": "true"
+            },
+            {
+                "version": "4.7.27",
+                "date": "2017-11-01"
+            },
+            {
+                "version": "4.7.28",
+                "date": "2017-12-06"
+            },
+            {
+                "version": "4.7.29",
+                "date": "2017-12-20"
+            },
+            {
+                "version": "4.7.30",
+                "date": "2018-02-07"
+            },
+            {
+                "version": "4.7.31",
+                "date": "2018-03-07"
+            }
+        ]
+    },
+    "5.0": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.0.0",
+                "date": "2018-04-04"
+            },
+            {
+                "version": "5.0.1",
+                "date": "2018-04-19",
+                "message": "Fix recent regression causing Dedupe screen to fail on WordPress. Update in-app version messaging."
+            },
+            {
+                "version": "5.0.2",
+                "date": "2018-04-25",
+                "severity": "notice",
+                "message": "Fix broken link to release notes."
+            }
+        ]
+    },
+    "5.1": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.1.0",
+                "date": "2018-05-02"
+            },
+            {
+                "version": "5.1.1",
+                "date": "2018-05-15",
+                "message": "Fix recent regressions relating to address searching and email invoices. Add utility to correct multilingual issues."
+            },
+            {
+                "version": "5.1.2",
+                "date": "2018-05-16",
+                "message": "Fix recent regression in 5.1.1 due to incomplete backport"
+            }
+        ]
+    },
+    "5.2": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.2.0",
+                "date": "2018-06-06"
+            },
+            {
+                "version": "5.2.1",
+                "date": "2018-06-08",
+                "severity": "notice",
+                "message": "Fix recent regression in 5.2.0 when contribution reports include soft-credit column"
+            },
+            {
+                "version": "5.2.2",
+                "date": "2018-06-19",
+                "severity": "notice",
+                "message": "Fix recent regression in 5.2.0 where backoffce event registration failed to load on WordPress"
+            }
+        ]
+    },
+    "5.3": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.3.0",
+                "date": "2018-07-04"
+            },
+            {
+                "version": "5.3.1",
+                "date": "2018-07-18",
+                "security": "true",
+                "message": "Fix seven security issues, including at least one highly critical"
+            },
+            {
+                "version": "5.3.2",
+                "date": "2018-07-25",
+                "message": "Fix regressions in PCP events, merge screen, and 'Check for Matching Contact'"
+            }
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10",
+            "eol": "2019-01-09"
+        }
+    },
+    "5.4": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.4.0",
+                "date": "2018-08-01"
+            },
+            {
+                "version": "5.4.1",
+                "date": "2018-08-25",
+                "message": "Fixes regressions affecting SMS and Memcache users. Fix upgrade issues."
+            }
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10",
+            "eol": "2019-01-09"
+        }
+    },
+    "5.5": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.5.0",
+                "date": "2018-09-11"
+            },
+            {
+                "version": "5.5.1",
+                "date": "2018-09-12",
+                "message": "Fix recent regression affecting relationship-based smart-groups which predate 5.5.0",
+                "severity": "notice"
+            },
+            {
+                "version": "5.5.2",
+                "date": "2018-09-20",
+                "message": "Fix regression which prevents editing CiviCase configuration on new sites",
+                "severity": "notice"
+            },
+            {
+                "version": "5.5.3",
+                "date": "2018-09-25",
+                "message": "Fix regressions affecting (a) editing newly created option groups and (b) editing tags via profile",
+                "severity": "notice"
+            }
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10"
+        }
+    },
+    "5.6": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.6.0",
+                "date": "2018-10-03"
+            },
+            {
+                "version": "5.6.1",
+                "date": "2018-10-23",
+                "message": "Fix regressions affecting certain reports, certain smart groups, menu alignment on Joomla, and an overzealous permission."
+            }
+        ],
+        "schedule": {
+            "deprecated": "2018-12-10"
+        }
+    },
+    "5.7": {
+        "status": "stable",
+        "message": "5.7.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/blog\/josh\/civicrm-version-57-candidate-for-extended-security-release\">Extended Security Release<\/a>.<\/strong>",
+        "releases": [
+            {
+                "version": "5.7.0",
+                "date": "2018-11-07"
+            },
+            {
+                "version": "5.7.1",
+                "date": "2018-11-20",
+                "message": "Fix regression in search task \"Tag Contacts\"."
+            },
+            {
+                "version": "5.7.2",
+                "date": "2018-11-20",
+                "message": "Fix regression in displaying UTF-8 in some dropdowns."
+            },
+            {
+                "version": "5.7.3",
+                "date": "2018-12-05",
+                "message": "Fix regressions in (a) recalculating edited net-amount and (b) loading unnecessary\/nonexistent file."
+            },
+            {
+                "version": "5.7.4",
+                "date": "2019-02-20",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
+                "security": "true"
+            },
+            {
+                "version": "5.7.5",
+                "date": "2019-02-22",
+                "message": "Fix regression involving contact images"
+            }
+        ]
+    },
+    "5.8": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.8.0",
+                "date": "2018-12-05"
+            },
+            {
+                "version": "5.8.1",
+                "date": "2018-12-12",
+                "message": "Fix regressions involving a date icon, a search setting, an email subject line, and an unnecessary warning."
+            },
+            {
+                "version": "5.8.2",
+                "date": "2018-12-17",
+                "message": "Fix regressions involving activity-sequences, quick search by email, an API filter option, and two backend forms for CiviContribute\/CiviMember."
+            }
+        ],
+        "schedule": {
+            "deprecated": "2019-01-06"
+        }
+    },
+    "5.9": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.9.0",
+                "date": "2019-01-02"
+            },
+            {
+                "version": "5.9.1",
+                "date": "2019-01-16",
+                "message": "Fix regressions involving (1) anonymous users of contribution\/event-registration screens and (2) filters in \"Manage Case\" screen"
+            }
+        ]
+    },
+    "5.10": {
+        "status": "eol",
+        "releases": [
+            {
+                "version": "5.10.0",
+                "date": "2019-02-06"
+            },
+            {
+                "version": "5.10.1",
+                "date": "2019-02-12",
+                "message": "Fix regression involving validation of backend credit card form"
+            },
+            {
+                "version": "5.10.2",
+                "date": "2019-02-14",
+                "message": "Fix regressions involving deletion of relationships, the \"Change Case Status\" form, and smart-groups on ACL-enabled systems."
+            },
+            {
+                "version": "5.10.3",
+                "date": "2019-02-20",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
+                "security": "true"
+            },
+            {
+                "version": "5.10.4",
+                "date": "2019-02-22",
+                "message": "Fix regressions involving (1) contact images, (2) pagination in contribution report, and (3) multi-group filtering in Search Builder."
+            }
+        ]
+    },
+    "5.11": {
+        "status": "deprecated",
+        "releases": [
+            {
+                "version": "5.11.0",
+                "date": "2019-03-06"
+            }
+        ]
+    },
+    "5.12": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.12.0",
+                "date": "2019-04-04"
+            },
+            {
+                "version": "5.12.1",
+                "date": "2019-04-15",
+                "message": "Fix regression involving dedupe. Restore default menu color and allow customization."
+            },
+            {
+                "version": "5.12.2",
+                "date": "2019-04-19",
+                "message": "Fix regressions involving menu presentation, contact dashboard, and mailing preview."
+            },
+            {
+                "version": "5.12.3",
+                "date": "2019-04-20",
+                "message": "Fix regression involving \"Find Pledges\"."
+            },
+            {
+                "version": "5.12.4",
+                "date": "2019-04-25",
+                "message": "Fix regression involving CiviMail previews. Fix new installer diagnostic."
+            }
+        ]
+    },
+    "5.13": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.13.0",
+                "date": "2019-05-01"
+            },
+            {
+                "version": "5.13.1",
+                "date": "2019-05-02",
+                "message": "Fix regression involving WordPress & REST. Fix upgrade issue for multilingual sites."
+            },
+            {
+                "version": "5.13.2",
+                "date": "2019-05-06",
+                "message": "Fix regressions involving \"Activities\" sort-order and CiviCase's inbound email attachments."
+            },
+            {
+                "version": "5.13.3",
+                "date": "2019-05-14",
+                "message": "Fix regressions involving activity and event listings. Fix new warnings involving menus and profile creation."
+            }
+        ]
+    }
+}
