@@ -40,8 +40,7 @@ class DevPreviewReport {
   public function handleRequest() {
     $versions = explode(',', $this->request->get('versions', '5.0.0,5.0.beta1,4.7.32,4.7.29,4.6.36,4.6.32,4.5.10'));
 
-    $buf = [];
-
+    $msgs = [];
     foreach ($versions as $version) {
       VersionNumber::assertWellFormed($version);
       $fakeRequest = new Request([
@@ -50,13 +49,27 @@ class DevPreviewReport {
       ]);
 
       $sr = new SummaryReport($fakeRequest, VersionsFile::getFileName($this->request->get('versionsFile', '')));
-      $msgs = json_decode($sr->handleRequest()->getContent(), 1);
-      $buf[] = self::renderMessages($version, $msgs);
+      $msgs[$version] = json_decode($sr->handleRequest()->getContent(), 1);
     }
 
-    return new Response(
-      sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf))
-    );
+    switch ($this->request->get('format')) {
+      case 'devPreview':
+      case 'devPreviewHtml':
+        $buf = [];
+        foreach ($msgs as $version => $verMsgs) {
+          $buf[] = self::renderMessages($version, $verMsgs);
+        }
+        return new Response(sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf)));
+
+      case 'devPreviewJson':
+        return new Response(json_encode($msgs), 200, ['Content-Type' => 'application/json']);
+
+      case 'devPreviewCsv':
+        return new Response(self::renderCsv($msgs), 200, ['Content-Type' => 'text/csv']);
+
+      default:
+        throw new \RuntimeException('Unrecognized format');
+    }
   }
 
   public static function renderMessages($version, $msgs) {
@@ -85,6 +98,22 @@ class DevPreviewReport {
       '{title}' => htmlentities($title),
       '{fields}' => implode('', $rows),
     ]);
+  }
+
+  /**
+   * @param array $msgs
+   *   Array(string $version => array $msgList)
+   * @return string
+   */
+  public static function renderCsv($msgs) {
+    $rows = [];
+    $rows[] = ['tgt.version', 'msg.name', 'msg.severity', 'msg.title', 'msg.message'];
+    foreach ($msgs as $version => $verMsgs) {
+      foreach ($verMsgs as $msg) {
+        $rows[] = [$version, $msg['name'], $msg['severity'], $msg['title'], $msg['message']];
+      }
+    }
+    return \Pingback\CsvGenerator::create($rows);
   }
 
 }
