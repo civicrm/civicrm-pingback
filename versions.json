@@ -643,7 +643,7 @@
         ]
     },
     "5.10": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.10.0",
@@ -673,7 +673,7 @@
         ]
     },
     "5.11": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.11.0",
@@ -682,7 +682,7 @@
         ]
     },
     "5.12": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.12.0",
