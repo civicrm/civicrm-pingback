@@ -3,8 +3,32 @@ namespace Pingback;
 
 class VersionsFile {
 
-  public static function getFileName() {
-    return dirname(__DIR__) . "/versions.json";
+  /**
+   * @param string $name
+   *   Ex: 'versions.json' or 'ex1.json'
+   * @return string
+   *   Ex: '/var/foo/bar.json'.
+   * @throws \Exception
+   */
+  public static function getFileName($name = 'versions.json') {
+    switch ($name) {
+      case 'ex1.json':
+        return dirname(__DIR__) . '/tests/ex1.json';
+
+      case 'ex2.json':
+      case 'ex2-dates.json':
+        return dirname(__DIR__) . '/tests/ex2-dates.json';
+
+      case 'staging.json':
+        return dirname(__DIR__) . '/versions.staging.json';
+
+      case '':
+      case 'versions.json':
+        return dirname(__DIR__) . "/versions.json";
+
+      default:
+        throw new \Exception('Invalid versionsFile');
+    }
   }
 
   /**

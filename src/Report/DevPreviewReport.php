@@ -33,33 +33,6 @@ class DevPreviewReport {
    */
   protected $request;
 
-  /**
-   * @param string $file
-   *   Ex: '' or 'ex1.json'
-   * @return string
-   *   Ex: '/var/foo/bar.json'.
-   * @throws \Exception
-   */
-  public function findVersionsFile($file) {
-    switch ($file) {
-      case 'ex1.json':
-        return dirname(dirname(__DIR__)) . '/tests/ex1.json';
-
-      case 'ex2.json':
-      case 'ex2-dates.json':
-        return dirname(dirname(__DIR__)) . '/tests/ex2-dates.json';
-
-      case 'staging.json':
-        return dirname(dirname(__DIR__)) . '/versions.staging.json';
-
-      case '':
-        return VersionsFile::getFileName();
-
-      default:
-        throw new \Exception('Invalid versionsFile');
-    }
-  }
-
   public function __construct(Request $request) {
     $this->request = $request;
   }
@@ -76,7 +49,7 @@ class DevPreviewReport {
         'version' => $version,
       ]);
 
-      $sr = new SummaryReport($fakeRequest, $this->findVersionsFile($this->request->get('versionsFile', '')));
+      $sr = new SummaryReport($fakeRequest, VersionsFile::getFileName($this->request->get('versionsFile', '')));
       $msgs = json_decode($sr->handleRequest()->getContent(), 1);
       $buf[] = self::renderMessages($version, $msgs);
     }
