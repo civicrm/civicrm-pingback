@@ -745,5 +745,14 @@
                 "message": "Fix regressions involving certain membership statuses, D7 htmlpurifier, D8 public Javascript, jQuery in monorepos, re-sorting participants, and a breadcrumb."
             }
         ]
+    },
+    "5.14": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.14.0",
+                "date": "2019-06-05"
+            }
+        ]
     }
 }
