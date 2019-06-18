@@ -752,6 +752,11 @@
             {
                 "version": "5.14.0",
                 "date": "2019-06-05"
+            },
+            {
+                "version": "5.14.1",
+                "date": "2019-06-17",
+                "message": "Fix recent regressions involving some uploaded images and some activity submissions. Mitigate timeouts during status-check."
             }
         ]
     }
