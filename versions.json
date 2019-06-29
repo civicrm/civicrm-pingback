@@ -762,6 +762,11 @@
                 "version": "5.14.1",
                 "date": "2019-06-17",
                 "message": "Fix recent regressions involving some uploaded images and some activity submissions. Mitigate timeouts during status-check."
+            },
+            {
+                "version": "5.14.2",
+                "date": "2019-06-29",
+                "message": "Fix recent regressions involving sample data-set and dashboard activity feed (with ACLs)."
             }
         ]
     }
