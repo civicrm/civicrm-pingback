@@ -589,18 +589,18 @@
             {
                 "version": "5.7.4",
                 "date": "2019-02-20",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "security": "true"
             },
             {
                 "version": "5.7.5",
                 "date": "2019-02-22",
-                "message": "Fix regression involving contact images. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
+                "message": "Fix regression involving contact images. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
             },
             {
                 "version": "5.7.6",
                 "date": "2019-05-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -747,7 +747,7 @@
             {
                 "version": "5.13.6",
                 "date": "2019-06-17",
-                "message": "Fix regressions involving some uploaded images, recurring contributions with legacy IPN, and exporting soft credits. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
+                "message": "Fix regressions involving some uploaded images, recurring contributions with legacy IPN, and exporting soft credits. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
             }
         ]
     },
@@ -767,6 +767,15 @@
                 "version": "5.14.2",
                 "date": "2019-06-29",
                 "message": "Fix recent regressions involving sample data-set and dashboard activity feed (with ACLs)."
+            }
+        ]
+    },
+    "5.15": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.15.0",
+                "date": "2019-07-03"
             }
         ]
     }
