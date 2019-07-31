@@ -781,6 +781,11 @@
                 "version": "5.15.1",
                 "date": "2019-07-10",
                 "message": "Fix recent regressions involving a refund use-case, a contribution report, and D8 CLI support."
+            },
+            {
+                "version": "5.15.2",
+                "date": "2019-07-31",
+                "message": "Fix recent issues regarding search selections, activity custom data, a contribution message, and a MySQL status check."
             }
         ]
     }
