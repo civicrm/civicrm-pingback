@@ -788,5 +788,14 @@
                 "message": "Fix recent issues regarding search selections, activity custom data, a contribution message, and a MySQL status check."
             }
         ]
+    },
+    "5.16": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.16.0",
+                "date": "2019-08-07"
+            }
+        ]
     }
 }
