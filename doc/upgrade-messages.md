@@ -9,7 +9,9 @@ A message is an alert/status note displayed to a site administrator (*permission
 * `title` (printable text, brief)
 * `message` (printable text, longer, HTML)
 
-http://latest.civicrm.org/stable.php?format=devPreview&versions=5.0.
+Examples:
+* http://latest.civicrm.org/stable.php?format=devPreview&versions=5.0.2
+* http://latest.civicrm.org/stable.php?format=devPreview&versions=5.15.0
 
 ### Q: I want to change some text. Isn't the following text ("...") better than old text ("...")?
 
