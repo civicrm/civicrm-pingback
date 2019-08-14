@@ -54,6 +54,12 @@ In both cases, the message content should draw more attention to facts than to j
 * *Example*: It is a *judgment* that every site ought to be upgraded on a incremental/continuous basis. It is a *judgment* that every site ought to peg to an "X.Y" version for 12 months.
 * *Exception*: The following judgments are endorsed: It is preferrable to run a version *without any known security vulnerabilities*. It is preferrable to run a version *with active security support*.
 
-### Q: Can upgrade messages be distilled into one brief statement (3-10 words)?
+### Q: Why do the upgrade messages show a list of versions?
 
-Maybe. I haven't seen a good one. If you've got one, evaluate it from the various perspectives of (a) different versions and (b) different upgrade/maintenance mentalities.
+The list can be verbose, and many readers aren't going to think through every detail in there. So why show it?
+
+For me, it's based in a critique that Edward Tufte makes repeatedly about information-display: to give the reader an intuitive understanding of the information, you should present it with a *meaningful scale*.
+
+If a typical reader looks at the text "5.10=>5.11" and the text "5.10=>5.16", they cannot intuit much. Visually, those look the same. To get some meaning from them, you need to understand what each increment means `$X` change, and then do a mental adjustment to determine how big `$X * (11-10)` or `$X * (16-10)`. Of course, it doesn't help that amount of incremental change `$X` varies project-to-project.
+
+The list tries to give the reader better intuition about the scale of changes. It equates "1 version == 1 month == 1 row". If I see 3 rows, then that means my upgrade will have to address 3 months worth of change. Then I ask myself, "Do I want to upgrade now, or should I wait another 3 months?" I can reason about that question more accurately/intuitively because the visual elements correspond to the amount of change, and there are several signals (the month numbers; the length of the release notes) which can reinforce this sense of scale.
