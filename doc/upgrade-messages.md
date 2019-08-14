@@ -60,6 +60,8 @@ The list can be verbose, and many readers aren't going to think through every de
 
 For me, it's based in a critique that Edward Tufte makes repeatedly about information-display: to give the reader an intuitive understanding of the information, you should present it with a *meaningful scale*.
 
-If a typical reader looks at the text "5.10=>5.11" and the text "5.10=>5.16", they cannot intuit much. Visually, those look the same. To get some meaning from them, you need to understand what each increment means `$X` change, and then do a mental adjustment to determine how big `$X * (11-10)` or `$X * (16-10)`. Of course, it doesn't help that amount of incremental change `$X` varies project-to-project.
+If a typical reader looks at the text "5.10=>5.11" and the text "5.10=>5.16", they cannot intuit much. Visually, those look the same. To get some meaning from them, you need to understand that each increment means `$X` change, and then do a mental adjustment to determine the size of `(11-10)*$X` or `(16-10)*$X`. Of course, it doesn't help that `$X` naturally varies from project-to-project.
 
 The list tries to give the reader better intuition about the scale of changes. It equates "1 version == 1 month == 1 row". If I see 3 rows, then that means my upgrade will have to address 3 months worth of change. Then I ask myself, "Do I want to upgrade now, or should I wait another 3 months?" I can reason about that question more accurately/intuitively because the visual elements correspond to the amount of change, and there are several signals (the month numbers; the length of the release notes) which can reinforce this sense of scale.
+
+These messages are not *advocacy* -- they're not actually trying to prod users to a pre-determined behavior. Rather, they are *education* -- they aim to help the reader make decisions based on realistic expectations.
