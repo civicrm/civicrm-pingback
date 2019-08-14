@@ -54,8 +54,4 @@ In both cases, the message content should draw more attention to facts than to j
 
 ### Q: Can upgrade messages be distilled into one brief statement (3-10 words)?
 
-If there were a single, simple, generally-agreed upgrade/maintenance strategy, then yes.
-
-If you're dealing with a specific edge-case, then perhaps.
-
-Generally, I think it's important to consider the diversity of the readership - and this will make it hard to give simple/good/effective automated advice.
+Maybe. I haven't seen a good one. If you've got one, evaluate it from the various perspectives of (a) different versions and (b) different upgrade/maintenance mentalities.
