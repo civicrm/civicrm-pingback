@@ -795,6 +795,16 @@
             {
                 "version": "5.16.0",
                 "date": "2019-08-07"
+            },
+            {
+                "version": "5.16.1",
+                "date": "2019-08-12",
+                "message": "Fix recent regressions involving custom searches and menu reloads."
+            },
+            {
+                "version": "5.16.2",
+                "date": "2019-08-14",
+                "message": "Fix recent regressions involving \"Edit Financial Account\"."
             }
         ]
     }
