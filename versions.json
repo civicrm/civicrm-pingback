@@ -805,6 +805,11 @@
                 "version": "5.16.2",
                 "date": "2019-08-14",
                 "message": "Fix recent regressions involving \"Edit Financial Account\"."
+            },
+            {
+                "version": "5.16.3",
+                "date": "2019-08-2",
+                "message": "Fix recent regressions involving CiviCase merges, custom file fields, and editing \"Additional Details\" of contributions. Improve error-reporting for unsupported PHP versions."
             }
         ]
     }
