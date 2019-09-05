@@ -817,5 +817,14 @@
                 "message": "Fix recent regression involving smart-groups with relative date-filters."
             }
         ]
+    },
+    "5.17": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.17.0",
+                "date": "2019-09-04"
+            }
+        ]
     }
 }
