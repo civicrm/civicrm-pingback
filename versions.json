@@ -824,6 +824,11 @@
             {
                 "version": "5.17.0",
                 "date": "2019-09-04"
+            },
+            {
+                "version": "5.17.1",
+                "date": "2019-09-09",
+                "message": "Fix recent regression involving CiviCampaign deletion. Fix recent upgrade issue with handling pptx files."
             }
         ]
     }
