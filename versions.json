@@ -829,6 +829,16 @@
                 "version": "5.17.1",
                 "date": "2019-09-09",
                 "message": "Fix recent regression involving CiviCampaign deletion. Fix recent upgrade issue with handling pptx files."
+            },
+            {
+                "version": "5.17.2",
+                "date": "2019-09-09",
+                "message": "Fix recent regression involving Advanced Search (with email)."
+            },
+            {
+                "version": "5.17.3",
+                "date": "2019-09-10",
+                "message": "Fix recent regressions involving Advanced Search (with email), CiviReport styling, and D8 warnings."
             }
         ]
     }
