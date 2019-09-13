@@ -839,6 +839,11 @@
                 "version": "5.17.3",
                 "date": "2019-09-10",
                 "message": "Fix recent regressions involving Advanced Search (with email), CiviReport styling, and D8 warnings."
+            },
+            {
+                "version": "5.17.4",
+                "date": "2019-09-12",
+                "message": "Fix recent regressions involving the \"export\" hook, custom-fields for events, and configurations which have disabled \"Household\" contacts."
             }
         ]
     }
