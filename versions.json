@@ -844,6 +844,11 @@
                 "version": "5.17.4",
                 "date": "2019-09-12",
                 "message": "Fix recent regressions involving the \"export\" hook, custom-fields for events, and configurations which have disabled \"Household\" contacts."
+            },
+            {
+                "version": "5.17.5",
+                "date": "2019-09-26",
+                "message": "Fix recent regression involving new recurring memberships created through backend."
             }
         ]
     }
