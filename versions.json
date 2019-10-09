@@ -851,5 +851,19 @@
                 "message": "Fix recent regression involving new recurring memberships created through backend."
             }
         ]
+    },
+    "5.18": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.18.0",
+                "date": "2019-10-04"
+            },
+            {
+                "version": "5.18.1",
+                "date": "2019-10-05",
+                "message": "Fix recent regressions involving new memberships and exports."
+            }
+        ]
     }
 }
