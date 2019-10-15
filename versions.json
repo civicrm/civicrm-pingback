@@ -868,6 +868,11 @@
                 "version": "5.18.2",
                 "date": "2019-10-09",
                 "message": "Fix recent regressions involving import/export and profile search results."
+            },
+            {
+                "version": "5.18.3",
+                "date": "2019-10-15",
+                "message": "Fix recent regressions involving certain pending memberships and certain pending contributions."
             }
         ]
     }
