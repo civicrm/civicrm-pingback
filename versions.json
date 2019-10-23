@@ -873,6 +873,11 @@
                 "version": "5.18.3",
                 "date": "2019-10-15",
                 "message": "Fix recent regressions involving certain pending memberships and certain pending contributions."
+            },
+            {
+                "version": "5.18.4",
+                "date": "2019-10-22",
+                "message": "Fix recent regressions involving certain PayPal-based memberships, \"Additional Payments\", the \"Dedupe\" API, and certain reports and notification-emails."
             }
         ]
     }
