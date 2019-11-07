@@ -867,7 +867,7 @@
             {
                 "version": "5.18.2",
                 "date": "2019-10-09",
-                "message": "Fix recent regressions involving import/export and profile search results."
+                "message": "Fix recent regressions involving import\/export and profile search results."
             },
             {
                 "version": "5.18.3",
@@ -878,6 +878,15 @@
                 "version": "5.18.4",
                 "date": "2019-10-22",
                 "message": "Fix recent regressions involving certain PayPal-based memberships, \"Additional Payments\", the \"Dedupe\" API, and certain reports and notification-emails."
+            }
+        ]
+    },
+    "5.19": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.19.0",
+                "date": "2019-11-06"
             }
         ]
     }
