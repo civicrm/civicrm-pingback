@@ -906,6 +906,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-19 through CIVI-SA-2019-23<\/a>. Fix recent regressions.",
                 "security": "true",
                 "severity": "critical"
+            },
+            {
+                "version": "5.19.3",
+                "date": "2019-11-25",
+                "message": "Fix recent regression involving wp-cli and CiviMail hyperlinks."
             }
         ]
     }
