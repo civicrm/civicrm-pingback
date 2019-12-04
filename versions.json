@@ -755,6 +755,13 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-19 through CIVI-SA-2019-23<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.13.8",
+                "date": "2019-12-04",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-24<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -911,6 +918,22 @@
                 "version": "5.19.3",
                 "date": "2019-11-25",
                 "message": "Fix recent regression involving wp-cli and CiviMail hyperlinks."
+            },
+            {
+                "version": "5.19.4",
+                "date": "2019-12-04",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-24<\/a>. Fix recent regressions.",
+                "security": "true",
+                "severity": "critical"
+            }
+        ]
+    },
+    "5.20": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.20.0",
+                "date": "2019-12-04"
             }
         ]
     }
