@@ -934,6 +934,11 @@
             {
                 "version": "5.20.0",
                 "date": "2019-12-04"
+            },
+            {
+                "version": "5.20.1",
+                "date": "2019-12-10",
+                "message": "Fix recent regressions involving relational memberships and the upgrader."
             }
         ]
     }
