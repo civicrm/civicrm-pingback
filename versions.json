@@ -944,6 +944,11 @@
                 "version": "5.20.2",
                 "date": "2019-12-11",
                 "message": "Fix recent regressions involving partial-payments and multi-participant payments."
+            },
+            {
+                "version": "5.20.3",
+                "date": "2019-12-28",
+                "message": "Fix recent regressions involving participant names, membership receipts, and membership imports."
             }
         ]
     }
