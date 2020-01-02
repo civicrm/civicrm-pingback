@@ -951,5 +951,14 @@
                 "message": "Fix recent regressions involving participant names, membership receipts, and membership imports."
             }
         ]
+    },
+    "5.21": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.21.0",
+                "date": "2019-01-01"
+            }
+        ]
     }
 }
