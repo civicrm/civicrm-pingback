@@ -958,6 +958,11 @@
             {
                 "version": "5.21.0",
                 "date": "2019-01-01"
+            },
+            {
+                "version": "5.21.1",
+                "date": "2019-01-10",
+                "message": "Fix recent regressions involving \"Enable multiple bulk emails\" and \"Payment Summary\" table."
             }
         ]
     }
