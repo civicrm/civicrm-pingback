@@ -957,12 +957,17 @@
         "releases": [
             {
                 "version": "5.21.0",
-                "date": "2019-01-01"
+                "date": "2020-01-01"
             },
             {
                 "version": "5.21.1",
-                "date": "2019-01-10",
+                "date": "2020-01-10",
                 "message": "Fix recent regressions involving \"Enable multiple bulk emails\" and \"Payment Summary\" table."
+            },
+            {
+                "version": "5.21.2",
+                "date": "2020-01-23",
+                "message": "Fix recent regressions involving contact date-filters, certain receipts, certain smart-groups, and localized installation."
             }
         ]
     }
