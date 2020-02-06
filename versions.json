@@ -970,5 +970,14 @@
                 "message": "Fix recent regressions involving contact date-filters, certain receipts, certain smart-groups, and localized installation."
             }
         ]
+    },
+    "5.22": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.22.0",
+                "date": "2020-02-05"
+            }
+        ]
     }
 }
