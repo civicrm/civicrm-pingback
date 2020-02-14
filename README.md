@@ -29,6 +29,25 @@ Requirements:
 ./bin/pb release:add 4.7.99
 ```
 
+## End-point: stable.php
+
+The `stable.php` is the primary end-point for pingbacks and version-checks.
+
+Different versions of CiviCRM expect the response to be in different formats. The `format` parameter allows the requester to indicate the response:
+
+* __No format__ (deprecated): Returns a textual string with the current stable release. (This was used up until early/mid 4.x's.)
+* __format=json__ (deprecated): Returns a JSON document with a list of versions and their release-dates (This was introduced in mid 4.x.')
+* __format=summary__: Returns a JSON document with a list of *messages* summarizing the upgrade situation. (This was introduced in 5.x.)
+
+All variants accept additional parameters with technical details and statistics about the requester's deployment. For example:
+
+* `version`: CiviCRM version
+* `lang`: Preferred lanugage
+* `uf`: CMS type (`WordPress`, `Drupal8`, etc)
+* `PHP`: PHP version
+* `MySQL`: MySQL version
+* (*See `CRM_Utils_VersionCheck` for more complete listing *)
+
 ## Development: Testing
 
 Tests are implemented in PHPUnit. To run all tests, simply call phpunit without any arguments:
