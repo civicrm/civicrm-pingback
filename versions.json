@@ -977,6 +977,11 @@
             {
                 "version": "5.22.0",
                 "date": "2020-02-05"
+            },
+            {
+                "version": "5.22.1",
+                "date": "2020-02-18",
+                "message": "Fix recent regressions involving certain searches, certain one-time donations, upgrades, and deduping on custom-data."
             }
         ]
     }
