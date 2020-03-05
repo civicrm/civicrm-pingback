@@ -984,5 +984,14 @@
                 "message": "Fix recent regressions involving certain searches, certain one-time donations, upgrades, and deduping on custom-data."
             }
         ]
+    },
+    "5.23": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.23.0",
+                "date": "2020-03-04"
+            }
+        ]
     }
 }
