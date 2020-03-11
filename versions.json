@@ -992,6 +992,11 @@
             {
                 "version": "5.23.0",
                 "date": "2020-03-04"
+            },
+            {
+                "version": "5.23.1",
+                "date": "2020-03-10",
+                "message": "Fix recent regressions involving Civi&lt;=&gt;WP navigation and an unnecessary warning."
             }
         ]
     }
