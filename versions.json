@@ -997,6 +997,11 @@
                 "version": "5.23.1",
                 "date": "2020-03-10",
                 "message": "Fix recent regressions involving Civi&lt;=&gt;WP navigation and an unnecessary warning."
+            },
+            {
+                "version": "5.23.2",
+                "date": "2020-03-13",
+                "message": "Fix recent regression involving frontend screens on Joomla."
             }
         ]
     }
