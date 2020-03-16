@@ -1002,6 +1002,11 @@
                 "version": "5.23.2",
                 "date": "2020-03-13",
                 "message": "Fix recent regression involving frontend screens on Joomla."
+            },
+            {
+                "version": "5.23.3",
+                "date": "2020-03-16",
+                "message": "Fix recent regression involving certain malformed resource URLs."
             }
         ]
     }
