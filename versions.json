@@ -1014,5 +1014,14 @@
                 "message": "Fix recent regression involving CMS's which are deployed to a subdirectory."
             }
         ]
+    },
+    "5.24": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.24.0",
+                "date": "2020-04-01"
+            }
+        ]
     }
 }
