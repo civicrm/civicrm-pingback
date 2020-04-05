@@ -1021,6 +1021,11 @@
             {
                 "version": "5.24.0",
                 "date": "2020-04-01"
+            },
+            {
+                "version": "5.24.1",
+                "date": "2020-04-04",
+                "message": "Fix recent regressions involving the web-based upgrader and certain smart groups."
             }
         ]
     }
