@@ -969,6 +969,13 @@
                 "version": "5.21.2",
                 "date": "2020-01-23",
                 "message": "Fix recent regressions involving contact date-filters, certain receipts, certain smart-groups, and localized installation."
+            },
+            {
+                "version": "5.21.3",
+                "date": "2020-04-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1031,6 +1038,13 @@
                 "version": "5.24.2",
                 "date": "2020-04-09",
                 "message": "Fix recent regressions involving DB_DataObject, localization warnings, and upgrade issues for certain extensions."
+            },
+            {
+                "version": "5.24.3",
+                "date": "2020-04-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08<\/a>.",
+                "security": "true",
+                "severity": "critical"
             }
         ]
     }
