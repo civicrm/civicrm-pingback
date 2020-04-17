@@ -1045,6 +1045,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08<\/a>.",
                 "security": "true",
                 "severity": "critical"
+            },
+            {
+                "version": "5.24.4",
+                "date": "2020-04-17",
+                "message": "Fix recent regressions involving CiviMail unsubscribes and Drupal 8.7."
             }
         ]
     }
