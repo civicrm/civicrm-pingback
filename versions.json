@@ -1055,6 +1055,39 @@
                 "version": "5.24.5",
                 "date": "2020-04-22",
                 "message": "Fix recent regressions involving SMTP error-handling and searching on customized, reciprocal relationships."
+            },
+            {
+                "version": "5.24.6",
+                "date": "2020-04-30",
+                "message": "Fix recent regressions involving \"CiviContribute Component Settings\" and the \"Activity Detail\" report."
+            }
+        ]
+    },
+    "5.25": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.25.0",
+                "date": "2020-05-06"
+            }
+        ]
+    },
+    "5.26": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.26.0",
+                "date": "2020-06-03"
+            },
+            {
+                "version": "5.26.1",
+                "date": "2020-06-06",
+                "message": "Fix recent regressions involving frontend credit card validator and certain checkboxes. Revise MySQL version notices."
+            },
+            {
+                "version": "5.26.2",
+                "date": "2020-06-16",
+                "message": "Fix recent regressions involving smart groups, CiviContribute, certain APIv3 options, and dedupe performance. Revise deprecation notices."
             }
         ]
     }
