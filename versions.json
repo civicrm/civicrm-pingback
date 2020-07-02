@@ -1090,5 +1090,14 @@
                 "message": "Fix recent regressions involving smart groups, CiviContribute, certain APIv3 options, and dedupe performance. Revise deprecation notices."
             }
         ]
+    },
+    "5.27": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.27.0",
+                "date": "2020-07-01"
+            }
+        ]
     }
 }
