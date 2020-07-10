@@ -1097,6 +1097,11 @@
             {
                 "version": "5.27.0",
                 "date": "2020-07-01"
+            },
+            {
+                "version": "5.27.1",
+                "date": "2020-07-09",
+                "message": "Fix recent regressions involving upgrader and CiviMail on Joomla."
             }
         ]
     }
