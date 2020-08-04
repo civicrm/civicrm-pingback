@@ -1102,6 +1102,21 @@
                 "version": "5.27.1",
                 "date": "2020-07-09",
                 "message": "Fix recent regressions involving upgrader and CiviMail on Joomla."
+            },
+            {
+                "version": "5.27.2",
+                "date": "2020-07-14",
+                "message": "Fix recent regressions involving display of deleted contacts, deduping, reporting with time filters, and CiviMail on WordPress/Joomla."
+            },
+            {
+                "version": "5.27.3",
+                "date": "2020-07-23",
+                "message": "Fix recent issue with upgrading."
+            },
+            {
+                "version": "5.27.4",
+                "date": "2020-08-03",
+                "message": "Fix recent regressions involving default contribution amounts, CiviMail error-handling, CiviCase action links, and WordPress data-files."
             }
         ]
     }
