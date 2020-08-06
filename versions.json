@@ -1119,5 +1119,14 @@
                 "message": "Fix recent regressions involving default contribution amounts, CiviMail error-handling, CiviCase action links, and WordPress data-files."
             }
         ]
+    },
+    "5.28": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.28.0",
+                "date": "2020-08-05"
+            }
+        ]
     }
 }
