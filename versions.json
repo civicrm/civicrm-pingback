@@ -1141,6 +1141,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19<\/a>.",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.28.2",
+                "date": "2020-08-20",
+                "message": "Fix recent issue with upgrading."
             }
         ]
     }
