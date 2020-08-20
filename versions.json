@@ -1093,6 +1093,7 @@
     },
     "5.27": {
         "status": "stable",
+        "message": "5.27.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.27.0",
@@ -1106,7 +1107,7 @@
             {
                 "version": "5.27.2",
                 "date": "2020-07-14",
-                "message": "Fix recent regressions involving display of deleted contacts, deduping, reporting with time filters, and CiviMail on WordPress/Joomla."
+                "message": "Fix recent regressions involving display of deleted contacts, deduping, reporting with time filters, and CiviMail on WordPress\/Joomla."
             },
             {
                 "version": "5.27.3",
@@ -1117,6 +1118,13 @@
                 "version": "5.27.4",
                 "date": "2020-08-03",
                 "message": "Fix recent regressions involving default contribution amounts, CiviMail error-handling, CiviCase action links, and WordPress data-files."
+            },
+            {
+                "version": "5.27.5",
+                "date": "2020-08-19",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1126,6 +1134,13 @@
             {
                 "version": "5.28.0",
                 "date": "2020-08-05"
+            },
+            {
+                "version": "5.28.1",
+                "date": "2020-08-19",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
