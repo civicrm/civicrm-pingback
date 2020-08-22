@@ -1146,6 +1146,11 @@
                 "version": "5.28.2",
                 "date": "2020-08-20",
                 "message": "Fix recent issue with upgrading."
+            },
+            {
+                "version": "5.28.3",
+                "date": "2020-08-22",
+                "message": "Fix recent regressions involving deleted contacts, Drupal Views, contribution cancellation, dedupe-exceptions, and an icon."
             }
         ]
     }
