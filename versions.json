@@ -1151,6 +1151,11 @@
                 "version": "5.28.3",
                 "date": "2020-08-22",
                 "message": "Fix recent regressions involving deleted contacts, Drupal Views, contribution cancellation, dedupe-exceptions, and an icon."
+            },
+            {
+                "version": "5.28.4",
+                "date": "2020-09-01",
+                "message": "Fix recent regressions involving tax calculations, CiviCase assignments, and custom-field administration."
             }
         ]
     }
