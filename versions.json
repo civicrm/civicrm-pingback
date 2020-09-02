@@ -1125,6 +1125,16 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.27.6",
+                "date": "2020-08-22",
+                "message": "Fix recent regressions involving deleted contacts, Drupal Views, contribution cancellation, dedupe-exceptions, and an icon. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
+            },
+            {
+                "version": "5.27.7",
+                "date": "2020-09-01",
+                "message": "Fix recent regressions involving tax calculations, CiviCase assignments, and custom-field administration. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
             }
         ]
     },
