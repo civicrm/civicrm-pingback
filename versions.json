@@ -1168,5 +1168,14 @@
                 "message": "Fix recent regressions involving tax calculations, CiviCase assignments, and custom-field administration."
             }
         ]
+    },
+    "5.29": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.29.0",
+                "date": "2020-09-02"
+            }
+        ]
     }
 }
