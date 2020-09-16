@@ -1175,6 +1175,11 @@
             {
                 "version": "5.29.0",
                 "date": "2020-09-02"
+            },
+            {
+                "version": "5.29.1",
+                "date": "2020-09-15",
+                "message": "Fix recent regressions involving PayPal Pro, message-template permissions, custom-field API, and deduping certain contacts."
             }
         ]
     }
