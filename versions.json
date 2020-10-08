@@ -1182,5 +1182,14 @@
                 "message": "Fix recent regressions involving PayPal Pro, message-template permissions, custom-field API, and deduping certain contacts."
             }
         ]
+    },
+    "5.30": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.30.0",
+                "date": "2020-10-07"
+            }
+        ]
     }
 }
