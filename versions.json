@@ -1189,6 +1189,11 @@
             {
                 "version": "5.30.0",
                 "date": "2020-10-07"
+            },
+            {
+                "version": "5.30.1",
+                "date": "2020-10-20",
+                "message": "Fix recent regressions involving \"Group\" styling, events on the user dashboard, mail to recently deleted contacts, and editing relationship types."
             }
         ]
     }
