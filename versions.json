@@ -1196,5 +1196,14 @@
                 "message": "Fix recent regressions involving \"Group\" styling, events on the user dashboard, mail to recently deleted contacts, and editing relationship types."
             }
         ]
+    },
+    "5.31": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.31.0",
+                "date": "2020-11-05"
+            }
+        ]
     }
 }
