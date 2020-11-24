@@ -1203,6 +1203,11 @@
             {
                 "version": "5.31.0",
                 "date": "2020-11-05"
+            },
+            {
+                "version": "5.31.1",
+                "date": "2020-11-23",
+                "message": "Fix recent regressions involving (1) adding contacts to groups on certain screens and (2) handling PayPal statuses on certain configurations."
             }
         ]
     }
