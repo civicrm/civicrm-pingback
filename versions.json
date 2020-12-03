@@ -1210,5 +1210,14 @@
                 "message": "Fix recent regressions involving (1) adding contacts to groups on certain screens and (2) handling PayPal statuses on certain configurations."
             }
         ]
+    },
+    "5.32": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.32.0",
+                "date": "2020-12-02"
+            }
+        ]
     }
 }
