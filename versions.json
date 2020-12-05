@@ -1217,6 +1217,11 @@
             {
                 "version": "5.32.0",
                 "date": "2020-12-02"
+            },
+            {
+                "version": "5.32.1",
+                "date": "2020-12-05",
+                "message": "Fix recent regressions involving (1) recurring contributions, (2) advanced search and certain custom fields, (3) exporting non-primary fields."
             }
         ]
     }
