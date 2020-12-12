@@ -1222,6 +1222,11 @@
                 "version": "5.32.1",
                 "date": "2020-12-05",
                 "message": "Fix recent regressions involving (1) recurring contributions, (2) advanced search and certain custom fields, (3) exporting non-primary fields."
+            },
+            {
+                "version": "5.32.2",
+                "date": "2020-12-12",
+                "message": "Fix recent regressions involving (1) restrictions on financial types, (2) currency labels, (3) bulk-registering participants, (4) searching/viewing participants, (5) exporting non-primary fields, and (6) the upgrader."
             }
         ]
     }
