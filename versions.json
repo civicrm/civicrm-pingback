@@ -1229,5 +1229,19 @@
                 "message": "Fix recent regressions involving (1) restrictions on financial types, (2) currency labels, (3) bulk-registering participants, (4) searching/viewing participants, (5) exporting non-primary fields, and (6) the upgrader."
             }
         ]
+    },
+    "5.33": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.33.0",
+                "date": "2021-01-06"
+            },
+            {
+                "version": "5.33.1",
+                "date": "2021-01-07",
+                "message": "Fix recent regressions involving (1) translations on contribution pages and (2) upgrades on systems with certain third-party modules."
+            }
+        ]
     }
 }
