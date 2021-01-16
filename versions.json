@@ -1241,6 +1241,11 @@
                 "version": "5.33.1",
                 "date": "2021-01-07",
                 "message": "Fix recent regressions involving (1) translations on contribution pages and (2) upgrades on systems with certain third-party modules."
+            },
+            {
+                "version": "5.33.2",
+                "date": "2021-01-15",
+                "message": "Fix recent regressions involving CiviGrant exports and version reporting."
             }
         ]
     }
