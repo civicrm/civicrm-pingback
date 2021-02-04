@@ -1248,5 +1248,14 @@
                 "message": "Fix recent regressions involving CiviGrant exports and version reporting."
             }
         ]
+    },
+    "5.34": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.34.0",
+                "date": "2021-02-03"
+            }
+        ]
     }
 }
