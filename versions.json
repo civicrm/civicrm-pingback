@@ -711,7 +711,7 @@
         ]
     },
     "5.13": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.13.0",
@@ -766,7 +766,7 @@
         ]
     },
     "5.14": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.14.0",
@@ -785,7 +785,7 @@
         ]
     },
     "5.15": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.15.0",
@@ -804,7 +804,7 @@
         ]
     },
     "5.16": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.16.0",
@@ -833,7 +833,7 @@
         ]
     },
     "5.17": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.17.0",
@@ -867,7 +867,7 @@
         ]
     },
     "5.18": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.18.0",
@@ -896,7 +896,7 @@
         ]
     },
     "5.19": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.19.0",
@@ -929,7 +929,7 @@
         ]
     },
     "5.20": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.20.0",
@@ -953,7 +953,7 @@
         ]
     },
     "5.21": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.21.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -980,7 +980,7 @@
         ]
     },
     "5.22": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.22.0",
@@ -994,7 +994,7 @@
         ]
     },
     "5.23": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.23.0",
@@ -1023,7 +1023,7 @@
         ]
     },
     "5.24": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.24.0",
@@ -1064,7 +1064,7 @@
         ]
     },
     "5.25": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.25.0",
@@ -1073,7 +1073,7 @@
         ]
     },
     "5.26": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.26.0",
@@ -1092,7 +1092,7 @@
         ]
     },
     "5.27": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.27.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -1139,7 +1139,7 @@
         ]
     },
     "5.28": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.28.0",
@@ -1170,7 +1170,7 @@
         ]
     },
     "5.29": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.29.0",
@@ -1184,7 +1184,7 @@
         ]
     },
     "5.30": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.30.0",
@@ -1198,7 +1198,7 @@
         ]
     },
     "5.31": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.31.0",
@@ -1212,7 +1212,7 @@
         ]
     },
     "5.32": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.32.0",
@@ -1232,6 +1232,7 @@
     },
     "5.33": {
         "status": "stable",
+        "message": "5.33.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.33.0",
@@ -1246,11 +1247,18 @@
                 "version": "5.33.2",
                 "date": "2021-01-15",
                 "message": "Fix recent regressions involving CiviGrant exports and version reporting."
+            },
+            {
+                "version": "5.33.3",
+                "date": "2021-03-17",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
     "5.34": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.34.0",
@@ -1264,6 +1272,13 @@
             {
                 "version": "5.35.0",
                 "date": "2021-03-03"
+            },
+            {
+                "version": "5.35.1",
+                "date": "2021-03-17",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
