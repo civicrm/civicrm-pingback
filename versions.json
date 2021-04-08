@@ -1281,5 +1281,14 @@
                 "security": "true"
             }
         ]
+    },
+    "5.36": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.36.0",
+                "date": "2021-04-07"
+            }
+        ]
     }
 }
