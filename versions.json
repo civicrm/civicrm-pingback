@@ -1254,6 +1254,18 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.33.4",
+                "date": "2021-03-17",
+                "message": "Backport cryptography options"
+            },
+            {
+                "version": "5.33.5",
+                "date": "2021-04-21",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-08<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1279,6 +1291,13 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07<\/a>.",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.35.2",
+                "date": "2021-04-21",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-08<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1288,6 +1307,22 @@
             {
                 "version": "5.36.0",
                 "date": "2021-04-07"
+            },
+            {
+                "version": "5.36.1",
+                "date": "2021-04-21",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-08<\/a>.",
+                "severity": "critical",
+                "security": "true"
+            }
+        ]
+    },
+    "5.37": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.37.0",
+                "date": "2021-05-05"
             }
         ]
     }
