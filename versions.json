@@ -1323,6 +1323,11 @@
             {
                 "version": "5.37.0",
                 "date": "2021-05-05"
+            },
+            {
+                "version": "5.37.1",
+                "date": "2021-05-11",
+                "message": "Fix recent regressions involving Joomla permission management and \"Thank-You Dates\"."
             }
         ]
     }
