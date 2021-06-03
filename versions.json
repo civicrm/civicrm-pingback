@@ -1335,5 +1335,14 @@
                 "message": "Fix recent regressions involving non-decimal currencies on some payment processors."
             }
         ]
+    },
+    "5.38": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.38.0",
+                "date": "2021-06-02"
+            }
+        ]
     }
 }
