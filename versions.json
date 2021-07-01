@@ -1342,6 +1342,11 @@
             {
                 "version": "5.38.0",
                 "date": "2021-06-02"
+            },
+            {
+                "version": "5.38.1",
+                "date": "2021-06-30",
+                "message": "Fix recent regressions involving custom-fields on events, certain return-links, membership processing with some payment processors, and inbound email handling with some uncommon addresses."
             }
         ]
     }
