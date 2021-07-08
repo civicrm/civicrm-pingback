@@ -1349,5 +1349,14 @@
                 "message": "Fix recent regressions involving custom-fields on events, certain return-links, membership processing with some payment processors, and inbound email handling with some uncommon addresses."
             }
         ]
+    },
+    "5.39": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.39.0",
+                "date": "2021-07-07"
+            }
+        ]
     }
 }
