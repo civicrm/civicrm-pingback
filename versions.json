@@ -1356,6 +1356,11 @@
             {
                 "version": "5.39.0",
                 "date": "2021-07-07"
+            },
+            {
+                "version": "5.39.1",
+                "date": "2021-08-05",
+                "message": "Fix recent regressions involving circular groups, listings with related contacts, certain CiviContribute tasks, pricing of limited-time events when using back-office forms, ReCAPTCHA admin, some smart group configurations, and certain URL fragments in WordPress."
             }
         ]
     }
