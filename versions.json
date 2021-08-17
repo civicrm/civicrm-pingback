@@ -1370,6 +1370,16 @@
             {
                 "version": "5.40.0",
                 "date": "2021-08-05"
+            },
+            {
+                "version": "5.40.1",
+                "date": "2021-08-06",
+                "message": "Fix recent regressions involving Contact Dashboard, actions in Search Kit, and rendering of some pages on WordPress."
+            },
+            {
+                "version": "5.40.2",
+                "date": "2021-08-17",
+                "message": "Fix recent regressions involving Quick Search, processing some prices in CiviContribute, free memberships, batch-updates for memberships, and APIv3 performance."
             }
         ]
     }
