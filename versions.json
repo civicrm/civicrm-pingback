@@ -1380,6 +1380,11 @@
                 "version": "5.40.2",
                 "date": "2021-08-17",
                 "message": "Fix recent regressions involving Quick Search, processing some prices in CiviContribute, free memberships, batch-updates for memberships, and APIv3 performance."
+            },
+            {
+                "version": "5.40.3",
+                "date": "2021-08-23",
+                "message": "Fix recent regressions involving scheduled SMS reminders and OAuth token renewal."
             }
         ]
     }
