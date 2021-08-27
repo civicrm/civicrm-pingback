@@ -1385,6 +1385,11 @@
                 "version": "5.40.3",
                 "date": "2021-08-23",
                 "message": "Fix recent regressions involving scheduled SMS reminders and OAuth token renewal."
+            },
+            {
+                "version": "5.40.4",
+                "date": "2021-08-26",
+                "message": "Fix recent regressions involving data-export, line-item subtotals when using APIs+taxes, and certain scheduled reminders."
             }
         ]
     }
