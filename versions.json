@@ -1392,5 +1392,14 @@
                 "message": "Fix recent regressions involving data-export, line-item subtotals when using APIs+taxes, and certain scheduled reminders."
             }
         ]
+    },
+    "5.41": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.41.0",
+                "date": "2021-09-01"
+            }
+        ]
     }
 }
