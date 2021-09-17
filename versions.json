@@ -1399,6 +1399,11 @@
             {
                 "version": "5.41.0",
                 "date": "2021-09-01"
+            },
+            {
+                "version": "5.41.1",
+                "date": "2021-09-17",
+                "message": "Fix recent regression involving \"New Contribution\". Fix recent upgrade issues involving \"scssphp\" and \"dataprocessor\"."
             }
         ]
     }
