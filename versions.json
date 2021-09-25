@@ -1404,6 +1404,11 @@
                 "version": "5.41.1",
                 "date": "2021-09-17",
                 "message": "Fix recent regression involving \"New Contribution\". Fix recent upgrade issues involving \"scssphp\" and \"dataprocessor\"."
+            },
+            {
+                "version": "5.41.2",
+                "date": "2021-09-25",
+                "message": "Fix recent regression involving smart-groups."
             }
         ]
     }
