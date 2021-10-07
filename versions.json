@@ -1411,5 +1411,14 @@
                 "message": "Fix recent regression involving smart-groups."
             }
         ]
+    },
+    "5.42": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.42.0",
+                "date": "2021-10-06"
+            }
+        ]
     }
 }
