@@ -1418,6 +1418,11 @@
             {
                 "version": "5.42.0",
                 "date": "2021-10-06"
+            },
+            {
+                "version": "5.42.1",
+                "date": "2021-10-13",
+                "message": "Fix recent regressions involving membership creation and Search Kit."
             }
         ]
     }
