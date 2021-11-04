@@ -1425,5 +1425,14 @@
                 "message": "Fix recent regressions involving membership creation and Search Kit."
             }
         ]
+    },
+    "5.43": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.43.0",
+                "date": "2021-11-03"
+            }
+        ]
     }
 }
