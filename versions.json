@@ -1432,6 +1432,11 @@
             {
                 "version": "5.43.0",
                 "date": "2021-11-03"
+            },
+            {
+                "version": "5.43.1",
+                "date": "2021-11-12",
+                "message": "Fix recent regressions involving maps, CiviEvent PDFs, smart-group upgrades, and some unusual custom-field-sets."
             }
         ]
     }
