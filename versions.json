@@ -1444,5 +1444,14 @@
                 "message": "Fix recent compatibility issue with Drupal 9."
             }
         ]
+    },
+    "5.44": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.44.0",
+                "date": "2021-12-01"
+            }
+        ]
     }
 }
