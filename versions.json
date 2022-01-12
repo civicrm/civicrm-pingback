@@ -1460,6 +1460,11 @@
             {
                 "version": "5.45.0",
                 "date": "2022-01-05"
+            },
+            {
+                "version": "5.45.1",
+                "date": "2022-01-11",
+                "message": "Fix recent regressions involving image uploads, relationship data-entry, mail-merge tokens, and external hyperlinks."
             }
         ]
     }
