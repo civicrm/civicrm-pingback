@@ -1465,6 +1465,11 @@
                 "version": "5.45.1",
                 "date": "2022-01-11",
                 "message": "Fix recent regressions involving image uploads, relationship data-entry, mail-merge tokens, and external hyperlinks."
+            },
+            {
+                "version": "5.45.2",
+                "date": "2022-01-28",
+                "message": "Fix recent regressions involving core extension upgrades and handling of greetings."
             }
         ]
     }
