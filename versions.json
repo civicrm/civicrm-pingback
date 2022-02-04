@@ -1477,5 +1477,14 @@
                 "message": "Fix recent issue with running upgrades."
             }
         ]
+    },
+    "5.46": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.46.0",
+                "date": "2022-02-03"
+            }
+        ]
     }
 }
