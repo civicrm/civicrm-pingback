@@ -1484,6 +1484,11 @@
             {
                 "version": "5.46.0",
                 "date": "2022-02-03"
+            },
+            {
+                "version": "5.46.1",
+                "date": "2022-02-09",
+                "message": "Fix recent regressions involving custom fields (type \"Money\") and the status check API."
             }
         ]
     }
