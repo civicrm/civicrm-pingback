@@ -1489,6 +1489,11 @@
                 "version": "5.46.1",
                 "date": "2022-02-09",
                 "message": "Fix recent regressions involving custom fields (type \"Money\") and the status check API."
+            },
+            {
+                "version": "5.46.2",
+                "date": "2022-02-10",
+                "message": "Fix recent regressions involving APIv3 (\"Duplicatecheck\" and records with numerical names)."
             }
         ]
     }
