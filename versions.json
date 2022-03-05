@@ -1496,5 +1496,14 @@
                 "message": "Fix recent regressions involving APIv3 (\"Duplicatecheck\" and records with numerical names)."
             }
         ]
+    },
+    "5.47": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.47.0",
+                "date": "2022-03-04"
+            }
+        ]
     }
 }
