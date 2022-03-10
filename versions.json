@@ -1503,6 +1503,11 @@
             {
                 "version": "5.47.0",
                 "date": "2022-03-04"
+            },
+            {
+                "version": "5.47.1",
+                "date": "2022-03-09",
+                "message": "Fix recent regressions involving upgrades and CiviGrant."
             }
         ]
     }
