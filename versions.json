@@ -1456,6 +1456,7 @@
     },
     "5.45": {
         "status": "stable",
+        "message": "5.45.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.45.0",
@@ -1475,6 +1476,13 @@
                 "version": "5.45.3",
                 "date": "2022-02-03",
                 "message": "Fix recent issue with running upgrades."
+            },
+            {
+                "version": "5.45.4",
+                "date": "2022-03-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1494,6 +1502,13 @@
                 "version": "5.46.2",
                 "date": "2022-02-10",
                 "message": "Fix recent regressions involving APIv3 (\"Duplicatecheck\" and records with numerical names)."
+            },
+            {
+                "version": "5.46.3",
+                "date": "2022-03-16",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1508,6 +1523,13 @@
                 "version": "5.47.1",
                 "date": "2022-03-09",
                 "message": "Fix recent regressions involving upgrades and CiviGrant."
+            },
+            {
+                "version": "5.47.2",
+                "date": "2022-03-16",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a> and recent upgrade issues.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
