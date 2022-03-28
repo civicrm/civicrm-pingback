@@ -1530,6 +1530,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a> and recent upgrade issues.",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.47.3",
+                "date": "2022-03-27",
+                "message": "Rollback <a target=\"_blank\" href='https:\/\/civicrm.org\/redirect\/event-timezone-5.47'>CiviEvent Timezone</a> changes. Fix recent regressions."
             }
         ]
     }
