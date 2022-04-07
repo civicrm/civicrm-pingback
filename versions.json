@@ -1483,6 +1483,13 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.45.5",
+                "date": "2022-04-06",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-06<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1535,6 +1542,22 @@
                 "version": "5.47.3",
                 "date": "2022-03-27",
                 "message": "Rollback <a target=\"_blank\" href='https:\/\/civicrm.org\/redirect\/event-timezone-5.47'>CiviEvent Timezone</a> changes. Fix recent regressions."
+            },
+            {
+                "version": "5.47.4",
+                "date": "2022-04-06",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01-06<\/a> and multilingual upgrade issues.",
+                "severity": "critical",
+                "security": "true"
+            }
+        ]
+    },
+    "5.48": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.48.0",
+                "date": "2022-04-06"
             }
         ]
     }
