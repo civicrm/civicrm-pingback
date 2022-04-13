@@ -1558,6 +1558,11 @@
             {
                 "version": "5.48.0",
                 "date": "2022-04-06"
+            },
+            {
+                "version": "5.48.1",
+                "date": "2022-04-12",
+                "message": "Fix recent issues affecting CiviGrant statuses, CiviMail validation, and upgrades."
             }
         ]
     }
