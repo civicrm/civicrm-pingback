@@ -1562,7 +1562,12 @@
             {
                 "version": "5.48.1",
                 "date": "2022-04-12",
-                "message": "Fix recent issues affecting CiviGrant statuses, CiviMail validation, and upgrades."
+                "message": "Fix recent issues involving CiviGrant statuses, CiviMail validation, and upgrades."
+            },
+            {
+                "version": "5.48.2",
+                "date": "2022-04-20",
+                "message": "Fix recent issues involving CiviContribute backend, financial ACLs, some \"Employer\" relationships, and sorting in Search Kit."
             }
         ]
     }
