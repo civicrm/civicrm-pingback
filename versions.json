@@ -1570,5 +1570,14 @@
                 "message": "Fix recent issues involving CiviContribute backend, financial ACLs, some \"Employer\" relationships, and sorting in Search Kit."
             }
         ]
+    },
+    "5.49": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.49.0",
+                "date": "2022-05-04"
+            }
+        ]
     }
 }
