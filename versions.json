@@ -1582,6 +1582,11 @@
                 "version": "5.49.1",
                 "date": "2022-05-06",
                 "message": "Fix recent issues involving APIv4 (Contact.getFields) and the fallback certificate file."
+            },
+            {
+                "version": "5.49.2",
+                "date": "2022-05-19",
+                "message": "Fix recent issues involving Scheduled Reminders."
             }
         ]
     }
