@@ -564,7 +564,7 @@
         }
     },
     "5.7": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.7.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -1231,7 +1231,7 @@
         ]
     },
     "5.33": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.33.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -1279,7 +1279,7 @@
         ]
     },
     "5.35": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.35.0",
@@ -1302,7 +1302,7 @@
         ]
     },
     "5.36": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.36.0",
@@ -1318,7 +1318,7 @@
         ]
     },
     "5.37": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.37.0",
@@ -1337,7 +1337,7 @@
         ]
     },
     "5.38": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.38.0",
@@ -1351,7 +1351,7 @@
         ]
     },
     "5.39": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.39.0",
@@ -1365,7 +1365,7 @@
         ]
     },
     "5.40": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.40.0",
@@ -1394,7 +1394,7 @@
         ]
     },
     "5.41": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.41.0",
@@ -1413,7 +1413,7 @@
         ]
     },
     "5.42": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.42.0",
@@ -1427,7 +1427,7 @@
         ]
     },
     "5.43": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.43.0",
@@ -1446,7 +1446,7 @@
         ]
     },
     "5.44": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.44.0",
