@@ -1490,6 +1490,13 @@
                 "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-06<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.45.6",
+                "date": "2022-06-01",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1546,7 +1553,7 @@
             {
                 "version": "5.47.4",
                 "date": "2022-04-06",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01-06<\/a> and multilingual upgrade issues.",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-06<\/a> and multilingual upgrade issues.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1592,6 +1599,13 @@
                 "version": "5.49.3",
                 "date": "2022-05-25",
                 "message": "Fix recent issues involving recurring contributions, Guzzle, and certain tokens and translations."
+            },
+            {
+                "version": "5.49.4",
+                "date": "2022-06-01",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-07<\/a> and recent regression involving checksum-links.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
