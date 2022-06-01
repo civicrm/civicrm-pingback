@@ -1608,5 +1608,14 @@
                 "security": "true"
             }
         ]
+    },
+    "5.50": {
+    	"status": "stable",
+        "releases": [
+            {
+                "version": "5.50.0",
+                "date": "2022-06-01"
+            }
+        ]
     }
 }
