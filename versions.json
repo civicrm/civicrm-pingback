@@ -1630,6 +1630,11 @@
                 "version": "5.50.1",
                 "date": "2022-06-02",
                 "message": "Fix recent regression involving APIv3."
+            },
+            {
+                "version": "5.50.2",
+                "date": "2022-06-14",
+                "message": "Fix recent regressions involving ukgiftaid, CiviMember configuration, and unusual hook errors. Update Guzzle."
             }
         ]
     }
