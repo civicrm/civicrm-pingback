@@ -1635,6 +1635,11 @@
                 "version": "5.50.2",
                 "date": "2022-06-14",
                 "message": "Fix recent regressions involving ukgiftaid, CiviMember configuration, and unusual hook errors. Update Guzzle."
+            },
+            {
+                "version": "5.50.3",
+                "date": "2022-06-17",
+                "message": "Fix recent regressions involving membership renewals and editing of recurring contributions."
             }
         ]
     }
