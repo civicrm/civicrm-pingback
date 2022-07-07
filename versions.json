@@ -1647,5 +1647,14 @@
                 "message": "Fix recent regressions involving \"on behalf of\" payments, price-set formatting, and \"Recent Item\" permissions. Update Guzzle."
             }
         ]
+    },
+    "5.51": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.51.0",
+                "date": "2022-07-06"
+            }
+        ]
     }
 }
