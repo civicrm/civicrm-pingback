@@ -1654,6 +1654,11 @@
             {
                 "version": "5.51.0",
                 "date": "2022-07-06"
+            },
+            {
+                "version": "5.51.1",
+                "date": "2022-07-11",
+                "message": "Fix recent issues involving certain imports, access to view contributions, and PHPUnit compatibility."
             }
         ]
     }
