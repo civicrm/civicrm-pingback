@@ -1659,6 +1659,11 @@
                 "version": "5.51.1",
                 "date": "2022-07-11",
                 "message": "Fix recent issues involving certain imports, access to view contributions, and PHPUnit compatibility."
+            },
+            {
+                "version": "5.51.2",
+                "date": "2022-08-02",
+                "message": "Fix recent issues involving certain tokens and geocoding rules in extensions. Update DOMPDF. Improve upgrader."
             }
         ]
     }
