@@ -1664,6 +1664,11 @@
                 "version": "5.51.2",
                 "date": "2022-08-02",
                 "message": "Fix recent issues involving certain tokens and geocoding rules in extensions. Update DOMPDF. Improve upgrader."
+            },
+            {
+                "version": "5.51.3",
+                "date": "2022-08-03",
+                "message": "Fix recent issues involving backend credit-card processing and import performance."
             }
         ]
     }
