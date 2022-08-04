@@ -1671,5 +1671,14 @@
                 "message": "Fix recent issues involving backend credit-card processing and import performance."
             }
         ]
+    },
+    "5.52": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.52.0",
+                "date": "2022-08-03"
+            }
+        ]
     }
 }
