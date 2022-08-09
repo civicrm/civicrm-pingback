@@ -1678,6 +1678,11 @@
             {
                 "version": "5.52.0",
                 "date": "2022-08-03"
+            },
+            {
+                "version": "5.52.1",
+                "date": "2022-08-09",
+                "message": "Fix recent issues involving WP plugin compatibility, imports, Search Kit, and Afform."
             }
         ]
     }
