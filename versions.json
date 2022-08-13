@@ -1683,6 +1683,11 @@
                 "version": "5.52.1",
                 "date": "2022-08-09",
                 "message": "Fix recent issues involving WP plugin compatibility, imports, Search Kit, and Afform."
+            },
+            {
+                "version": "5.52.2",
+                "date": "2022-08-12",
+                "message": "Fix recent issues involving custom-data, CiviMail,dashlets, imports, and Zeta mail."
             }
         ]
     }
