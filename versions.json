@@ -1688,6 +1688,11 @@
                 "version": "5.52.2",
                 "date": "2022-08-12",
                 "message": "Fix recent issues involving custom-data, CiviMail,dashlets, imports, and Zeta mail."
+            },
+            {
+                "version": "5.52.3",
+                "date": "2022-08-30",
+                "message": "Fix recent issues involving imports."
             }
         ]
     }
