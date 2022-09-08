@@ -1695,5 +1695,14 @@
                 "message": "Fix recent issues involving imports."
             }
         ]
+    },
+    "5.53": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.53.0",
+                "date": "2022-09-07"
+            }
+        ]
     }
 }
