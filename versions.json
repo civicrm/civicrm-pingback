@@ -1711,6 +1711,11 @@
             {
                 "version": "5.54.0",
                 "date": "2022-10-08"
+            },
+            {
+                "version": "5.54.1",
+                "date": "2022-10-28",
+                "message": "Fix recent issues imports, extension management, and event badges."
             }
         ]
     }
