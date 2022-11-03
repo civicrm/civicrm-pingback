@@ -1718,5 +1718,14 @@
                 "message": "Fix recent issues imports, extension management, and event badges."
             }
         ]
+    },
+    "5.55": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.55.0",
+                "date": "2022-11-02"
+            }
+        ]
     }
 }
