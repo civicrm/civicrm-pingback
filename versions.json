@@ -1715,12 +1715,12 @@
             {
                 "version": "5.54.1",
                 "date": "2022-10-28",
-                "message": "Fix recent issues imports, extension management, and event badges."
+                "message": "Fix recent issues involving imports, extension management, and event badges."
             },
             {
                 "version": "5.54.2",
                 "date": "2022-11-02",
-                "message": "Fix recent issues imports, extension management, and PHP 8.1."
+                "message": "Fix recent issues involving imports, extension management, and PHP 8.1."
             }
         ]
     },
@@ -1730,6 +1730,16 @@
             {
                 "version": "5.55.0",
                 "date": "2022-11-02"
+            },
+            {
+                "version": "5.55.1",
+                "date": "2022-11-08",
+                "message": "Fix recent issues involving navigation menu and country fields for payments."
+            },
+            {
+                "version": "5.55.2",
+                "date": "2022-11-17",
+                "message": "Fix recent issues involving WordPress status-checks, Backdrop UI, sample data, and Afform installation."
             }
         ]
     }
