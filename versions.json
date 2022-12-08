@@ -1742,5 +1742,14 @@
                 "message": "Fix recent issues involving WordPress status-checks, Backdrop UI, sample data, and Afform installation."
             }
         ]
+    },
+    "5.56": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.56.0",
+                "date": "2022-12-07"
+            }
+        ]
     }
 }
