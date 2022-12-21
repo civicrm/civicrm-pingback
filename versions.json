@@ -1749,6 +1749,11 @@
             {
                 "version": "5.56.0",
                 "date": "2022-12-07"
+            },
+            {
+                "version": "5.56.1",
+                "date": "2022-12-20",
+                "message": "Fix recent issues involving CiviContribute displays, CiviContribute imports, CiviAccount batches, Flexmailer tracking, and a SearchKit warning."
             }
         ]
     }
