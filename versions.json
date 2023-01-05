@@ -1650,6 +1650,7 @@
     },
     "5.51": {
         "status": "stable",
+        "message": "5.51.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.51.0",
@@ -1669,6 +1670,13 @@
                 "version": "5.51.3",
                 "date": "2022-08-03",
                 "message": "Fix recent issues involving backend credit-card processing and import performance."
+            },
+            {
+                "version": "5.51.4",
+                "date": "2023-01-04",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-01, -02, and -03<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1754,6 +1762,13 @@
                 "version": "5.56.1",
                 "date": "2022-12-20",
                 "message": "Fix recent issues involving CiviContribute displays, CiviContribute imports, CiviAccount batches, Flexmailer tracking, and a SearchKit warning."
+            },
+            {
+                "version": "5.56.2",
+                "date": "2023-01-04",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-01, -02, and -03<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
