@@ -1506,7 +1506,7 @@
         ]
     },
     "5.46": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.46.0",
@@ -1532,7 +1532,7 @@
         ]
     },
     "5.47": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.47.0",
@@ -1565,7 +1565,7 @@
         ]
     },
     "5.48": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.48.0",
@@ -1584,7 +1584,7 @@
         ]
     },
     "5.49": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.49.0",
@@ -1620,7 +1620,7 @@
         ]
     },
     "5.50": {
-    	"status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.50.0",
