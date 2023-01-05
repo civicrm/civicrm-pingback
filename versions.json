@@ -1771,5 +1771,14 @@
                 "security": "true"
             }
         ]
+    },
+    "5.57": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.57.0",
+                "date": "2023-01-04"
+            }
+        ]
     }
 }
