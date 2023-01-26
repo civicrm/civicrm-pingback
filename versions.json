@@ -1783,6 +1783,11 @@
                 "version": "5.57.1",
                 "date": "2023-01-12",
                 "message": "Fix recent issues involving Joomla CLI, SearchKit \"Update\", contribution listings, asset-building, and signing-keys."
+            },
+            {
+                "version": "5.57.2",
+                "date": "2023-01-26",
+                "message": "Fix recent issues involving CiviEvent's offline emails, CiviEvent defaults, Form Builder auto-completion, and upgrades for large databases."
             }
         ]
     }
