@@ -1788,6 +1788,11 @@
                 "version": "5.57.2",
                 "date": "2023-01-26",
                 "message": "Fix recent issues involving CiviEvent's offline emails, CiviEvent defaults, Form Builder auto-completion, and upgrades for large databases."
+            },
+            {
+                "version": "5.57.3",
+                "date": "2023-01-30",
+                "message": "Fix recent issues involving CiviMail \"resubscribe\" requests and display of soft-contributions."
             }
         ]
     }
