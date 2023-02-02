@@ -1795,5 +1795,14 @@
                 "message": "Fix recent issues involving CiviMail \"resubscribe\" requests and display of soft-contributions."
             }
         ]
+    },
+    "5.58": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.58.0",
+                "date": "2023-02-01"
+            }
+        ]
     }
 }
