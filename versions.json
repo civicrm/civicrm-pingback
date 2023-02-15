@@ -1774,6 +1774,7 @@
     },
     "5.57": {
         "status": "stable",
+        "message": "5.57.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.57.0",
@@ -1793,7 +1794,15 @@
                 "version": "5.57.3",
                 "date": "2023-01-30",
                 "message": "Fix recent issues involving CiviMail \"resubscribe\" requests and display of soft-contributions."
+            },
+            {
+                "version": "5.57.4",
+                "date": "2023-02-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a>.",
+                "severity": "critical",
+                "security": "true"
             }
+
         ]
     },
     "5.58": {
@@ -1802,6 +1811,13 @@
             {
                 "version": "5.58.0",
                 "date": "2023-02-01"
+            },
+            {
+                "version": "5.58.1",
+                "date": "2023-02-15",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a> as well as other recent issues.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
