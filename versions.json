@@ -1827,6 +1827,11 @@
             {
                 "version": "5.59.0",
                 "date": "2023-03-01"
+            },
+            {
+                "version": "5.59.1",
+                "date": "2023-03-03",
+                "message": "Fix recent issues involving contribution pages, multi-lingual upgrades, and state-province tokens."
             }
         ]
     }
