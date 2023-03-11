@@ -1801,8 +1801,12 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a>.",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "5.57.5",
+                "date": "2023-03-10",
+                "message": "Fix recent issues involving contribution imports and PayPal Pro."
             }
-
         ]
     },
     "5.58": {
