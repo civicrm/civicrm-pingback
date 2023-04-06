@@ -1853,5 +1853,14 @@
                 "message": "Fix recent issues involving \"Case\" deletion, extraneous confirmation fields, sorting soft-credits, and \"Event\" API."
             }
         ]
+    },
+    "5.60": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.60.0",
+                "date": "2023-04-05"
+            }
+        ]
     }
 }
