@@ -1869,6 +1869,16 @@
             {
                 "version": "5.61.0",
                 "date": "2023-05-03"
+            },
+            {
+                "version": "5.61.1",
+                "date": "2023-05-05",
+                "message": "Fix compatibility with Drupal v9.5.9."
+            },
+            {
+                "version": "5.61.2",
+                "date": "2023-05-08",
+                "message": "Fix recent issues with CiviMember forms and warnings on Drupal."
             }
         ]
     }
