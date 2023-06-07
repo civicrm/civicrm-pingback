@@ -1226,7 +1226,7 @@
             {
                 "version": "5.32.2",
                 "date": "2020-12-12",
-                "message": "Fix recent regressions involving (1) restrictions on financial types, (2) currency labels, (3) bulk-registering participants, (4) searching/viewing participants, (5) exporting non-primary fields, and (6) the upgrader."
+                "message": "Fix recent regressions involving (1) restrictions on financial types, (2) currency labels, (3) bulk-registering participants, (4) searching\/viewing participants, (5) exporting non-primary fields, and (6) the upgrader."
             }
         ]
     },
@@ -1553,7 +1553,7 @@
             {
                 "version": "5.47.3",
                 "date": "2022-03-27",
-                "message": "Rollback <a target=\"_blank\" href='https:\/\/civicrm.org\/redirect\/event-timezone-5.47'>CiviEvent Timezone</a> changes. Fix recent regressions."
+                "message": "Rollback <a target=\"_blank\" href='https:\/\/civicrm.org\/redirect\/event-timezone-5.47'>CiviEvent Timezone<\/a> changes. Fix recent regressions."
             },
             {
                 "version": "5.47.4",
@@ -1884,6 +1884,20 @@
                 "version": "5.61.3",
                 "date": "2023-05-19",
                 "message": "Fix recent issue with CiviMember forms."
+            },
+            {
+                "version": "5.61.4",
+                "date": "2023-05-24",
+                "message": "Fix recent issue with CiviMember layout and processing help text."
+            }
+        ]
+    },
+    "5.62": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.62.0",
+                "date": "2023-06-07"
             }
         ]
     }
