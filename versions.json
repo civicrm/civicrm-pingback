@@ -1898,6 +1898,11 @@
             {
                 "version": "5.62.0",
                 "date": "2023-06-07"
+            },
+            {
+                "version": "5.62.1",
+                "date": "2023-06-16",
+                "message": "Fix recent issues with mail blasts on WordPress, CiviMember discounts, and an extraneous output."
             }
         ]
     }
