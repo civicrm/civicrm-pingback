@@ -1905,5 +1905,14 @@
                 "message": "Fix recent issues with mail blasts on WordPress, CiviMember discounts, and an extraneous output."
             }
         ]
+    },
+    "5.63": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.63.0",
+                "date": "2023-07-05"
+            }
+        ]
     }
 }
