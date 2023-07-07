@@ -1912,6 +1912,11 @@
             {
                 "version": "5.63.0",
                 "date": "2023-07-05"
+            },
+            {
+                "version": "5.63.1",
+                "date": "2023-07-07",
+                "message": "Fix recent issues with click-through tracking, \"Accepted credit cards\", toggling components, and errors on PHP 8."
             }
         ]
     }
