@@ -1917,6 +1917,11 @@
                 "version": "5.63.1",
                 "date": "2023-07-07",
                 "message": "Fix recent issues with click-through tracking, \"Accepted credit cards\", toggling components, and errors on PHP 8."
+            },
+            {
+                "version": "5.63.2",
+                "date": "2023-07-26",
+                "message": "Fix recent issues with certain kinds of custom fields."
             }
         ]
     }
