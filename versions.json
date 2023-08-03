@@ -1929,5 +1929,14 @@
                 "message": "Fix recent issues with editing certain price options and displaying some custom computations."
             }
         ]
+    },
+    "5.64": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.64.0",
+                "date": "2023-08-02"
+            }
+        ]
     }
 }
