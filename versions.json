@@ -1455,7 +1455,7 @@
         ]
     },
     "5.45": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.45.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -1649,7 +1649,7 @@
         ]
     },
     "5.51": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.51.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -1681,7 +1681,7 @@
         ]
     },
     "5.52": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.52.0",
@@ -1705,7 +1705,7 @@
         ]
     },
     "5.53": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.53.0",
@@ -1714,7 +1714,7 @@
         ]
     },
     "5.54": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.54.0",
@@ -1733,7 +1733,7 @@
         ]
     },
     "5.55": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.55.0",
@@ -1752,7 +1752,7 @@
         ]
     },
     "5.56": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.56.0",
@@ -1798,7 +1798,7 @@
             {
                 "version": "5.57.4",
                 "date": "2023-02-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
@@ -1810,7 +1810,7 @@
         ]
     },
     "5.58": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.58.0",
@@ -1826,7 +1826,7 @@
         ]
     },
     "5.59": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.59.0",
@@ -1855,7 +1855,7 @@
         ]
     },
     "5.60": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.60.0",
@@ -1864,7 +1864,7 @@
         ]
     },
     "5.61": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.61.0",
@@ -1893,7 +1893,7 @@
         ]
     },
     "5.62": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.62.0",
@@ -1908,6 +1908,7 @@
     },
     "5.63": {
         "status": "stable",
+        "message": "5.63.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
                 "version": "5.63.0",
@@ -1927,6 +1928,13 @@
                 "version": "5.63.3",
                 "date": "2023-08-02",
                 "message": "Fix recent issues with editing certain price options and displaying some custom computations."
+            },
+            {
+                "version": "5.63.4",
+                "date": "2023-09-06",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-07 through CIVI-SA-2023-15<\/a> and two other issues. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -1951,6 +1959,22 @@
                 "version": "5.64.3",
                 "date": "2023-09-01",
                 "message": "Fix recent issues involving free (unpaid) events."
+            },
+            {
+                "version": "5.64.4",
+                "date": "2023-09-06",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-07 through CIVI-SA-2023-15<\/a> and two other issues.",
+                "severity": "critical",
+                "security": "true"
+            }
+        ]
+    },
+    "5.65": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.65.0",
+                "date": "2023-09-06"
             }
         ]
     }
