@@ -1980,6 +1980,11 @@
                 "version": "5.65.1",
                 "date": "2023-09-08",
                 "message": "Fix recent issues involving upgrades, CiviEvent tokens, and testing."
+            },
+            {
+                "version": "5.65.2",
+                "date": "2023-09-19",
+                "message": "Fix recent issues involving upgrades."
             }
         ]
     }
