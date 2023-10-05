@@ -1987,5 +1987,14 @@
                 "message": "Fix recent issues involving upgrades."
             }
         ]
+    },
+    "5.66": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.66.0",
+                "date": "2023-10-04"
+            }
+        ]
     }
 }
