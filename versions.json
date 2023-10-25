@@ -1994,6 +1994,11 @@
             {
                 "version": "5.66.0",
                 "date": "2023-10-04"
+            },
+            {
+                "version": "5.66.1",
+                "date": "2023-10-25",
+                "message": "Fix recent issues involving custom data for CiviEvent, parent-child groups, and more."
             }
         ]
     }
