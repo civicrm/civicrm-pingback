@@ -1999,6 +1999,11 @@
                 "version": "5.66.1",
                 "date": "2023-10-25",
                 "message": "Fix recent issues involving custom data for CiviEvent, parent-child groups, and more."
+            },
+            {
+                "version": "5.66.2",
+                "date": "2023-10-29",
+                "message": "Fix recent issue involving scheduled reminders."
             }
         ]
     }
