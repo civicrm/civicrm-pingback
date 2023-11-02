@@ -2006,5 +2006,14 @@
                 "message": "Fix recent issue involving scheduled reminders."
             }
         ]
+    },
+    "5.67": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.67.0",
+                "date": "2023-11-01"
+            }
+        ]
     }
 }
