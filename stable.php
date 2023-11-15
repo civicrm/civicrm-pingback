@@ -22,9 +22,9 @@ verbose_log("Received request: " . print_r(['METHOD' => $_SERVER['REQUEST_METHOD
 if (!$link) {
   error_log("Cannot record request: Database not available");
 }
-elseif (!empty($_REQUEST['hash'])) {
+elseif (!empty($_REQUEST['sid']) || !empty($_REQUEST['hash'])) {
   if (flood_control_check()) {
-    if (!empty($_POST['hash'])) {
+    if (!empty($_POST['sid']) || !empty($_POST['hash'])) {
       verbose_log("Record POST request");
       process_post_request();
     }
@@ -39,7 +39,7 @@ elseif (!empty($_REQUEST['hash'])) {
 }
 else {
   // FIXME: Record some kind of nonce/fallback record so we can measure these; then make the log a bit quieter.
-  error_log("Cannot record request: No hash provided.");
+  error_log("Cannot record request: No sid or hash provided: " . print_r($_REQUEST, 1));
 }
 
 create_response(\Symfony\Component\HttpFoundation\Request::createFromGlobals())->send();
@@ -62,11 +62,14 @@ function verbose_log($message) {
 function flood_control_check() {
   global $link;
 
+  $sid = !empty($_REQUEST['sid']) ? $_REQUEST['sid'] : 'EMPTYSID';
+
   $sql = "SELECT id FROM `stats`
-    WHERE `hash` = '" . mysqli_real_escape_string($link, $_REQUEST['hash']) . "'
+    WHERE (`hash` = '" . mysqli_real_escape_string($link, $_REQUEST['hash']) . "' OR `sid` = '" . mysqli_real_escape_string($link, $sid) . "')
     AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s') . "'";
   $res = mysqli_query($link, $sql);
   if (mysqli_num_rows($res)) {
+    error_log("Failed flood_control_check: {$_SERVER['REMOTE_ADDR']}, hash={$_REQUEST['hash']}, sid={$sid}");
     return FALSE;
   }
   return TRUE;

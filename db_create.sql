@@ -60,6 +60,7 @@ CREATE TABLE `stats` (
   `PHP` text COLLATE utf8_unicode_ci,
   `PPTypes` text COLLATE utf8_unicode_ci,
   `hash` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sid` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `geoip_isoCode` char(2) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
   `domain_isoCode` char(2) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
