@@ -2013,6 +2013,11 @@
             {
                 "version": "5.67.0",
                 "date": "2023-11-01"
+            },
+            {
+                "version": "5.67.1",
+                "date": "2023-11-15",
+                "message": "Fix recent issues involving the Quick Search bar, certain Search Kit queries, CiviEvent self-service transfers, and more."
             }
         ]
     }
