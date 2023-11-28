@@ -2018,6 +2018,11 @@
                 "version": "5.67.1",
                 "date": "2023-11-15",
                 "message": "Fix recent issues involving the Quick Search bar, certain Search Kit queries, CiviEvent self-service transfers, and more."
+            },
+            {
+                "version": "5.67.2",
+                "date": "2023-11-27",
+                "message": "Fix recent issues involving event registration (multi-profile), filtering of bounce-messages, editing \"Contribution Date\", and more."
             }
         ]
     }
