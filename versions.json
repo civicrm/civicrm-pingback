@@ -2023,6 +2023,11 @@
                 "version": "5.67.2",
                 "date": "2023-11-27",
                 "message": "Fix recent issues involving event registration (multi-profile), filtering of bounce-messages, editing \"Contribution Date\", and more."
+            },
+            {
+                "version": "5.67.3",
+                "date": "2023-11-30",
+                "message": "Fix recent issue with CiviMail's inbound email processing."
             }
         ]
     }
