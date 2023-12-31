@@ -2030,5 +2030,19 @@
                 "message": "Fix recent issue with CiviMail's inbound email processing."
             }
         ]
+    },
+    "5.68": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.68.0",
+                "date": "2023-12-06"
+            },
+            {
+                "version": "5.68.1",
+                "date": "2023-12-30",
+                "message": "Fix recent issues with CiviEvent calendars (iCal), the View/Edit Contact screens, and dompdf."
+            }
+        ]
     }
 }
