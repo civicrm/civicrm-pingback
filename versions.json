@@ -1980,6 +1980,77 @@
                 "version": "5.65.1",
                 "date": "2023-09-08",
                 "message": "Fix recent issues involving upgrades, CiviEvent tokens, and testing."
+            },
+            {
+                "version": "5.65.2",
+                "date": "2023-09-19",
+                "message": "Fix recent issues involving upgrades."
+            }
+        ]
+    },
+    "5.66": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.66.0",
+                "date": "2023-10-04"
+            },
+            {
+                "version": "5.66.1",
+                "date": "2023-10-25",
+                "message": "Fix recent issues involving custom data for CiviEvent, parent-child groups, and more."
+            },
+            {
+                "version": "5.66.2",
+                "date": "2023-10-29",
+                "message": "Fix recent issue involving scheduled reminders."
+            }
+        ]
+    },
+    "5.67": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.67.0",
+                "date": "2023-11-01"
+            },
+            {
+                "version": "5.67.1",
+                "date": "2023-11-15",
+                "message": "Fix recent issues involving the Quick Search bar, certain Search Kit queries, CiviEvent self-service transfers, and more."
+            },
+            {
+                "version": "5.67.2",
+                "date": "2023-11-27",
+                "message": "Fix recent issues involving event registration (multi-profile), filtering of bounce-messages, editing \"Contribution Date\", and more."
+            },
+            {
+                "version": "5.67.3",
+                "date": "2023-11-30",
+                "message": "Fix recent issue with CiviMail's inbound email processing."
+            }
+        ]
+    },
+    "5.68": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.68.0",
+                "date": "2023-12-06"
+            },
+            {
+                "version": "5.68.1",
+                "date": "2023-12-30",
+                "message": "Fix recent issues with CiviEvent calendars (iCal), the View/Edit Contact screens, and dompdf."
+            }
+        ]
+    },
+    "5.69": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.69.0",
+                "date": "2024-01-04"
             }
         ]
     }
