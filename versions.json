@@ -2044,5 +2044,14 @@
                 "message": "Fix recent issues with CiviEvent calendars (iCal), the View/Edit Contact screens, and dompdf."
             }
         ]
+    },
+    "5.69": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.69.0",
+                "date": "2024-01-04"
+            }
+        ]
     }
 }
