@@ -69,7 +69,7 @@ function flood_control_check() {
     AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s') . "'";
   $res = mysqli_query($link, $sql);
   if (mysqli_num_rows($res)) {
-    error_log("Failed flood_control_check: {$_SERVER['REMOTE_ADDR']}, hash={$_REQUEST['hash']}, sid={$sid}");
+    error_log("Failed flood_control_check: {$_SERVER['REMOTE_ADDR']}, hash={$_REQUEST['hash']}, sid={$sid}, stat ID={$row['id']}, time={$row['time']}");
     return FALSE;
   }
   return TRUE;
