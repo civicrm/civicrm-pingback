@@ -22,7 +22,7 @@ class E {
    */
   public function ts($message, $args = array()) {
     // TODO actually translate $message...
-    if ($message{0} === '{' && isset($this->messages[$message])) {
+    if ($message[0] === '{' && isset($this->messages[$message])) {
       $message = $this->messages[$message];
     }
     return strtr($message, array_merge($this->messages, $args));
