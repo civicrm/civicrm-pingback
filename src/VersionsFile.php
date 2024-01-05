@@ -112,7 +112,7 @@ class VersionsFile {
     return $actualStatus;
   }
 
-  protected function cmpStatus($a, $b) {
+  protected static function cmpStatus($a, $b) {
     $val = [
       'stable' => 10,
       'lts' => 20,
