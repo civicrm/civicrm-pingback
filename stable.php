@@ -61,14 +61,15 @@ function verbose_log($message) {
  */
 function flood_control_check() {
   global $link;
-
   $sid = !empty($_REQUEST['sid']) ? $_REQUEST['sid'] : 'EMPTYSID';
-
-  $sql = "SELECT id FROM `stats`
+  $sql = "SELECT id, time FROM `stats`
     WHERE (`hash` = '" . mysqli_real_escape_string($link, $_REQUEST['hash']) . "' OR `sid` = '" . mysqli_real_escape_string($link, $sid) . "')
-    AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s') . "'";
+    AND `time` > '" . date_format(date_create('-1 day'), 'Y-m-d H:i:s') . "'
+    ORDER BY time DESC
+    LIMIT 1";
   $res = mysqli_query($link, $sql);
   if (mysqli_num_rows($res)) {
+    $row = $res->fetch_assoc();
     error_log("Failed flood_control_check: {$_SERVER['REMOTE_ADDR']}, hash={$_REQUEST['hash']}, sid={$sid}, stat ID={$row['id']}, time={$row['time']}");
     return FALSE;
   }
