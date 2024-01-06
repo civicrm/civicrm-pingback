@@ -2051,6 +2051,11 @@
             {
                 "version": "5.69.0",
                 "date": "2024-01-04"
+            },
+            {
+                "version": "5.69.1",
+                "date": "2024-01-05",
+                "message": "Fix recent issues involving CiviMember receipts, status-checks, and Smarty v3."
             }
         ]
     }
