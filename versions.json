@@ -2056,6 +2056,11 @@
                 "version": "5.69.1",
                 "date": "2024-01-05",
                 "message": "Fix recent issues involving CiviMember receipts, status-checks, and Smarty v3."
+            },
+            {
+                "version": "5.69.2",
+                "date": "2024-01-11",
+                "message": "Fix recent issues involving event confirmations, import mappings, new user accounts, and conditional links in saved searches."
             }
         ]
     }
