@@ -2061,6 +2061,11 @@
                 "version": "5.69.2",
                 "date": "2024-01-11",
                 "message": "Fix recent issues involving event confirmations, import mappings, new user accounts, and conditional links in saved searches."
+            },
+            {
+                "version": "5.69.3",
+                "date": "2024-01-26",
+                "message": "Fix recent issues involving CiviMail, viewing contributions, certain custom fields, and more."
             }
         ]
     }
