@@ -2066,6 +2066,11 @@
                 "version": "5.69.3",
                 "date": "2024-01-26",
                 "message": "Fix recent issues involving CiviMail, viewing contributions, certain custom fields, and more."
+            },
+            {
+                "version": "5.69.4",
+                "date": "2024-01-31",
+                "message": "Fix recent issues involving donations with \"Other\" amounts, membership renewal forms, certain custom fields, certain custom forms, and Smarty v3."
             }
         ]
     }
