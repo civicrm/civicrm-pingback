@@ -2078,5 +2078,14 @@
                 "message": "Fix recent issues involving contribution pages, Smarty v3, and more."
             }
         ]
+    },
+    "5.70": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.70.0",
+                "date": "2024-02-08"
+            }
+        ]
     }
 }
