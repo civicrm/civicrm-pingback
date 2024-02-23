@@ -2085,6 +2085,11 @@
             {
                 "version": "5.70.0",
                 "date": "2024-02-08"
+            },
+            {
+                "version": "5.70.1",
+                "date": "2024-02-22",
+                "message": "Fix recent issues involving contribution pages, event receipts, and more."
             }
         ]
     }
