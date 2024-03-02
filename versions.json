@@ -2090,6 +2090,11 @@
                 "version": "5.70.1",
                 "date": "2024-02-22",
                 "message": "Fix recent issues involving contribution pages, event receipts, and more."
+            },
+            {
+                "version": "5.70.2",
+                "date": "2024-03-02",
+                "message": "Fix recent issues involving Search Kit (\"Enable\"/\"Disable\" actions and \"DB Entity\" output)."
             }
         ]
     }
