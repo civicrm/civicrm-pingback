@@ -2104,6 +2104,11 @@
             {
                 "version": "5.71.0",
                 "date": "2024-03-06"
+            },
+            {
+                "version": "5.71.1",
+                "date": "2024-03-08",
+                "message": "Fix recent issues the survey results screen, certain kinds of Price Sets, and emails showing (un)rounded quantities."
             }
         ]
     }
