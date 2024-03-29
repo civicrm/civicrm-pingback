@@ -2108,7 +2108,12 @@
             {
                 "version": "5.71.1",
                 "date": "2024-03-08",
-                "message": "Fix recent issues the survey results screen, certain kinds of Price Sets, and emails showing (un)rounded quantities."
+                "message": "Fix recent issues involving the survey results screen, certain kinds of Price Sets, and emails showing (un)rounded quantities."
+            },
+            {
+                "version": "5.71.2",
+                "date": "2024-03-28",
+                "message": "Fix recent issues involving \"Other Amount\", event receipts, and display of certain custom fields."
             }
         ]
     }
