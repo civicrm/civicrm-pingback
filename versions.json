@@ -2116,5 +2116,14 @@
                 "message": "Fix recent issues involving \"Other Amount\", event receipts, and display of certain custom fields."
             }
         ]
+    },
+    "5.72": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.72.0",
+                "date": "2024-04-03"
+            }
+        ]
     }
 }
