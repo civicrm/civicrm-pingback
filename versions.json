@@ -2123,6 +2123,11 @@
             {
                 "version": "5.72.0",
                 "date": "2024-04-03"
+            },
+            {
+                "version": "5.72.1",
+                "date": "2024-04-08",
+                "message": "Fix recent issues involving public forms on WordPress, translation of certain backend forms, and file-uploads on custom forms."
             }
         ]
     }
