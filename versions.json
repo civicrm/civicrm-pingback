@@ -2128,6 +2128,11 @@
                 "version": "5.72.1",
                 "date": "2024-04-08",
                 "message": "Fix recent issues involving public forms on WordPress, translation of certain backend forms, and file-uploads on custom forms."
+            },
+            {
+                "version": "5.72.2",
+                "date": "2024-04-23",
+                "message": "Fix recent issues involving Smarty v3/v4, TCPDF, Joomla permission management, the new \"Admin UI\", and certain features in Search Kit."
             }
         ]
     }
