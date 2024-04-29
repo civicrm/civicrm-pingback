@@ -65,6 +65,38 @@ class VersionsFile {
 
   /**
    * @param array $versions
+   *  Full list of branches/version/releases.
+   * @return string[]
+   *   List of error messages
+   */
+  public static function validate(array $versions): array {
+    $errors = [];
+
+    foreach ($versions as $branchVer => $versionData) {
+      if (!VersionNumber::isWellFormed($branchVer)) {
+        $errors[] = sprintf('Branch version "%s" is malformed', $branchVer);
+      }
+      if (!preg_match('/^(stable|lts|eol)$/', $versionData['status'])) {
+        $errors[] = sprintf('Branch status "%s" is malformed', $versionData['status']);
+      }
+      foreach ($versionData['releases'] as $release) {
+        if (!VersionNumber::isWellFormed($release['version'])) {
+          $errors[] = sprintf('Release version "%s" is malformed', $release['version']);
+        }
+        if (!preg_match(';^\d\d\d\d-\d\d-\d\d$;', $release['date'])) {
+          $errors[] = sprintf('Release date "%s" is malformed', $release['date']);
+        }
+        if (isset($release['security']) && !preg_match('/^(true|false)$/', $release['security'])) {
+          $errors[] = sprintf('Release security flag "%s" is malformed', $release['security']);
+        }
+      }
+    }
+
+    return $errors;
+  }
+
+  /**
+   * @param array $versions
    * @return mixed
    *   Updated list of versions, sorted in normal order.
    */
