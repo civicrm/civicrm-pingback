@@ -1,8 +1,6 @@
 <?php
 namespace Pingback;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-
 class Application extends \Symfony\Component\Console\Application {
 
   /**
@@ -30,6 +28,7 @@ class Application extends \Symfony\Component\Console\Application {
     $commands[] = new \Pingback\Command\ReleaseListCommand();
     $commands[] = new \Pingback\Command\BranchStatusCommand();
     $commands[] = new \Pingback\Command\BranchListCommand();
+    $commands[] = new \Pingback\Command\EditCommand();
     return $commands;
   }
 
