@@ -22,7 +22,10 @@ class CliEditor {
    *   Update $buffer, or NULL on error.
    */
   public function editBuffer($buffer, $tmpSuffix = '', $attempts = 2) {
-    $tmpFile = tempnam(sys_get_temp_dir(), 'pb-editor-') . $tmpSuffix;
+    $baseTempNam = tempnam(sys_get_temp_dir(), 'pb-editor-');
+    $tmpFile = $baseTempNam . $tmpSuffix;
+    unlink($baseTempNam);
+    touch($tmpFile);
     chmod($tmpFile, 0600);
     file_put_contents($tmpFile, $buffer);
 
