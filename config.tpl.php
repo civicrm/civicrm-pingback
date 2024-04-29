@@ -5,7 +5,7 @@
  */
 
 $dbhost = 'mysql_host';
-$dbport = 3306;              // NOTE: If you want to omit, then NULL better than '', but check for yourself.
+$dbport = 3306;              /* NOTE: If you want to omit, then NULL better than '', but check for yourself. */
 $dbname = 'pingbackcm_71whg';
 $user   = 'mysql_user';
 $pass   = 'mysql_pass';
@@ -16,3 +16,8 @@ $pass   = 'mysql_pass';
  *   PHP error log.
  */
 $verbose = FALSE;
+
+// How should we notify web-frontend about new releases
+global $clearCache;
+$clearCache = 'echo "FIXME: Define clearCache options in config.php"';
+// $clearCache = 'curl -H "Content-Type: application/json" -X POST --data \'{"key": "FIXME"}\' https://civicrm.org/flushcache';

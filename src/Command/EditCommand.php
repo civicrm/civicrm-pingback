@@ -1,10 +1,12 @@
 <?php
 namespace Pingback\Command;
 
+use Pingback\CivicrmOrgUpdate;
 use Pingback\Util\CliEditor;
 use Pingback\VersionsFile;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class EditCommand extends Command {
@@ -17,7 +19,8 @@ class EditCommand extends Command {
   protected function configure() {
     $this
       ->setName('edit')
-      ->setDescription('Edit the list of versions');
+      ->setDescription('Edit the list of versions')
+      ->addOption('no-civicrm-org', NULL, InputOption::VALUE_NONE, 'Skip notification/validation for civicrm.org/download page');
   }
 
   public function __construct($name = NULL) {
@@ -53,6 +56,9 @@ class EditCommand extends Command {
     else {
       file_put_contents(VersionsFile::getFileName(), $newJson);
       echo "Updated versions.json\n";
+      if (!$input->getOption('no-civicrm-org')) {
+        (new CivicrmOrgUpdate())->autoClear($output);
+      }
       return 0;
     }
   }

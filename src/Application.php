@@ -1,6 +1,10 @@
 <?php
 namespace Pingback;
 
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
 class Application extends \Symfony\Component\Console\Application {
 
   /**
@@ -30,6 +34,15 @@ class Application extends \Symfony\Component\Console\Application {
     $commands[] = new \Pingback\Command\BranchListCommand();
     $commands[] = new \Pingback\Command\EditCommand();
     return $commands;
+  }
+
+  protected function doRunCommand(Command $command, InputInterface $input, OutputInterface $output) {
+    $config = dirname(__DIR__) . '/config.php';
+    if (file_exists($config)) {
+      require_once $config;
+    }
+
+    return parent::doRunCommand($command, $input, $output);
   }
 
 }
