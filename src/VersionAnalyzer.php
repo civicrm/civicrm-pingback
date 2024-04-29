@@ -26,6 +26,15 @@ class VersionAnalyzer {
   }
 
   /**
+   * @return array
+   *   Ex: ['version' => '5.1.2', 'security' => FALSE, 'date' => '2018-01-01'].
+   */
+  public function findLatestStableRelease(): array {
+    $branch = $this->findLatestBranchByStatus(['stable', 'lts', 'esr']);
+    return $this->findLatestRelease($branch);
+  }
+
+  /**
    * Find the latest branch with a given status.
    *
    * @param array|string $statuses
