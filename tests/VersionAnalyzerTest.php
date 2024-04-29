@@ -2,12 +2,12 @@
 
 namespace Pingback;
 
-class VersionAnalyzerTest extends \PHPUnit_Framework_TestCase {
+class VersionAnalyzerTest extends \PHPUnit\Framework\TestCase {
 
   public function testFindReleaseByVersion() {
     $release = $this->createVA()->findReleaseByVersion('4.7.8');
-    $this->assertRegexp(';^\d+\.\d+\.\d+;', $release['version']);
-    $this->assertRegexp(';^\d\d\d\d-\d\d-\d\d$;', $release['date']);
+    $this->assertMatchesRegularExpression(';^\d+\.\d+\.\d+;', $release['version']);
+    $this->assertMatchesRegularExpression(';^\d\d\d\d-\d\d-\d\d$;', $release['date']);
   }
 
   public function testFindLatestRelease() {

@@ -2,9 +2,9 @@
 
 namespace Pingback;
 
-class VersionsFileTest extends \PHPUnit_Framework_TestCase {
+class VersionsFileTest extends \PHPUnit\Framework\TestCase {
 
-  public function tearDown() {
+  public function tearDown(): void {
     parent::tearDown();
     Date::set(NULL);
   }

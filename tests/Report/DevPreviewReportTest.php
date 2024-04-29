@@ -4,7 +4,7 @@ namespace Pingback\Report;
 
 use Symfony\Component\HttpFoundation\Request;
 
-class DevPreviewReportTest extends \PHPUnit_Framework_TestCase {
+class DevPreviewReportTest extends \PHPUnit\Framework\TestCase {
 
   public function getExamples() {
     $es = [];

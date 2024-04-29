@@ -5,7 +5,7 @@ namespace Pingback\Report;
 use Pingback\VersionsFile;
 use Symfony\Component\HttpFoundation\Request;
 
-class SummaryReportTest extends \PHPUnit_Framework_TestCase {
+class SummaryReportTest extends \PHPUnit\Framework\TestCase {
 
   public function getExamples() {
     $es = [];
