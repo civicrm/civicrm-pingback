@@ -10,13 +10,19 @@ Requirements:
 - a copy of the GeoLite2 Country database, available at http://dev.maxmind.com/geoip/geoip2/geolite2/, stored at: /usr/share/GeoIP/GeoLite2-Country.mmdb
 - a script to regularely update the GeoIP database - such as https://github.com/maxmind/geoipupdate or a much simpler shell script
 
-### CLI: Listing releases
+### CLI: View/edit all releases
+
+```
+./bin/pb edit
+```
+
+### CLI: List releases
 
 ```
 ./bin/pb release:list
 ```
 
-### CLI: Adding a new release
+### CLI: Add a new release
 
 ```
 ### Add a new security release
