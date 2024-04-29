@@ -1,6 +1,7 @@
 <?php
 namespace Pingback\Command;
 
+use Pingback\CivicrmOrgUpdate;
 use Pingback\VersionNumber;
 use Pingback\VersionsFile;
 use Symfony\Component\Console\Command\Command;
@@ -23,6 +24,7 @@ class ReleaseAddCommand extends Command {
         'A brief description of what has been fixed', '')
       ->addOption('severity', 's', InputOption::VALUE_REQUIRED,
         'The overall significance of this revision (' . implode(',', $this->getSeverities()) . ')', '')
+      ->addOption('no-civicrm-org', NULL, InputOption::VALUE_NONE, 'Skip notification/validation for civicrm.org/download page')
       ->addArgument('version', InputArgument::REQUIRED);
   }
 
@@ -47,6 +49,12 @@ class ReleaseAddCommand extends Command {
     $output->writeln("... $result");
 
     VersionsFile::write(VersionsFile::getFileName(), $versions);
+
+    if (empty($input->getOption('no-civicrm-org'))) {
+      (new CivicrmOrgUpdate())->autoClear($output);
+    }
+
+    return 0;
   }
 
   /**
@@ -57,6 +65,7 @@ class ReleaseAddCommand extends Command {
    * @param string $security
    *   Ex: 'true' or 'false'
    * @param string $message
+   * @param string $severity
    * @return array
    * @throws \Exception
    */
