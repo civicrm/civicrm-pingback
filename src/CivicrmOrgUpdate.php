@@ -22,7 +22,7 @@ class CivicrmOrgUpdate {
 
     $this->clearCache();
     if (!$this->isLatestPublished($releaseVer)) {
-      throw new \RuntimeException("civicrm.org download does not mention $releaseVer!");
+      throw new \RuntimeException("civicrm.org download does not mention $releaseVer! You may need to manually use https://civicrm.org/admin/config/development/performance");
     }
   }
 
