@@ -2162,6 +2162,11 @@
                 "version": "5.73.3",
                 "date": "2024-05-23",
                 "message": "Fix recent issues involving some price-fields, some multi-select fields, Joomla upgrades, and cancellation for recurring contributions."
+            },
+            {
+                "version": "5.73.4",
+                "date": "2024-05-30",
+                "message": "Fix recent issues involving some participant cancellations, Joomla upgrades, and more."
             }
         ]
     }
