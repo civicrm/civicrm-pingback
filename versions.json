@@ -2169,5 +2169,14 @@
                 "message": "Fix recent issues involving some participant cancellations, Joomla upgrades, and more."
             }
         ]
+    },
+    "5.74": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "5.74.0",
+                "date": "2024-06-06"
+            }
+        ]
     }
 }
