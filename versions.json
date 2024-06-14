@@ -2176,6 +2176,16 @@
             {
                 "version": "5.74.0",
                 "date": "2024-06-06"
+            },
+            {
+                "version": "5.74.1",
+                "date": "2024-06-11",
+                "message": "Fix recent issues involving event registration and Backdrop navigation."
+            },
+            {
+                "version": "5.74.2",
+                "date": "2024-06-13",
+                "message": "Fix recent issues involving \"Update Recurring Contribution\", custom forms with certain navigation options, and disabled copies of CiviGrant."
             }
         ]
     }
