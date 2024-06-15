@@ -2186,6 +2186,11 @@
                 "version": "5.74.2",
                 "date": "2024-06-13",
                 "message": "Fix recent issues involving \"Update Recurring Contribution\", custom forms with certain navigation options, and disabled copies of CiviGrant."
+            },
+            {
+                "version": "5.74.3",
+                "date": "2024-06-15",
+                "message": "Fix recent issues involving edits to \"Scheduled Reminders\", changing participants' fees, and more."
             }
         ]
     }
