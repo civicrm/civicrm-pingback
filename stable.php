@@ -132,7 +132,7 @@ function insert_stats() {
 
   $fields = get_fields('stats');
   try {
-    $reader = new Reader('/usr/share/GeoIP/GeoLite2-Country.mmdb');
+    $reader = new Reader('../country.mmdb');
     $geoloc = $reader->country($_SERVER['REMOTE_ADDR']);
     $_REQUEST['geoip_isoCode'] = $geoloc->country->isoCode;
   }
