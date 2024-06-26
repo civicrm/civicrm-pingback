@@ -1907,7 +1907,7 @@
         ]
     },
     "5.63": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.63.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -1939,7 +1939,7 @@
         ]
     },
     "5.64": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.64.0",
@@ -1970,7 +1970,7 @@
         ]
     },
     "5.65": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.65.0",
@@ -1989,7 +1989,7 @@
         ]
     },
     "5.66": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.66.0",
@@ -2008,7 +2008,7 @@
         ]
     },
     "5.67": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.67.0",
@@ -2032,7 +2032,7 @@
         ]
     },
     "5.68": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.68.0",
@@ -2076,11 +2076,18 @@
                 "version": "5.69.5",
                 "date": "2024-02-08",
                 "message": "Fix recent issues involving contribution pages, Smarty v3, and more."
+            },
+            {
+                "version": "5.69.6",
+                "date": "2023-06-19",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03<\/a> and one other issue. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
     "5.70": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.70.0",
@@ -2099,7 +2106,7 @@
         ]
     },
     "5.71": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.71.0",
@@ -2118,7 +2125,7 @@
         ]
     },
     "5.72": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.72.0",
@@ -2142,7 +2149,7 @@
         ]
     },
     "5.73": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "5.73.0",
@@ -2191,6 +2198,13 @@
                 "version": "5.74.3",
                 "date": "2024-06-15",
                 "message": "Fix recent issues involving edits to \"Scheduled Reminders\", changing participants' fees, and more."
+            },
+            {
+                "version": "5.74.4",
+                "date": "2023-06-19",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03<\/a> and three other issues.",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
