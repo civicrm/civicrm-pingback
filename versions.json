@@ -2202,14 +2202,14 @@
             },
             {
                 "version": "5.74.4",
-                "date": "2023-06-19",
+                "date": "2024-06-19",
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03<\/a> and three other issues.",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.74.5",
-                "date": "2023-07-03",
+                "date": "2024-07-03",
                 "message": "Fix recent issues custom membership receipts in Webform (et al), reports with the \"Notes\" column, and the Drupal \"Permission\" page."
             }
         ]
@@ -2219,7 +2219,7 @@
         "releases": [
              {
                 "version": "5.75.0",
-                "date": "2023-07-03"
+                "date": "2024-07-03"
              }
         ]
     }
