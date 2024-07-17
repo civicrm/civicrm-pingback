@@ -2210,7 +2210,7 @@
             {
                 "version": "5.74.5",
                 "date": "2024-07-03",
-                "message": "Fix recent issues custom membership receipts in Webform (et al), reports with the \"Notes\" column, and the Drupal \"Permission\" page."
+                "message": "Fix recent issues involving custom membership receipts in Webform (et al), reports with the \"Notes\" column, and the Drupal \"Permission\" page."
             }
         ]
     },
@@ -2220,6 +2220,11 @@
              {
                 "version": "5.75.0",
                 "date": "2024-07-03"
+             },
+             {
+                "version": "5.75.1",
+                "date": "2024-07-16",
+                "message": "Fix recent issues with involving some options for free events, some kinds of custom data, and more."
              }
         ]
     }
