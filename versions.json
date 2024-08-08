@@ -2225,6 +2225,20 @@
                 "version": "5.75.1",
                 "date": "2024-07-16",
                 "message": "Fix recent issues with involving some options for free events, some kinds of custom data, and more."
+             },
+             {
+                "version": "5.75.2",
+                "date": "2024-08-07",
+                "message": "Fix recent issues with involving CiviDiscount and CiviImport."
+             }
+        ]
+    },
+    "5.75": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "5.76.0",
+                "date": "2024-08-07"
              }
         ]
     }
