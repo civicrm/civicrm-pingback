@@ -2216,6 +2216,7 @@
     },
     "5.75": {
         "status": "stable",
+        "message": "5.75.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
              {
                 "version": "5.75.0",
@@ -2230,6 +2231,11 @@
                 "version": "5.75.2",
                 "date": "2024-08-07",
                 "message": "Fix recent issues involving CiviDiscount and CiviImport."
+             },
+             {
+                "version": "5.75.3",
+                "date": "2024-09-05",
+                "message": "Fix recent issues with Recaptcha compatibility."
              }
         ]
     },
@@ -2254,6 +2260,15 @@
                 "version": "5.76.3",
                 "date": "2024-09-04",
                 "message": "Fix recent issue involving some price-options in CiviMember."
+             }
+        ]
+    },
+    "5.77": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "5.77.0",
+                "date": "2024-09-04"
              }
         ]
     }
