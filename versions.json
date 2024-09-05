@@ -2244,6 +2244,16 @@
                 "version": "5.76.1",
                 "date": "2024-08-09",
                 "message": "Fix recent issue involving upgrades for CiviMail."
+             },
+             {
+                "version": "5.76.2",
+                "date": "2024-08-15",
+                "message": "Fix recent issue involving CiviMember and Tell-A-Friend."
+             },
+             {
+                "version": "5.76.3",
+                "date": "2024-09-04",
+                "message": "Fix recent issue involving some price-options in CiviMember."
              }
         ]
     }
