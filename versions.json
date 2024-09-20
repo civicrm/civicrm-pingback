@@ -1,6 +1,6 @@
 {
     "4.6": {
-        "status": "lts",
+        "status": "eol",
         "releases": [
             {
                 "version": "4.6.alpha1",
@@ -1773,7 +1773,7 @@
         ]
     },
     "5.57": {
-        "status": "stable",
+        "status": "eol",
         "message": "5.57.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
             {
@@ -2235,7 +2235,7 @@
              {
                 "version": "5.75.3",
                 "date": "2024-09-05",
-                "message": "Fix recent issues with Recaptcha compatibility."
+                "message": "Fix recent issues with Recaptcha compatibility. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
              }
         ]
     },
