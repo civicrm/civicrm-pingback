@@ -2269,6 +2269,25 @@
              {
                 "version": "5.77.0",
                 "date": "2024-09-04"
+             },
+             {
+                "version": "5.77.1",
+                "date": "2024-09-25",
+                "message": "Fix recent issues involving admin-only price-fields, import-mappings, and schema for new/recent installations."
+             }
+        ]
+    },
+    "5.78": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "5.78.0",
+                "date": "2024-10-02"
+             },
+             {
+                "version": "5.78.1",
+                "date": "2024-10-10",
+                "message": "Fix recent issues involving Smarty v2, contact-reference fields, admin-only price-fields, and overriden options in Form Builder."
              }
         ]
     }
