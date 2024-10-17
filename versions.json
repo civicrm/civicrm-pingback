@@ -2236,11 +2236,18 @@
                 "version": "5.75.3",
                 "date": "2024-09-05",
                 "message": "Fix recent issues with Recaptcha compatibility. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
+             },
+             {
+                "version": "5.75.4",
+                "date": "2024-10-16",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     },
     "5.76": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "5.76.0",
@@ -2264,7 +2271,7 @@
         ]
     },
     "5.77": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "5.77.0",
@@ -2288,6 +2295,13 @@
                 "version": "5.78.1",
                 "date": "2024-10-10",
                 "message": "Fix recent issues involving Smarty v2, contact-reference fields, admin-only price-fields, and overriden options in Form Builder."
+             },
+             {
+                "version": "5.78.2",
+                "date": "2024-10-16",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08<\/a> and other issues.",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     }
