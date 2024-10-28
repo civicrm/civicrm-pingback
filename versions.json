@@ -2317,6 +2317,11 @@
                 "version": "5.78.3",
                 "date": "2024-10-17",
                 "message": "Fix recent issues involving the upgrader and Event Cart."
+             },
+             {
+                "version": "5.78.4",
+                "date": "2024-10-28",
+                "message": "Fix recent issues involving the CiviCase UI, printing, and date-fields in Form Builder."
              }
         ]
     }
