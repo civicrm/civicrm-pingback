@@ -2243,6 +2243,16 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+                "version": "5.75.5",
+                "date": "2024-10-17",
+                "message": "Fix recent issue with upgrader. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
+             },
+             {
+                "version": "5.75.6",
+                "date": "2024-10-28",
+                "message": "Fix recent issues with CiviCase UI and printing. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
              }
         ]
     },
@@ -2302,6 +2312,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08<\/a> and other issues.",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+                "version": "5.78.3",
+                "date": "2024-10-17",
+                "message": "Fix recent issues involving the upgrader and Event Cart."
              }
         ]
     }
