@@ -2324,5 +2324,14 @@
                 "message": "Fix recent issues involving the CiviCase UI, printing, and date-fields in Form Builder."
              }
         ]
+    },
+    "5.79": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "5.79.0",
+                "date": "2024-11-06"
+             }
+        ]
     }
 }
