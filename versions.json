@@ -2331,6 +2331,11 @@
              {
                 "version": "5.79.0",
                 "date": "2024-11-06"
+             },
+             {
+                "version": "5.79.1",
+                "date": "2024-11-26",
+                "message": "Fix recent issues with WP shortcodes, new localized installations, and more."
              }
         ]
     }
