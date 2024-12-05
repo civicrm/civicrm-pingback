@@ -2343,5 +2343,14 @@
                 "message": "Fix recent issue with shared addresses."
              }
         ]
+    },
+    "5.80": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "5.80.0",
+                "date": "2024-12-04"
+             }
+        ]
     }
 }
