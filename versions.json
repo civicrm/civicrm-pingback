@@ -2336,6 +2336,11 @@
                 "version": "5.79.1",
                 "date": "2024-11-26",
                 "message": "Fix recent issues with WP shortcodes, new localized installations, and more."
+             },
+             {
+                "version": "5.79.2",
+                "date": "2024-12-04",
+                "message": "Fix recent issue with shared addresses."
              }
         ]
     }
