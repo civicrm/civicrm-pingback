@@ -2350,6 +2350,11 @@
              {
                 "version": "5.80.0",
                 "date": "2024-12-04"
+             },
+             {
+                "version": "5.80.1",
+                "date": "2024-12-12",
+                "message": "Fix recent issues involving Thank-You Gifts, SMS, and upgrades."
              }
         ]
     }
