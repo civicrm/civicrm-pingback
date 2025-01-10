@@ -2357,11 +2357,16 @@
                 "message": "Fix recent issues involving Thank-You Gifts, SMS, and upgrades."
              },
              {
-                "version": "5.80.1",
+                "version": "5.80.2",
                 "date": "2025-01-08",
                 "message": "Fix security issues in TCPDF/PHPSpreadsheet. Fix recent issues involving extension upgrades, scheduled jobs, and more.",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+                "version": "5.80.3",
+                "date": "2025-01-08",
+                "message": "Fix recent issue involving a false status-alert."
              }
         ]
     },
