@@ -2366,7 +2366,7 @@
              {
                 "version": "5.80.3",
                 "date": "2025-01-08",
-                "message": "Fix recent issue involving a false status-alert."
+                "message": "Fix recent issue involving system-status dashboard."
              }
         ]
     },
