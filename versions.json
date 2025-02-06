@@ -2376,6 +2376,16 @@
              {
                 "version": "5.81.0",
                 "date": "2025-01-08"
+             },
+             {
+                "version": "5.81.1",
+                "date": "2025-01-21",
+                "message": "Fix recent issues involving trash icons, custom-field tabs, and password-resets on Standalone."
+             },
+             {
+                "version": "5.81.2",
+                "date": "2025-02-05",
+                "message": "Fix recent issue involving saved-searches and disabled fields."
              }
         ]
     }
