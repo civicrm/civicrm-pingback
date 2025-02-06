@@ -2388,5 +2388,14 @@
                 "message": "Fix recent issue involving saved-searches and disabled fields."
              }
         ]
+    },
+    "5.82": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "5.82.0",
+                "date": "2025-02-05"
+             }
+        ]
     }
 }
