@@ -2395,6 +2395,20 @@
              {
                 "version": "5.82.0",
                 "date": "2025-02-05"
+             },
+             {
+                "version": "5.82.1",
+                "date": "2025-03-05",
+                "message": "Fix recent issues involving repeat-activities, editing relationship dates, certain event confirmations, and more."
+             }
+        ]
+    },
+    "6.0": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.0.0",
+                "date": "2025-03-05"
              }
         ]
     }
