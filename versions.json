@@ -2419,6 +2419,20 @@
                 "version": "6.0.2",
                 "date": "2025-03-18",
                 "message": "Fix recent issues involving River Lea dark-mode and some web-based upgrades."
+             },
+             {
+                "version": "6.0.3",
+                "date": "2025-03-22",
+                "message": "Fix recent issues involving certain custom data, upgrading long email addresses, and more."
+             }
+        ]
+    },
+    "6.1": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.1.0",
+                "date": "2025-04-03"
              }
         ]
     }
