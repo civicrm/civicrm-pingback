@@ -2433,6 +2433,11 @@
              {
                 "version": "6.1.0",
                 "date": "2025-04-03"
+             },
+             {
+                "version": "6.1.1",
+                "date": "2025-04-16",
+                "message": "Fix recent issues involving search icon, extension downloads, imports, and more."
              }
         ]
     }
