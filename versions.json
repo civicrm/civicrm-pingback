@@ -2438,6 +2438,11 @@
                 "version": "6.1.1",
                 "date": "2025-04-16",
                 "message": "Fix recent issues involving search icon, extension downloads, imports, and more."
+             },
+             {
+                "version": "6.1.2",
+                "date": "2025-04-21",
+                "message": "Fix recent issues involving de-duplication for contacts."
              }
         ]
     }
