@@ -2445,5 +2445,14 @@
                 "message": "Fix recent issues involving de-duplication for contacts."
              }
         ]
+    },
+    "6.2": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.2.0",
+                "date": "2025-05-07"
+             }
+        ]
     }
 }
