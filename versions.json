@@ -2386,6 +2386,11 @@
                 "version": "5.81.2",
                 "date": "2025-02-05",
                 "message": "Fix recent issue involving saved-searches and disabled fields."
+             },
+             {
+                "version": "5.81.3",
+                "date": "2025-05-23",
+                "message": "Fix intermittent download problem with Github. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
              }
         ]
     },
