@@ -2466,6 +2466,16 @@
              {
                 "version": "6.3.0",
                 "date": "2025-06-04"
+             },
+             {
+                "version": "6.3.1",
+                "date": "2025-06-05",
+                "message": "Fix recent issues involving composer-deployments and styling."
+             },
+             {
+                "version": "6.3.2",
+                "date": "2025-07-01",
+                "message": "Fix recent issues involving activity-deletions, pop-ups in saved-searches, and custom-forms with users on standalone."
              }
         ]
     }
