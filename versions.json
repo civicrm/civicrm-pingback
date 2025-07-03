@@ -2478,5 +2478,14 @@
                 "message": "Fix recent issues involving activity-deletions, pop-ups in saved-searches, and custom-forms with users on standalone."
              }
         ]
+    },
+    "6.4": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.4.0",
+                "date": "2025-07-02"
+             }
+        ]
     }
 }
