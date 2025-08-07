@@ -2295,7 +2295,7 @@
         ]
     },
     "5.78": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "5.78.0",
@@ -2326,7 +2326,7 @@
         ]
     },
     "5.79": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "5.79.0",
@@ -2345,7 +2345,7 @@
         ]
     },
     "5.80": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "5.80.0",
@@ -2391,11 +2391,18 @@
                 "version": "5.81.3",
                 "date": "2025-05-23",
                 "message": "Fix intermittent download problem with Github. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
+             },
+             {
+                "version": "5.81.4",
+                "date": "2025-08-06",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-01 through CIVI-SA-2025-06<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     },
     "5.82": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "5.82.0",
@@ -2409,7 +2416,7 @@
         ]
     },
     "6.0": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.0.0",
@@ -2485,6 +2492,22 @@
              {
                 "version": "6.4.0",
                 "date": "2025-07-02"
+             },
+             {
+                "version": "6.4.1",
+                "date": "2025-08-06",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-01 through CIVI-SA-2025-06<\/a>.",
+                "severity": "critical",
+                "security": "true"
+             }
+        ]
+    },
+    "6.5": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.5.0",
+                "date": "2025-08-06"
              }
         ]
     }
