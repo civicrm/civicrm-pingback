@@ -2508,6 +2508,20 @@
              {
                 "version": "6.5.0",
                 "date": "2025-08-06"
+             },
+             {
+                "version": "6.5.1",
+                "date": "2025-09-03",
+                "message": "Fix recent issues with custom-data and APIv4 caching."
+             }
+        ]
+    },
+    "6.6": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.6.0",
+                "date": "2025-09-03"
              }
         ]
     }
