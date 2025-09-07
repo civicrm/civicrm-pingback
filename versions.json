@@ -2522,6 +2522,11 @@
              {
                 "version": "6.6.0",
                 "date": "2025-09-03"
+             },
+             {
+                "version": "6.6.1",
+                "date": "2025-09-07",
+                "message": "Fix recent issues with CiviContribute emails and with Danish regions."
              }
         ]
     }
