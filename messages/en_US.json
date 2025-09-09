@@ -1,5 +1,5 @@
 {
-  "{esrBranch}": "5.75",
+  "{esrBranch}": "6.4",
 
   "{branch_eol_title}": "CiviCRM Version End-of-Life",
   "{branch_eol_message}": "<p>CiviCRM {userBranch} has reached its end of life. Security updates are not provided anymore. Please upgrade to the latest stable release (<a href=\"https:\/\/civicrm.org\/download\">{latestStableBranch}</a>) or an extended security release (<a href=\"https:\/\/civicrm.org\/esr\">{esrBranch}</a>).</p><p><strong>Release history</strong></p>{branchList}",
