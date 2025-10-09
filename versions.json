@@ -2532,6 +2532,25 @@
                 "version": "6.6.2",
                 "date": "2025-09-16",
                 "message": "Fix recent issues involving the standalone installer and Smarty notifications."
+             },
+             {
+                "version": "6.6.3",
+                "date": "2025-09-24",
+                "message": "Fix recent issues involving state-province customizations, the \"Batch Entry\" extension, and more."
+             }
+        ]
+    },
+    "6.7": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.7.0",
+                "date": "2025-10-02"
+             },
+             {
+                "version": "6.7.1",
+                "date": "2025-10-07",
+                "message": "Fix reccent issues involving the upgrade process, editing of \"Events\", and anonymous access to custom forms."
              }
         ]
     }
