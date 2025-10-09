@@ -66,6 +66,7 @@ CREATE TABLE `stats` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `co` int(10) unsigned DEFAULT NULL,
   `communityMessagesUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Smarty` varchar(16) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   KEY `hash` (`hash`),
