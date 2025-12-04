@@ -2551,6 +2551,29 @@
                 "version": "6.7.1",
                 "date": "2025-10-07",
                 "message": "Fix reccent issues involving the upgrade process, editing of \"Events\", and anonymous access to custom forms."
+             },
+             {
+                "version": "6.7.2",
+                "date": "2025-10-30",
+                "message": "Fix reccent issues involving certain imports, opt-out links, and more."
+             }
+        ]
+    },
+    "6.8": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.8.0",
+                "date": "2025-11-05"
+             }
+        ]
+    },
+    "6.9": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.9.0",
+                "date": "2025-12-03"
              }
         ]
     }
