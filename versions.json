@@ -2588,6 +2588,20 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08<\/a>.",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+                "version": "6.9.2",
+                "date": "2025-01-07",
+                "message": "Fix recent issues with install/upgrade on Drupal 10/11."
+             }
+        ]
+    },
+    "6.10": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.10.0",
+                "date": "2026-01-07"
              }
         ]
     }
