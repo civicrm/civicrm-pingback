@@ -2602,6 +2602,16 @@
              {
                 "version": "6.10.0",
                 "date": "2026-01-07"
+             },
+             {
+                "version": "6.10.1",
+                "date": "2026-01-07",
+                "message": "Fix recent issues dashboard styling, form builder, and more."
+             },
+             {
+                "version": "6.10.2",
+                "date": "2026-02-04",
+                "message": "Fix compatibility issues with Backdrop, brick/math, and Smarty 2, and other recent issues."
              }
         ]
     }
