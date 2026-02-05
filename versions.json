@@ -2440,7 +2440,7 @@
         ]
     },
     "6.1": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.1.0",
@@ -2459,7 +2459,7 @@
         ]
     },
     "6.2": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.2.0",
@@ -2468,7 +2468,7 @@
         ]
     },
     "6.3": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.3.0",
@@ -2503,14 +2503,14 @@
              {
                 "version": "6.4.2",
                 "date": "2025-12-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
              }
         ]
     },
     "6.5": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.5.0",
@@ -2524,7 +2524,7 @@
         ]
     },
     "6.6": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.6.0",
@@ -2548,7 +2548,7 @@
         ]
     },
     "6.7": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.7.0",
@@ -2567,7 +2567,7 @@
         ]
     },
     "6.8": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.8.0",
@@ -2612,6 +2612,15 @@
                 "version": "6.10.2",
                 "date": "2026-02-04",
                 "message": "Fix compatibility issues with Backdrop, brick/math, and Smarty 2, and other recent issues."
+             }
+        ]
+    },
+    "6.11": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.11.0",
+                "date": "2026-02-04"
              }
         ]
     }
