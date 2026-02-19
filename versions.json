@@ -2621,6 +2621,11 @@
              {
                 "version": "6.11.0",
                 "date": "2026-02-04"
+             },
+             {
+                "version": "6.11.1",
+                "date": "2026-02-18",
+                "message": "Fix recent issues involving surveys, certain options in search-forms, CiviGrant upgrades, and more."
              }
         ]
     }
