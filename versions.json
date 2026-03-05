@@ -2626,6 +2626,16 @@
                 "version": "6.11.1",
                 "date": "2026-02-18",
                 "message": "Fix recent issues involving surveys, certain options in search-forms, CiviGrant upgrades, and more."
+             },
+             {
+                "version": "6.11.2",
+                "date": "2026-03-02",
+                "message": "Fix recent issues involving preferred language, display preferences, Form Builder overrides, and styling quirks."
+             },
+             {
+                "version": "6.11.3",
+                "date": "2026-03-04",
+                "message": "Fix recent issues involving upgrades and advanced search"
              }
         ]
     }
