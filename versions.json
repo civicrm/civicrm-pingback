@@ -2488,6 +2488,7 @@
     },
     "6.4": {
         "status": "stable",
+        "message": "6.4.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
              {
                 "version": "6.4.0",
@@ -2576,7 +2577,7 @@
         ]
     },
     "6.9": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.9.0",
@@ -2598,6 +2599,7 @@
     },
     "6.10": {
         "status": "stable",
+        "message": "6.10.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
         "releases": [
              {
                 "version": "6.10.0",
@@ -2612,6 +2614,13 @@
                 "version": "6.10.2",
                 "date": "2026-02-04",
                 "message": "Fix compatibility issues with Backdrop, brick/math, and Smarty 2, and other recent issues."
+             },
+             {
+                "version": "6.10.3",
+                "date": "2026-03-18",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-01 through CIVI-SA-2026-17<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     },
@@ -2645,6 +2654,13 @@
              {
                 "version": "6.12.0",
                 "date": "2026-03-04"
+             },
+             {
+                "version": "6.12.1",
+                "date": "2026-03-18",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-01 through CIVI-SA-2026-17<\/a>.",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     }
