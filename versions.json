@@ -2683,5 +2683,14 @@
                 "message": "Fix recent issues with extra encodings and certain kinds of membership renewals."
              }
         ]
+    },
+    "6.13": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.13.0",
+                "date": "2026-04-01"
+             }
+        ]
     }
 }
