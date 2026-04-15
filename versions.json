@@ -2686,6 +2686,11 @@
                 "version": "6.12.3",
                 "date": "2026-04-01",
                 "message": "Fix recent issues with extra encodings and certain kinds of membership renewals."
+             },
+             {
+                "version": "6.12.4",
+                "date": "2026-04-15",
+                "message": "Fix critical issue with regards to CiviMember renewals <a target=\"_blank\" href='https:\/\/lab.civicrm.org\/dev\/core\/-\/work_items\/6424#note_201688'>Summary of issue<\/a>"
              }
         ]
     },
