@@ -2705,6 +2705,11 @@
                 "version": "6.13.1",
                 "date": "2026-04-13",
                 "message": "Fix recent issues with membership renwals, extra encodings and issues with CiviCase and custom fields"
+             },
+             {
+                "version": "6.13.2",
+                "date": "2026-04-22",
+                "message": "Fix issues creating user acounts on wordpress, over escaping of tag lables in search forms and more"
              }
         ]
     }
