@@ -2710,6 +2710,11 @@
                 "version": "6.13.2",
                 "date": "2026-04-22",
                 "message": "Fix issues creating user acounts on wordpress, over escaping of tag lables in search forms and more"
+             },
+             {
+                "version": "6.13.3",
+                "date": "2026-04-28",
+                "message": "Fix issues with CiviContribute,SearchKit and fix issue with membership type table and multisite"
              }
         ]
     }
