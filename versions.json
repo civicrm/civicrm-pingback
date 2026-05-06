@@ -2717,5 +2717,14 @@
                 "message": "Fix issues with CiviContribute,SearchKit and fix issue with membership type table and multisite"
              }
         ]
+    },
+    "6.14": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.14.0",
+                "date": "2026-05-06"
+             }
+        ]
     }
 }
