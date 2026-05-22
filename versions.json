@@ -2724,6 +2724,11 @@
              {
                 "version": "6.14.0",
                 "date": "2026-05-06"
+             },
+             {
+                "version": "6.14.1",
+                "date": "2026-05-22",
+                "message": "Fix issues with CiviMember, CiviContribute and fix an issue with WordPress 7.0 and checkbox,radio fields"
              }
         ]
     }
