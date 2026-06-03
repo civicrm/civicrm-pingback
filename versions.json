@@ -2736,5 +2736,14 @@
                 "message": "Fix issues with SearchKit, Premiums in CiviContribute and CKEditor4"
              }
         ]
+    },
+    "6.15": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.15.0",
+                "date": "2026-06-03"
+             }
+        ]
     }
 }
