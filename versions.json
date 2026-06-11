@@ -2743,6 +2743,11 @@
              {
                 "version": "6.15.0",
                 "date": "2026-06-03"
+             },
+             {
+                "version": "6.15.1",
+                "date": "2026-06-10",
+                "message": "FIx issues with Formbuilder forms, Viewing of Recurring contributions and date display in CiviReport"
              }
         ]
     }
