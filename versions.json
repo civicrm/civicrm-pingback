@@ -2647,7 +2647,7 @@
         ]
     },
     "6.11": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.11.0",
@@ -2671,7 +2671,7 @@
         ]
     },
     "6.12": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.12.0",
@@ -2702,7 +2702,7 @@
         ]
     },
     "6.13": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.13.0",
@@ -2726,7 +2726,7 @@
         ]
     },
     "6.14": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
              {
                 "version": "6.14.0",
@@ -2760,6 +2760,13 @@
                "version": "6.15.2",
                "date": "2026-06-14",
                "message": "Fix issues in CiviContribute, FormBuilder, Upgrade and SearchKit"
+             },
+             {
+                "version": "6.15.3",
+                "date": "2026-06-17",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34<\/a>. Also fix some regressions",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     }
