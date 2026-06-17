@@ -2636,6 +2636,13 @@
                 "version": "6.10.6",
                 "date": "2026-04-14",
                 "message": "Fix recent regressions from 6.10.3 involving double-encoding (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
+             },
+             {
+                "version": "6.10.7",
+                "date": "2026-06-17",
+                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     },
