@@ -2767,6 +2767,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34<\/a>. Also fix some regressions",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+                "version": "6.15.4",
+                "date": "2026-06-18",
+                "message": "Fix regessions in CiviEvent moving off waitlist, Upgrade in specific situations and in SearchKit,Formbuilder"
              }
         ]
     }
