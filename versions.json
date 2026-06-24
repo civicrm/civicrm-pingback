@@ -2772,6 +2772,11 @@
                 "version": "6.15.4",
                 "date": "2026-06-18",
                 "message": "Fix regessions in CiviEvent moving off waitlist, Upgrade in specific situations and in SearchKit,Formbuilder"
+             },
+             {
+                "version": "6.15.5",
+                "date": "2026-06-23",
+                "message": "Fix regressions in SearchKit and CiviContribute"
              }
         ]
     }
