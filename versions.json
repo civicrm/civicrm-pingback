@@ -1,3 +1,4 @@
+
 {
     "4.6": {
         "status": "eol",
@@ -2777,6 +2778,11 @@
                 "version": "6.15.5",
                 "date": "2026-06-23",
                 "message": "Fix regressions in SearchKit and CiviContribute"
+             },
+             {
+                "version": "6.15.6",
+                "date": "2026-06-28",
+                "message": "Fix regressions in SearchKit, CiviMember and CiviContribute"
              }
         ]
     }
