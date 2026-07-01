@@ -2790,5 +2790,14 @@
                 "message": "Fix regressions in SearchKit, CiviMember and CiviContribute"
              }
         ]
+    },
+    "6.16": {
+        "status": "stable",
+        "releases": [
+             {
+               "version": "6.16.0",
+               "date": "2026-07-01"
+             }
+        ]
     }
 }
