@@ -2802,6 +2802,11 @@
                "version": "6.16.1",
                "date": "2026-07-15",
                "message": "Fix regressions in SearchKit, FormBuilder and CiviContribute"
+             },
+             {
+               "version": "6.16.2",
+               "date": "2026-07-27",
+               "message": "Fix regressions in CiviContribute, FormBuilder"
              }
         ]
     }
