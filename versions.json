@@ -2657,6 +2657,13 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-35 and  CIVI-SA-2026-36<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+               "version": "6.10.10",
+                "date": "2026-08-05",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     },
@@ -2827,6 +2834,13 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-35 and CIVI-SA-2026-36<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+               "version": "6.16.5",
+                "date": "2026-08-05",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     },
@@ -2836,6 +2850,13 @@
              {
                "version": "6.17.0",
                "date": "2026-08-05"
+             },
+             {
+               "version": "6.17.1",
+                "date": "2026-08-05",
+                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37.",
+                "severity": "critical",
+                "security": "true"
              }
         ]
     }
