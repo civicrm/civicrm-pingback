@@ -2852,12 +2852,18 @@
                "date": "2026-08-05"
              },
              {
-               "version": "6.17.1",
+                "version": "6.17.1",
                 "date": "2026-08-05",
                 "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37.",
                 "severity": "critical",
                 "security": "true"
+             },
+             {
+                "version": "6.17.2",
+                "date": "2026-08-06",
+                "message": "Fix error with deleted files list"
              }
+
         ]
     }
 }
