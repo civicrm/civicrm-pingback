@@ -2862,8 +2862,12 @@
                 "version": "6.17.2",
                 "date": "2026-08-06",
                 "message": "Fix error with deleted files list"
+             },
+             {
+                "version": "6.17.3",
+                "date": "2026-08-26",
+                "message": "Fix Regressions on ACL List, Joomla Compatability, MySQL FTS and CiviEvent"
              }
-
         ]
     }
 }
