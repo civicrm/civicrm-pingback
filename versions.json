@@ -2869,5 +2869,14 @@
                 "message": "Fix Regressions on ACL List, Joomla Compatability, MySQL FTS and CiviEvent"
              }
         ]
+    },
+    "6.18": {
+        "status": "stable",
+        "releases": [
+             {
+                "version": "6.18.0",
+                "date": "2026-09-02"
+             }
+        ]
     }
 }
