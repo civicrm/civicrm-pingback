@@ -2881,6 +2881,11 @@
                 "version": "6.18.1",
                 "date": "2026-09-16",
                 "message": "Fix regressions in SearchKit, CiviMail, CustomFields, AdminUI, Joomla Integration"
+             },
+             {
+                "version": "6.18.2",
+                "date": "2026-10-01",
+                "message": "Fix regressions in SearchKit, Formbuilder, CiviMail, KCFinder Integration, Core Menu/Routing and Joomla Integration"
              }
         ]
     }
