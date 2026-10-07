@@ -2888,5 +2888,14 @@
                 "message": "Fix regressions in SearchKit, Formbuilder, CiviMail, KCFinder Integration, Core Menu/Routing and Joomla Integration"
              }
         ]
+    },
+    "6.19": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "6.19.0",
+                "date": "2026-10-07"
+            }
+        ]
     }
 }
