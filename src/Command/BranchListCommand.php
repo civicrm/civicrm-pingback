@@ -22,7 +22,7 @@ class BranchListCommand extends Command {
     $versions = VersionsFile::read();
     $va = new VersionAnalyzer($versions);
 
-    $rows = array();
+    $rows = [];
     foreach ($versions as $branchVer => $branchRec) {
       $latestRelease = $va->findLatestRelease($branchVer);
       $rows[] = [
@@ -35,7 +35,7 @@ class BranchListCommand extends Command {
     }
 
     $table = new Table($output);
-    $table->setHeaders(array('Branch', 'Current Status', 'Last Release', 'Deprecated Date', 'EOL Date'));
+    $table->setHeaders(['Branch', 'Current Status', 'Last Release', 'Deprecated Date', 'EOL Date']);
     $table->setRows($rows);
     $table->render();
   }

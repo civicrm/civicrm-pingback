@@ -14,7 +14,7 @@ class Process {
    */
   public static function sprintf($expr) {
     $args = func_get_args();
-    $newArgs = array();
+    $newArgs = [];
     $newArgs[] = array_shift($args);
     foreach ($args as $arg) {
       $newArgs[] = preg_match(';^[a-zA-Z0-9\.\/]+$;', $arg) ? $arg : escapeshellarg($arg);

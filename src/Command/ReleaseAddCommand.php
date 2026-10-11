@@ -70,10 +70,10 @@ class ReleaseAddCommand extends Command {
    * @throws \Exception
    */
   protected function createReleaseRecord($releaseVer, $date, $security, $message = NULL, $severity = NULL) {
-    $release = array(
+    $release = [
       'version' => $releaseVer,
       'date' => $date == 'now' ? date('Y-m-d') : $date,
-    );
+    ];
 
     if (!empty($message)) {
       $release['message'] = $message;

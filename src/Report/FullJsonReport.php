@@ -44,9 +44,9 @@ class FullJsonReport extends ReportBase {
    */
   public static function downgradeStatuses($versions) {
     // Older clients won't recognize these statuses...
-    $map = array(
+    $map = [
       'deprecated' => 'stable',
-    );
+    ];
 
     $result = [];
     foreach ($versions as $k => $v) {

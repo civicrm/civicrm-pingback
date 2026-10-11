@@ -27,7 +27,7 @@ class Application extends \Symfony\Component\Console\Application {
    * @return array of Symfony Command objects
    */
   public function createCommands($context = 'default') {
-    $commands = array();
+    $commands = [];
     $commands[] = new \Pingback\Command\ReleaseAddCommand();
     $commands[] = new \Pingback\Command\ReleaseListCommand();
     $commands[] = new \Pingback\Command\BranchStatusCommand();

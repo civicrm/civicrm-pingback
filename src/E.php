@@ -20,7 +20,7 @@ class E {
    * the indices of the array are not numerical; instead, they
    * are the exact substring to match.
    */
-  public function ts($message, $args = array()) {
+  public function ts($message, $args = []) {
     // TODO actually translate $message...
     if ($message[0] === '{' && isset($this->messages[$message])) {
       $message = $this->messages[$message];

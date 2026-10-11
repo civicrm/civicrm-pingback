@@ -20,15 +20,15 @@ class ReleaseListCommand extends Command {
   protected function execute(InputInterface $input, OutputInterface $output) {
     $versions = VersionsFile::read();
 
-    $rows = array();
+    $rows = [];
     foreach ($versions as $majorVer => $majorVerRec) {
       foreach ($majorVerRec['releases'] as $release) {
-        $rows[] = array($majorVer, $release['version'], $release['date'], $release['security'] ?? '');
+        $rows[] = [$majorVer, $release['version'], $release['date'], $release['security'] ?? ''];
       }
     }
 
     $table = new Table($output);
-    $table->setHeaders(array('Major', 'Minor', 'Date', 'Security'));
+    $table->setHeaders(['Major', 'Minor', 'Date', 'Security']);
     $table->setRows($rows);
     $table->render();
   }
