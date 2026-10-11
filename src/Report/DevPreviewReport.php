@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
  * This report provides a developer-oriented preview of how the upgrade messages
  * are rendered across many different versions.
  */
-class DevPreviewReport {
+class DevPreviewReport extends ReportBase {
 
   /**
    * Send an HTML document with the executive summary.
@@ -62,7 +62,7 @@ class DevPreviewReport {
         return new Response(sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf)));
 
       case 'devPreviewJson':
-        return new Response(json_encode($msgs), 200, ['Content-Type' => 'application/json']);
+        return self::createJson($msgs);
 
       case 'devPreviewCsv':
         return new Response(self::renderCsv($msgs), 200, ['Content-Type' => 'text/csv']);

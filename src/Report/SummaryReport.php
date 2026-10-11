@@ -5,9 +5,8 @@ use Pingback\E as E;
 use Pingback\VersionAnalyzer;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
-class SummaryReport {
+class SummaryReport extends ReportBase {
 
   /**
    * Send an HTML document with the executive summary.
@@ -29,8 +28,7 @@ class SummaryReport {
           'title' => 'Version Check Failed',
           'message' => 'The server failed to report on available versions. Perhaps the request was malformed.',
         ],
-      ]);
-      $response->setStatusCode(500);
+      ], 500);
       return $response;
     }
   }
@@ -270,12 +268,6 @@ class SummaryReport {
       return version_compare($a, $b);
     });
     return implode('', $branchVerSnippets);
-  }
-
-  protected static function createJson($output) {
-    return new Response(json_encode($output), 200, [
-      'Content-Type' => 'application/json',
-    ]);
   }
 
 }
