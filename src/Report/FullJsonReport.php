@@ -11,10 +11,11 @@ class FullJsonReport extends ReportBase {
    * Send a list of available versions in JSON format.
    *
    * @param \Symfony\Component\HttpFoundation\Request $request
-   * @return string|\Symfony\Component\HttpFoundation\Response
+   * @param string|null $jsonFile
+   * @return \Symfony\Component\HttpFoundation\Response
    */
-  public static function generate(Request $request) {
-    $versionInfo = VersionsFile::read();
+  public static function generate(Request $request, ?string $jsonFile = NULL) {
+    $versionInfo = VersionsFile::read($jsonFile);
     $versionInfo = self::downgradeStatuses($versionInfo);
 
     $requestVersion = $request->get('version', '');
@@ -26,12 +27,11 @@ class FullJsonReport extends ReportBase {
     else {
       // If a version has been specified, we only return info >= to that version
       $version = VersionNumber::getMinor($requestVersion);
-      $output = array();
-      foreach ($versionInfo as $branchVer => $branchDef) {
-        if ($branchVer >= $version) {
-          $output[$branchVer] = $branchDef;
-        }
-      }
+      $output = array_filter(
+        $versionInfo,
+        fn($branchVer) => version_compare($branchVer, $version, '>='),
+        ARRAY_FILTER_USE_KEY
+      );
 
       return self::createJson($output);
     }
