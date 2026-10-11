@@ -107,11 +107,10 @@ class ReleaseAddCommand extends Command {
     $branchVer = VersionNumber::getMinor($releaseVer);
 
     foreach ($versions[$branchVer]['releases'] as $k => $release) {
-      if ($release['version'] == $releaseVer) {
+      if ($release['version'] === $releaseVer) {
         $versions[$branchVer]['releases'][$k] = $newRelease;
         return 'updated';
       }
-
     }
 
     $versions[$branchVer]['releases'][] = $newRelease;
