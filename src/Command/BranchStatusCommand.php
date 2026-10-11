@@ -43,7 +43,7 @@ class BranchStatusCommand extends Command {
 
     // Apply --deprecated-date=YYYY-MM-DD and --eol-date=YYYY-MM-DD
     foreach ($this->getStatuses() as $status) {
-      $optName = "{$status}-date";
+      $optName = "$status-date";
       if ($input->hasOption($optName) && $val = $input->getOption($optName)) {
         if (!Date::isDate($val)) {
           throw new \Exception("Malformed date: $val");

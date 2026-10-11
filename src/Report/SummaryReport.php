@@ -221,7 +221,7 @@ class SummaryReport extends ReportBase {
           'https://download.civicrm.org/about/' . $release['version']
         ),
         '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
-        '{message}' => isset($release['message']) ? $release['message'] : '',
+        '{message}' => $release['message'] ?? '',
       ];
 
       if (empty($release['message'])) {

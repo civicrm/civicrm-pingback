@@ -23,7 +23,7 @@ class ReleaseListCommand extends Command {
     $rows = array();
     foreach ($versions as $majorVer => $majorVerRec) {
       foreach ($majorVerRec['releases'] as $release) {
-        $rows[] = array($majorVer, $release['version'], $release['date'], isset($release['security']) ? $release['security'] : '');
+        $rows[] = array($majorVer, $release['version'], $release['date'], $release['security'] ?? '');
       }
     }
 

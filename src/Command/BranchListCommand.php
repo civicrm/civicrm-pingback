@@ -29,8 +29,8 @@ class BranchListCommand extends Command {
         $branchVer,
         $branchRec['status'],
         sprintf('%s (%s)', $latestRelease['date'], $latestRelease['version']),
-        isset($branchRec['schedule']['deprecated']) ? $branchRec['schedule']['deprecated'] : '',
-        isset($branchRec['schedule']['eol']) ? $branchRec['schedule']['eol'] : '',
+        $branchRec['schedule']['deprecated'] ?? '',
+        $branchRec['schedule']['eol'] ?? '',
       ];
     }
 
