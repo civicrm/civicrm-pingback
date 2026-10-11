@@ -149,14 +149,21 @@ class VersionAnalyzer {
       return $this->versions[$branchVer]['status'];
     }
 
+    if (empty($this->versions)) {
+      return NULL;
+    }
+
+    $branches = array_keys($this->versions);
+    usort($branches, 'version_compare');
+
     // $branchVer is so old that we don't have any metadata?
-    $oldestBranch = min(array_keys($this->versions));
+    $oldestBranch = reset($branches);
     if (version_compare($branchVer, $oldestBranch, '<')) {
       return 'eol';
     }
 
     // $branchVer is so new that we don't have any metadata?
-    $newestBranch = max(array_keys($this->versions));
+    $newestBranch = end($branches);
     if (version_compare($branchVer, $newestBranch, '>')) {
       return 'testing';
     }
