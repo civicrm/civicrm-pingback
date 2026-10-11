@@ -60,8 +60,7 @@ class VersionsFile {
     }
 
     $versions = self::normalize($versions);
-    $jsOpt = defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : 0;
-    file_put_contents($jsonFile, json_encode($versions, $jsOpt));
+    file_put_contents($jsonFile, json_encode($versions, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
   }
 
   /**
