@@ -31,6 +31,8 @@ class ReleaseListCommand extends Command {
     $table->setHeaders(['Major', 'Minor', 'Date', 'Security']);
     $table->setRows($rows);
     $table->render();
+
+    return 0;
   }
 
 }

@@ -53,6 +53,8 @@ class BranchStatusCommand extends Command {
     }
 
     VersionsFile::write(VersionsFile::getFileName(), $versions);
+
+    return 0;
   }
 
   protected function getStatuses() {

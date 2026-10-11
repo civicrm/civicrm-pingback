@@ -38,6 +38,8 @@ class BranchListCommand extends Command {
     $table->setHeaders(['Branch', 'Current Status', 'Last Release', 'Deprecated Date', 'EOL Date']);
     $table->setRows($rows);
     $table->render();
+
+    return 0;
   }
 
 }
