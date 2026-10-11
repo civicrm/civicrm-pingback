@@ -1,5 +1,3 @@
-
-
 {
     "4.6": {
         "status": "eol",
@@ -567,7 +565,7 @@
     },
     "5.7": {
         "status": "eol",
-        "message": "5.7.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.7.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.7.0",
@@ -586,23 +584,23 @@
             {
                 "version": "5.7.3",
                 "date": "2018-12-05",
-                "message": "Fix regressions in (a) recalculating edited net-amount and (b) loading unnecessary\/nonexistent file."
+                "message": "Fix regressions in (a) recalculating edited net-amount and (b) loading unnecessary/nonexistent file."
             },
             {
                 "version": "5.7.4",
                 "date": "2019-02-20",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "security": "true"
             },
             {
                 "version": "5.7.5",
                 "date": "2019-02-22",
-                "message": "Fix regression involving contact images. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
+                "message": "Fix regression involving contact images. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
             },
             {
                 "version": "5.7.6",
                 "date": "2019-05-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -623,7 +621,7 @@
             {
                 "version": "5.8.2",
                 "date": "2018-12-17",
-                "message": "Fix regressions involving activity-sequences, quick search by email, an API filter option, and two backend forms for CiviContribute\/CiviMember."
+                "message": "Fix regressions involving activity-sequences, quick search by email, an API filter option, and two backend forms for CiviContribute/CiviMember."
             }
         ],
         "schedule": {
@@ -640,7 +638,7 @@
             {
                 "version": "5.9.1",
                 "date": "2019-01-16",
-                "message": "Fix regressions involving (1) anonymous users of contribution\/event-registration screens and (2) filters in \"Manage Case\" screen"
+                "message": "Fix regressions involving (1) anonymous users of contribution/event-registration screens and (2) filters in \"Manage Case\" screen"
             }
         ]
     },
@@ -664,7 +662,7 @@
             {
                 "version": "5.10.3",
                 "date": "2019-02-20",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-01 through CIVI-SA-2019-07</a>.",
                 "security": "true"
             },
             {
@@ -737,7 +735,7 @@
             {
                 "version": "5.13.4",
                 "date": "2019-05-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-09 through CIVI-SA-2019-18</a>.",
                 "security": "true",
                 "severity": "critical"
             },
@@ -749,19 +747,19 @@
             {
                 "version": "5.13.6",
                 "date": "2019-06-17",
-                "message": "Fix regressions involving some uploaded images, recurring contributions with legacy IPN, and exporting soft credits. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
+                "message": "Fix regressions involving some uploaded images, recurring contributions with legacy IPN, and exporting soft credits. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
             },
             {
                 "version": "5.13.7",
                 "date": "2019-11-20",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-19 through CIVI-SA-2019-23<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-19 through CIVI-SA-2019-23</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.13.8",
                 "date": "2019-12-04",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-24<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-24</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -883,7 +881,7 @@
             {
                 "version": "5.18.2",
                 "date": "2019-10-09",
-                "message": "Fix recent regressions involving import\/export and profile search results."
+                "message": "Fix recent regressions involving import/export and profile search results."
             },
             {
                 "version": "5.18.3",
@@ -912,7 +910,7 @@
             {
                 "version": "5.19.2",
                 "date": "2019-11-21",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-19 through CIVI-SA-2019-23<\/a>. Fix recent regressions.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-19 through CIVI-SA-2019-23</a>. Fix recent regressions.",
                 "security": "true",
                 "severity": "critical"
             },
@@ -924,7 +922,7 @@
             {
                 "version": "5.19.4",
                 "date": "2019-12-04",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2019-24<\/a>. Fix recent regressions.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2019-24</a>. Fix recent regressions.",
                 "security": "true",
                 "severity": "critical"
             }
@@ -956,7 +954,7 @@
     },
     "5.21": {
         "status": "eol",
-        "message": "5.21.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.21.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.21.0",
@@ -975,7 +973,7 @@
             {
                 "version": "5.21.3",
                 "date": "2020-04-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1044,7 +1042,7 @@
             {
                 "version": "5.24.3",
                 "date": "2020-04-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2020-01 through CIVI-SA-2020-08</a>.",
                 "security": "true",
                 "severity": "critical"
             },
@@ -1095,7 +1093,7 @@
     },
     "5.27": {
         "status": "eol",
-        "message": "5.27.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.27.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.27.0",
@@ -1109,7 +1107,7 @@
             {
                 "version": "5.27.2",
                 "date": "2020-07-14",
-                "message": "Fix recent regressions involving display of deleted contacts, deduping, reporting with time filters, and CiviMail on WordPress\/Joomla."
+                "message": "Fix recent regressions involving display of deleted contacts, deduping, reporting with time filters, and CiviMail on WordPress/Joomla."
             },
             {
                 "version": "5.27.3",
@@ -1124,19 +1122,19 @@
             {
                 "version": "5.27.5",
                 "date": "2020-08-19",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.27.6",
                 "date": "2020-08-22",
-                "message": "Fix recent regressions involving deleted contacts, Drupal Views, contribution cancellation, dedupe-exceptions, and an icon. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
+                "message": "Fix recent regressions involving deleted contacts, Drupal Views, contribution cancellation, dedupe-exceptions, and an icon. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
             },
             {
                 "version": "5.27.7",
                 "date": "2020-09-01",
-                "message": "Fix recent regressions involving tax calculations, CiviCase assignments, and custom-field administration. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
+                "message": "Fix recent regressions involving tax calculations, CiviCase assignments, and custom-field administration. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
             }
         ]
     },
@@ -1150,7 +1148,7 @@
             {
                 "version": "5.28.1",
                 "date": "2020-08-19",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2020-09 through CIVI-SA-2020-19</a>.",
                 "severity": "critical",
                 "security": "true"
             },
@@ -1228,13 +1226,13 @@
             {
                 "version": "5.32.2",
                 "date": "2020-12-12",
-                "message": "Fix recent regressions involving (1) restrictions on financial types, (2) currency labels, (3) bulk-registering participants, (4) searching\/viewing participants, (5) exporting non-primary fields, and (6) the upgrader."
+                "message": "Fix recent regressions involving (1) restrictions on financial types, (2) currency labels, (3) bulk-registering participants, (4) searching/viewing participants, (5) exporting non-primary fields, and (6) the upgrader."
             }
         ]
     },
     "5.33": {
         "status": "eol",
-        "message": "5.33.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.33.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.33.0",
@@ -1253,7 +1251,7 @@
             {
                 "version": "5.33.3",
                 "date": "2021-03-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
@@ -1265,7 +1263,7 @@
             {
                 "version": "5.33.5",
                 "date": "2021-04-21",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-08<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2021-08</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1290,14 +1288,14 @@
             {
                 "version": "5.35.1",
                 "date": "2021-03-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2021-01 through CIVI-SA-2021-07</a>.",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.35.2",
                 "date": "2021-04-21",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-08<\/a>.",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2021-08</a>.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1313,7 +1311,7 @@
             {
                 "version": "5.36.1",
                 "date": "2021-04-21",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2021-08<\/a>.",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2021-08</a>.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1458,7 +1456,7 @@
     },
     "5.45": {
         "status": "eol",
-        "message": "5.45.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.45.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.45.0",
@@ -1482,28 +1480,28 @@
             {
                 "version": "5.45.4",
                 "date": "2022-03-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.45.5",
                 "date": "2022-04-06",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-06<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-06</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.45.6",
                 "date": "2022-06-01",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-07<\/a>. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-07</a>. (<a href=\"https://civicrm.org/esr\">ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.45.7",
                 "date": "2022-06-02",
-                "message": "Fix recent regression involving APIv3. (<a href=\"https:\/\/civicrm.org\/esr\">ESR<\/a>)"
+                "message": "Fix recent regression involving APIv3. (<a href=\"https://civicrm.org/esr\">ESR</a>)"
             }
         ]
     },
@@ -1527,7 +1525,7 @@
             {
                 "version": "5.46.3",
                 "date": "2022-03-16",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05</a>.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1548,19 +1546,19 @@
             {
                 "version": "5.47.2",
                 "date": "2022-03-16",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05<\/a> and recent upgrade issues.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-01 through CIVI-SA-2022-05</a> and recent upgrade issues.",
                 "severity": "critical",
                 "security": "true"
             },
             {
                 "version": "5.47.3",
                 "date": "2022-03-27",
-                "message": "Rollback <a target=\"_blank\" href='https:\/\/civicrm.org\/redirect\/event-timezone-5.47'>CiviEvent Timezone<\/a> changes. Fix recent regressions."
+                "message": "Rollback <a target=\"_blank\" href='https://civicrm.org/redirect/event-timezone-5.47'>CiviEvent Timezone</a> changes. Fix recent regressions."
             },
             {
                 "version": "5.47.4",
                 "date": "2022-04-06",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-06<\/a> and multilingual upgrade issues.",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-06</a> and multilingual upgrade issues.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1610,7 +1608,7 @@
             {
                 "version": "5.49.4",
                 "date": "2022-06-01",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2022-07<\/a> and recent regression involving checksum-links.",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2022-07</a> and recent regression involving checksum-links.",
                 "severity": "critical",
                 "security": "true"
             },
@@ -1652,7 +1650,7 @@
     },
     "5.51": {
         "status": "eol",
-        "message": "5.51.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.51.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.51.0",
@@ -1676,7 +1674,7 @@
             {
                 "version": "5.51.4",
                 "date": "2023-01-04",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-01, -02, and -03<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2023-01, -02, and -03</a>.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1768,7 +1766,7 @@
             {
                 "version": "5.56.2",
                 "date": "2023-01-04",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-01, -02, and -03<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2023-01, -02, and -03</a>.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1776,7 +1774,7 @@
     },
     "5.57": {
         "status": "eol",
-        "message": "5.57.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.57.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.57.0",
@@ -1800,7 +1798,7 @@
             {
                 "version": "5.57.4",
                 "date": "2023-02-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2023-04, -05, and -06</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             },
@@ -1821,7 +1819,7 @@
             {
                 "version": "5.58.1",
                 "date": "2023-02-15",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-04, -05, and -06<\/a> as well as other recent issues.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2023-04, -05, and -06</a> as well as other recent issues.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1910,7 +1908,7 @@
     },
     "5.63": {
         "status": "eol",
-        "message": "5.63.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.63.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.63.0",
@@ -1934,7 +1932,7 @@
             {
                 "version": "5.63.4",
                 "date": "2023-09-06",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-07 through CIVI-SA-2023-15<\/a> and two other issues. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2023-07 through CIVI-SA-2023-15</a> and two other issues. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -1965,7 +1963,7 @@
             {
                 "version": "5.64.4",
                 "date": "2023-09-06",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2023-07 through CIVI-SA-2023-15<\/a> and two other issues.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2023-07 through CIVI-SA-2023-15</a> and two other issues.",
                 "severity": "critical",
                 "security": "true"
             }
@@ -2049,7 +2047,7 @@
     },
     "5.69": {
         "status": "eol",
-        "message": "5.69.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.69.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
                 "version": "5.69.0",
@@ -2083,7 +2081,7 @@
             {
                 "version": "5.69.6",
                 "date": "2023-06-19",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03<\/a> and one other issue. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03</a> and one other issue. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
             }
@@ -2205,7 +2203,7 @@
             {
                 "version": "5.74.4",
                 "date": "2024-06-19",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03<\/a> and three other issues.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03</a> and three other issues.",
                 "severity": "critical",
                 "security": "true"
             },
@@ -2218,675 +2216,675 @@
     },
     "5.75": {
         "status": "eol",
-        "message": "5.75.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "5.75.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
-             {
+            {
                 "version": "5.75.0",
                 "date": "2024-07-03"
-             },
-             {
+            },
+            {
                 "version": "5.75.1",
                 "date": "2024-07-16",
                 "message": "Fix recent issues involving some options for free events, some kinds of custom data, and more."
-             },
-             {
+            },
+            {
                 "version": "5.75.2",
                 "date": "2024-08-07",
                 "message": "Fix recent issues involving CiviDiscount and CiviImport."
-             },
-             {
+            },
+            {
                 "version": "5.75.3",
                 "date": "2024-09-05",
                 "message": "Fix recent issues with Recaptcha compatibility. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "5.75.4",
                 "date": "2024-10-16",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "5.75.5",
                 "date": "2024-10-17",
                 "message": "Fix recent issue with upgrader. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "5.75.6",
                 "date": "2024-10-28",
                 "message": "Fix recent issues with CiviCase UI and printing. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             }
+            }
         ]
     },
     "5.76": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.76.0",
                 "date": "2024-08-07"
-             },
-             {
+            },
+            {
                 "version": "5.76.1",
                 "date": "2024-08-09",
                 "message": "Fix recent issue involving upgrades for CiviMail."
-             },
-             {
+            },
+            {
                 "version": "5.76.2",
                 "date": "2024-08-15",
                 "message": "Fix recent issue involving CiviMember and Tell-A-Friend."
-             },
-             {
+            },
+            {
                 "version": "5.76.3",
                 "date": "2024-09-04",
                 "message": "Fix recent issue involving some price-options in CiviMember."
-             }
+            }
         ]
     },
     "5.77": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.77.0",
                 "date": "2024-09-04"
-             },
-             {
+            },
+            {
                 "version": "5.77.1",
                 "date": "2024-09-25",
                 "message": "Fix recent issues involving admin-only price-fields, import-mappings, and schema for new/recent installations."
-             }
+            }
         ]
     },
     "5.78": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.78.0",
                 "date": "2024-10-02"
-             },
-             {
+            },
+            {
                 "version": "5.78.1",
                 "date": "2024-10-10",
                 "message": "Fix recent issues involving Smarty v2, contact-reference fields, admin-only price-fields, and overriden options in Form Builder."
-             },
-             {
+            },
+            {
                 "version": "5.78.2",
                 "date": "2024-10-16",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08<\/a> and other issues.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2024-04 through CIVI-SA-2024-08</a> and other issues.",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "5.78.3",
                 "date": "2024-10-17",
                 "message": "Fix recent issues involving the upgrader and Event Cart."
-             },
-             {
+            },
+            {
                 "version": "5.78.4",
                 "date": "2024-10-28",
                 "message": "Fix recent issues involving the CiviCase UI, printing, and date-fields in Form Builder."
-             }
+            }
         ]
     },
     "5.79": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.79.0",
                 "date": "2024-11-06"
-             },
-             {
+            },
+            {
                 "version": "5.79.1",
                 "date": "2024-11-26",
                 "message": "Fix recent issues with WP shortcodes, new localized installations, and more."
-             },
-             {
+            },
+            {
                 "version": "5.79.2",
                 "date": "2024-12-04",
                 "message": "Fix recent issue with shared addresses."
-             }
+            }
         ]
     },
     "5.80": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.80.0",
                 "date": "2024-12-04"
-             },
-             {
+            },
+            {
                 "version": "5.80.1",
                 "date": "2024-12-12",
                 "message": "Fix recent issues involving Thank-You Gifts, SMS, and upgrades."
-             },
-             {
+            },
+            {
                 "version": "5.80.2",
                 "date": "2025-01-08",
                 "message": "Fix security issues in TCPDF/PHPSpreadsheet. Fix recent issues involving extension upgrades, scheduled jobs, and more.",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "5.80.3",
                 "date": "2025-01-08",
                 "message": "Fix recent issue involving system-status dashboard."
-             }
+            }
         ]
     },
     "5.81": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.81.0",
                 "date": "2025-01-08"
-             },
-             {
+            },
+            {
                 "version": "5.81.1",
                 "date": "2025-01-21",
                 "message": "Fix recent issues involving trash icons, custom-field tabs, and password-resets on Standalone."
-             },
-             {
+            },
+            {
                 "version": "5.81.2",
                 "date": "2025-02-05",
                 "message": "Fix recent issue involving saved-searches and disabled fields."
-             },
-             {
+            },
+            {
                 "version": "5.81.3",
                 "date": "2025-05-23",
                 "message": "Fix intermittent download problem with Github. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "5.81.4",
                 "date": "2025-08-06",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-01 through CIVI-SA-2025-06<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2025-01 through CIVI-SA-2025-06</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             }
+            }
         ]
     },
     "5.82": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "5.82.0",
                 "date": "2025-02-05"
-             },
-             {
+            },
+            {
                 "version": "5.82.1",
                 "date": "2025-03-05",
                 "message": "Fix recent issues involving repeat-activities, editing relationship dates, certain event confirmations, and more."
-             }
+            }
         ]
     },
     "6.0": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.0.0",
                 "date": "2025-03-05"
-             },
-             {
+            },
+            {
                 "version": "6.0.1",
                 "date": "2025-03-13",
                 "message": "Fix recent issues involving Joomla upgrades, CiviMail cron jobs, and more."
-             },
-             {
+            },
+            {
                 "version": "6.0.2",
                 "date": "2025-03-18",
                 "message": "Fix recent issues involving River Lea dark-mode and some web-based upgrades."
-             },
-             {
+            },
+            {
                 "version": "6.0.3",
                 "date": "2025-03-22",
                 "message": "Fix recent issues involving certain custom data, upgrading long email addresses, and more."
-             }
+            }
         ]
     },
     "6.1": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.1.0",
                 "date": "2025-04-03"
-             },
-             {
+            },
+            {
                 "version": "6.1.1",
                 "date": "2025-04-16",
                 "message": "Fix recent issues involving search icon, extension downloads, imports, and more."
-             },
-             {
+            },
+            {
                 "version": "6.1.2",
                 "date": "2025-04-21",
                 "message": "Fix recent issues involving de-duplication for contacts."
-             }
+            }
         ]
     },
     "6.2": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.2.0",
                 "date": "2025-05-07"
-             }
+            }
         ]
     },
     "6.3": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.3.0",
                 "date": "2025-06-04"
-             },
-             {
+            },
+            {
                 "version": "6.3.1",
                 "date": "2025-06-05",
                 "message": "Fix recent issues involving composer-deployments and styling."
-             },
-             {
+            },
+            {
                 "version": "6.3.2",
                 "date": "2025-07-01",
                 "message": "Fix recent issues involving activity-deletions, pop-ups in saved-searches, and custom-forms with users on standalone."
-             }
+            }
         ]
     },
     "6.4": {
         "status": "eol",
-        "message": "6.4.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "6.4.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
-             {
+            {
                 "version": "6.4.0",
                 "date": "2025-07-02"
-             },
-             {
+            },
+            {
                 "version": "6.4.1",
                 "date": "2025-08-06",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-01 through CIVI-SA-2025-06<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2025-01 through CIVI-SA-2025-06</a>.",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.4.2",
                 "date": "2025-12-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             }
+            }
         ]
     },
     "6.5": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.5.0",
                 "date": "2025-08-06"
-             },
-             {
+            },
+            {
                 "version": "6.5.1",
                 "date": "2025-09-03",
                 "message": "Fix recent issues with custom-data and APIv4 caching."
-             }
+            }
         ]
     },
     "6.6": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.6.0",
                 "date": "2025-09-03"
-             },
-             {
+            },
+            {
                 "version": "6.6.1",
                 "date": "2025-09-07",
                 "message": "Fix recent issues with CiviContribute emails and with Danish regions."
-             },
-             {
+            },
+            {
                 "version": "6.6.2",
                 "date": "2025-09-16",
                 "message": "Fix recent issues involving the standalone installer and Smarty notifications."
-             },
-             {
+            },
+            {
                 "version": "6.6.3",
                 "date": "2025-09-24",
                 "message": "Fix recent issues involving state-province customizations, the \"Batch Entry\" extension, and more."
-             }
+            }
         ]
     },
     "6.7": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.7.0",
                 "date": "2025-10-02"
-             },
-             {
+            },
+            {
                 "version": "6.7.1",
                 "date": "2025-10-07",
                 "message": "Fix reccent issues involving the upgrade process, editing of \"Events\", and anonymous access to custom forms."
-             },
-             {
+            },
+            {
                 "version": "6.7.2",
                 "date": "2025-10-30",
                 "message": "Fix reccent issues involving certain imports, opt-out links, and more."
-             }
+            }
         ]
     },
     "6.8": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.8.0",
                 "date": "2025-11-05"
-             }
+            }
         ]
     },
     "6.9": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.9.0",
                 "date": "2025-12-03"
-             },
-             {
+            },
+            {
                 "version": "6.9.1",
                 "date": "2025-12-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2025-07 through CIVI-SA-2025-08</a>.",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.9.2",
                 "date": "2025-01-07",
                 "message": "Fix recent issues with install/upgrade on Drupal 10/11."
-             }
+            }
         ]
     },
     "6.10": {
         "status": "stable",
-        "message": "6.10.x is an <strong><a target=\"_blank\" href=\"https:\/\/civicrm.org\/esr\">Extended Security Release<\/a>.<\/strong>",
+        "message": "6.10.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
-             {
+            {
                 "version": "6.10.0",
                 "date": "2026-01-07"
-             },
-             {
+            },
+            {
                 "version": "6.10.1",
                 "date": "2026-01-07",
                 "message": "Fix recent issues dashboard styling, form builder, and more."
-             },
-             {
+            },
+            {
                 "version": "6.10.2",
                 "date": "2026-02-04",
                 "message": "Fix compatibility issues with Backdrop, brick/math, and Smarty 2, and other recent issues."
-             },
-             {
+            },
+            {
                 "version": "6.10.3",
                 "date": "2026-03-18",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-01 through CIVI-SA-2026-17<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-01 through CIVI-SA-2026-17</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.10.4",
                 "date": "2026-03-23",
                 "message": "Fix recent regressions from 6.10.3 involving double-encoding (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "6.10.5",
                 "date": "2026-03-23",
                 "message": "Fix recent regressions from 6.10.3 involving double-encoding (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "6.10.6",
                 "date": "2026-04-14",
                 "message": "Fix recent regressions from 6.10.3 involving double-encoding (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "6.10.7",
                 "date": "2026-06-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.10.8",
                 "date": "2026-06-28",
                 "message": "Fix recent regressions from 6.10.7 (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
-             },
-             {
+            },
+            {
                 "version": "6.10.9",
                 "date": "2026-08-05",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-35 and  CIVI-SA-2026-36<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-35 and  CIVI-SA-2026-36</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
-               "version": "6.10.10",
+            },
+            {
+                "version": "6.10.10",
                 "date": "2026-08-05",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             }
+            }
         ]
     },
     "6.11": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.11.0",
                 "date": "2026-02-04"
-             },
-             {
+            },
+            {
                 "version": "6.11.1",
                 "date": "2026-02-18",
                 "message": "Fix recent issues involving surveys, certain options in search-forms, CiviGrant upgrades, and more."
-             },
-             {
+            },
+            {
                 "version": "6.11.2",
                 "date": "2026-03-02",
                 "message": "Fix recent issues involving preferred language, display preferences, Form Builder overrides, and styling quirks."
-             },
-             {
+            },
+            {
                 "version": "6.11.3",
                 "date": "2026-03-04",
                 "message": "Fix recent issues involving upgrades and advanced search"
-             }
+            }
         ]
     },
     "6.12": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.12.0",
                 "date": "2026-03-04"
-             },
-             {
+            },
+            {
                 "version": "6.12.1",
                 "date": "2026-03-18",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-01 through CIVI-SA-2026-17<\/a>.",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-01 through CIVI-SA-2026-17</a>.",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.12.2",
                 "date": "2026-03-23",
                 "message": "Fix recent issues with extra encodings, upgrades, PayPal current support, and more."
-             },
-             {
+            },
+            {
                 "version": "6.12.3",
                 "date": "2026-04-01",
                 "message": "Fix recent issues with extra encodings and certain kinds of membership renewals."
-             },
-             {
+            },
+            {
                 "version": "6.12.4",
                 "date": "2026-04-15",
-                "message": "Fix critical issue with regards to CiviMember renewals <a target=\"_blank\" href='https:\/\/lab.civicrm.org\/dev\/core\/-\/work_items\/6424#note_201688'>Summary of issue<\/a>"
-             }
+                "message": "Fix critical issue with regards to CiviMember renewals <a target=\"_blank\" href='https://lab.civicrm.org/dev/core/-/work_items/6424#note_201688'>Summary of issue</a>"
+            }
         ]
     },
     "6.13": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.13.0",
                 "date": "2026-04-01"
-             },
-             {
+            },
+            {
                 "version": "6.13.1",
                 "date": "2026-04-13",
                 "message": "Fix recent issues with membership renwals, extra encodings and issues with CiviCase and custom fields"
-             },
-             {
+            },
+            {
                 "version": "6.13.2",
                 "date": "2026-04-22",
                 "message": "Fix issues creating user acounts on wordpress, over escaping of tag lables in search forms and more"
-             },
-             {
+            },
+            {
                 "version": "6.13.3",
                 "date": "2026-04-28",
                 "message": "Fix issues with CiviContribute,SearchKit and fix issue with membership type table and multisite"
-             }
+            }
         ]
     },
     "6.14": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.14.0",
                 "date": "2026-05-06"
-             },
-             {
+            },
+            {
                 "version": "6.14.1",
                 "date": "2026-05-22",
                 "message": "Fix issues with CiviMember, CiviContribute and fix an issue with WordPress 7.0 and checkbox,radio fields"
-             },
-             {
+            },
+            {
                 "version": "6.14.2",
                 "date": "2026-06-03",
                 "message": "Fix issues with SearchKit, Premiums in CiviContribute and CKEditor4"
-             }
+            }
         ]
     },
     "6.15": {
         "status": "eol",
         "releases": [
-             {
+            {
                 "version": "6.15.0",
                 "date": "2026-06-03"
-             },
-             {
+            },
+            {
                 "version": "6.15.1",
                 "date": "2026-06-10",
                 "message": "FIx issues with Formbuilder forms, Viewing of Recurring contributions and date display in CiviReport"
-             },
-             {
-               "version": "6.15.2",
-               "date": "2026-06-14",
-               "message": "Fix issues in CiviContribute, FormBuilder, Upgrade and SearchKit"
-             },
-             {
+            },
+            {
+                "version": "6.15.2",
+                "date": "2026-06-14",
+                "message": "Fix issues in CiviContribute, FormBuilder, Upgrade and SearchKit"
+            },
+            {
                 "version": "6.15.3",
                 "date": "2026-06-17",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34<\/a>. Also fix some regressions",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-18 through CIVI-SA-2026-34</a>. Also fix some regressions",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.15.4",
                 "date": "2026-06-18",
                 "message": "Fix regessions in CiviEvent moving off waitlist, Upgrade in specific situations and in SearchKit,Formbuilder"
-             },
-             {
+            },
+            {
                 "version": "6.15.5",
                 "date": "2026-06-23",
                 "message": "Fix regressions in SearchKit and CiviContribute"
-             },
-             {
+            },
+            {
                 "version": "6.15.6",
                 "date": "2026-06-28",
                 "message": "Fix regressions in SearchKit, CiviMember and CiviContribute"
-             }
+            }
         ]
     },
     "6.16": {
         "status": "stable",
         "releases": [
-             {
-               "version": "6.16.0",
-               "date": "2026-07-01"
-             },
-             {
-               "version": "6.16.1",
-               "date": "2026-07-15",
-               "message": "Fix regressions in SearchKit, FormBuilder and CiviContribute"
-             },
-             {
-               "version": "6.16.2",
-               "date": "2026-07-27",
-               "message": "Fix regressions in CiviContribute, FormBuilder"
-             },
-             {
-               "version": "6.16.3",
-               "date": "2026-08-03",
-               "message": "Fix regressions in AdminUi, Custom Fields Admin UI and ChartKit"
-             },
-             {
+            {
+                "version": "6.16.0",
+                "date": "2026-07-01"
+            },
+            {
+                "version": "6.16.1",
+                "date": "2026-07-15",
+                "message": "Fix regressions in SearchKit, FormBuilder and CiviContribute"
+            },
+            {
+                "version": "6.16.2",
+                "date": "2026-07-27",
+                "message": "Fix regressions in CiviContribute, FormBuilder"
+            },
+            {
+                "version": "6.16.3",
+                "date": "2026-08-03",
+                "message": "Fix regressions in AdminUi, Custom Fields Admin UI and ChartKit"
+            },
+            {
                 "version": "6.16.4",
                 "date": "2026-08-05",
-                "message": "Fix security issues <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-35 and CIVI-SA-2026-36<\/a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-35 and CIVI-SA-2026-36</a>. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
-               "version": "6.16.5",
+            },
+            {
+                "version": "6.16.5",
                 "date": "2026-08-05",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
-             }
+            }
         ]
     },
     "6.17": {
         "status": "stable",
         "releases": [
-             {
-               "version": "6.17.0",
-               "date": "2026-08-05"
-             },
-             {
+            {
+                "version": "6.17.0",
+                "date": "2026-08-05"
+            },
+            {
                 "version": "6.17.1",
                 "date": "2026-08-05",
-                "message": "Fix security issue <a target=\"_blank\" href='https:\/\/civicrm.org\/advisory'>CIVI-SA-2026-37.",
+                "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-37.",
                 "severity": "critical",
                 "security": "true"
-             },
-             {
+            },
+            {
                 "version": "6.17.2",
                 "date": "2026-08-06",
                 "message": "Fix error with deleted files list"
-             },
-             {
+            },
+            {
                 "version": "6.17.3",
                 "date": "2026-08-26",
                 "message": "Fix Regressions on ACL List, Joomla Compatability, MySQL FTS and CiviEvent"
-             }
+            }
         ]
     },
     "6.18": {
         "status": "stable",
         "releases": [
-             {
+            {
                 "version": "6.18.0",
                 "date": "2026-09-02"
-             },
-             {
+            },
+            {
                 "version": "6.18.1",
                 "date": "2026-09-16",
                 "message": "Fix regressions in SearchKit, CiviMail, CustomFields, AdminUI, Joomla Integration"
-             },
-             {
+            },
+            {
                 "version": "6.18.2",
                 "date": "2026-10-01",
                 "message": "Fix regressions in SearchKit, Formbuilder, CiviMail, KCFinder Integration, Core Menu/Routing and Joomla Integration"
-             }
+            }
         ]
     },
     "6.19": {
