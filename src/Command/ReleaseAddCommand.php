@@ -29,7 +29,7 @@ class ReleaseAddCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
     $releaseVer = $input->getArgument('version');
     VersionNumber::assertWellFormed($releaseVer);
     $branchVer = VersionNumber::getMinor($releaseVer);

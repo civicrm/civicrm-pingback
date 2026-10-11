@@ -22,7 +22,7 @@ class BranchStatusCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
 
     $branch = $input->getArgument('branch');
 

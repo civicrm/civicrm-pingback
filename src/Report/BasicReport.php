@@ -12,7 +12,7 @@ class BasicReport {
    * @return \Symfony\Component\HttpFoundation\Response
    */
   public static function generate(Request $request) {
-    $versionInfo = \Pingback\VersionsFile::read(\Pingback\VersionsFile::getFileName());
+    $versionInfo = \Pingback\VersionsFile::read();
     $majors = array_keys($versionInfo);
     usort($majors, function($a, $b){
       return -1 * version_compare($a, $b);

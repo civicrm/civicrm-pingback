@@ -15,7 +15,7 @@ class FullJsonReport {
    * @return string|\Symfony\Component\HttpFoundation\Response
    */
   public static function generate(Request $request) {
-    $versionInfo = \Pingback\VersionsFile::read(\Pingback\VersionsFile::getFileName());
+    $versionInfo = VersionsFile::read();
     $versionInfo = self::downgradeStatuses($versionInfo);
 
     $requestVersion = $request->get('version', '');

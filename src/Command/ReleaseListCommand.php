@@ -18,7 +18,7 @@ class ReleaseListCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
 
     $rows = array();
     foreach ($versions as $majorVer => $majorVerRec) {

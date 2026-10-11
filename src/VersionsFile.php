@@ -38,7 +38,8 @@ class VersionsFile {
    * @return array
    * @throws \Exception
    */
-  public static function read($jsonFile) {
+  public static function read($jsonFile = NULL) {
+    $jsonFile ??= self::getFileName();
     $versions = json_decode(file_get_contents($jsonFile), TRUE);
     if (!$versions) {
       throw new \Exception("Failed to read $jsonFile");

@@ -2,7 +2,6 @@
 
 namespace Pingback\Report;
 
-use Pingback\VersionsFile;
 use Symfony\Component\HttpFoundation\Request;
 
 class SummaryReportTest extends \PHPUnit\Framework\TestCase {
@@ -104,7 +103,7 @@ class SummaryReportTest extends \PHPUnit\Framework\TestCase {
       'format' => 'summary',
       'version' => $version,
     ]);
-    $report = new SummaryReport($request, VersionsFile::getFileName());
+    $report = new SummaryReport($request);
     $response = $report->handleRequest();
     $this->assertTrue(!empty($response->getContent()));
     $this->assertEquals(200, $response->getStatusCode());

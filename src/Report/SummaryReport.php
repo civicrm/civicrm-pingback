@@ -17,7 +17,7 @@ class SummaryReport {
    */
   public static function generate(Request $request) {
     try {
-      $sr = new SummaryReport($request, \Pingback\VersionsFile::getFileName());
+      $sr = new SummaryReport($request);
       return $sr->handleRequest();
     }
     catch (\Exception $e) {
@@ -51,7 +51,7 @@ class SummaryReport {
    */
   protected $e;
 
-  public function __construct(Request $request, $fileName) {
+  public function __construct(Request $request, ?string $fileName = NULL) {
     $this->va = new VersionAnalyzer(\Pingback\VersionsFile::read($fileName));
     $this->userVer = VersionNumber::getPatch($request->get('version', ''));
     $this->e = new E(dirname(dirname(__DIR__)) . '/messages', ['en_US']);

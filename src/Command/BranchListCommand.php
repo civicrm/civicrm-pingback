@@ -19,7 +19,7 @@ class BranchListCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
     $va = new VersionAnalyzer($versions);
 
     $rows = array();

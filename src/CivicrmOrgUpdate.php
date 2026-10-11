@@ -7,7 +7,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class CivicrmOrgUpdate {
 
   public function autoClear(OutputInterface $output): void {
-    $va = new VersionAnalyzer(VersionsFile::read(VersionsFile::getFileName()));
+    $va = new VersionAnalyzer(VersionsFile::read());
     $releaseVer = $va->findLatestStableRelease()['version'] ?? NULL;
     if ($releaseVer === NULL) {
       throw new \RuntimeException("Failed to determine latest stable release");
