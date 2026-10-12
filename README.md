@@ -10,6 +10,13 @@ Requirements:
 - a copy of the GeoLite2 Country database, available at http://dev.maxmind.com/geoip/geoip2/geolite2/, stored at: /usr/share/GeoIP/GeoLite2-Country.mmdb
 - a script to regularely update the GeoIP database - such as https://github.com/maxmind/geoipupdate or a much simpler shell script
 
+### Installation
+
+```
+composer install
+./bin/pb install --db='mysql://user:pass@127.0.0.1:3307/db'
+```
+
 ### CLI: View/edit all releases
 
 ```

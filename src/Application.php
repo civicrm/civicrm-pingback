@@ -33,6 +33,7 @@ class Application extends \Symfony\Component\Console\Application {
     $commands[] = new \Pingback\Command\BranchStatusCommand();
     $commands[] = new \Pingback\Command\BranchListCommand();
     $commands[] = new \Pingback\Command\EditCommand();
+    $commands[] = new \Pingback\Command\InstallCommand();
     return $commands;
   }
 
