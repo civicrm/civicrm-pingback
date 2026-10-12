@@ -46,7 +46,7 @@ class InstallCommandTest extends TestCase {
       'pass' => 'secret_pass',
     ];
 
-    $command->createConfigFile($dbConfig, $tplFile, $configFile);
+    $command->createConfigFile($dbConfig, $tplFile, $configFile, TRUE);
 
     $content = file_get_contents($configFile);
     $this->assertStringContainsString("\$dbhost = 'localhost';", $content);

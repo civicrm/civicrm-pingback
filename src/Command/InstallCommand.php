@@ -1,4 +1,5 @@
 <?php
+
 namespace Pingback\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -12,7 +13,8 @@ class InstallCommand extends Command {
     $this
       ->setName('install')
       ->setDescription('Install Pingback configuration and database')
-      ->addOption('db', NULL, InputOption::VALUE_REQUIRED, 'Database DSN (e.g. mysql://user:pass@127.0.0.1:3307/dbname)');
+      ->addOption('db', NULL, InputOption::VALUE_REQUIRED, 'Database DSN (e.g. mysql://user:pass@127.0.0.1:3307/dbname)')
+      ->addOption('force', 'f', InputOption::VALUE_NONE, 'Override existing config files and database tables');
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
@@ -32,10 +34,10 @@ class InstallCommand extends Command {
       throw new \RuntimeException("SQL file not found: $sqlFile");
     }
 
-    $this->importDatabase($dbConfig, $sqlFile);
+    $this->importDatabase($dbConfig, $sqlFile, $input->getOption('force'));
     $output->writeln("<info>Database schema initialized successfully.</info>");
 
-    $this->createConfigFile($dbConfig, $tplFile, $configFile);
+    $this->createConfigFile($dbConfig, $tplFile, $configFile, $input->getOption('force'));
     $output->writeln("<info>Created $configFile successfully.</info>");
 
     return 0;
@@ -73,8 +75,9 @@ class InstallCommand extends Command {
    *
    * @param array $dbConfig
    * @param string $sqlFile
+   * @param bool $force
    */
-  protected function importDatabase(array $dbConfig, $sqlFile) {
+  protected function importDatabase(array $dbConfig, $sqlFile, bool $force) {
     $mysqli = @new \mysqli(
       $dbConfig['host'],
       $dbConfig['user'],
@@ -97,6 +100,12 @@ class InstallCommand extends Command {
       throw new \RuntimeException("Failed to select database $dbname: " . $mysqli->error);
     }
 
+    foreach (['stats', 'entities', 'extensions'] as $table) {
+      if ($this->hasTable($mysqli, $table) && !$force) {
+        throw new \RuntimeException("Database ($dbname) already has table ($table). Use --force to overwrite all pre-existing data.");
+      }
+    }
+
     $sql = file_get_contents($sqlFile);
     if (!$mysqli->multi_query($sql)) {
       throw new \RuntimeException("Failed to execute SQL in $sqlFile: " . $mysqli->error);
@@ -111,14 +120,30 @@ class InstallCommand extends Command {
     $mysqli->close();
   }
 
+  protected function hasTable($mysqli, string $tableName): bool {
+    try {
+      if ($mysqli->query("SHOW CREATE TABLE `$tableName`")) {
+        return TRUE;
+      }
+    }
+    catch (\mysqli_sql_exception $e) {
+    }
+    return FALSE;
+  }
+
   /**
    * Generate config.php from config.tpl.php or template.
    *
    * @param array $dbConfig
    * @param string $tplFile
    * @param string $configFile
+   * @param bool $force
    */
-  public function createConfigFile(array $dbConfig, $tplFile, $configFile) {
+  public function createConfigFile(array $dbConfig, $tplFile, $configFile, bool $force) {
+    if (file_exists($configFile) && !$force) {
+      throw new \Exception("Config file already exists ($configFile). Use --force to overwrite all pre-existing data.");
+    }
+
     if (file_exists($tplFile)) {
       $content = file_get_contents($tplFile);
     }
