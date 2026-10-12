@@ -12,11 +12,10 @@ class FullJsonReport extends ReportBase {
    * Send a list of available versions in JSON format.
    *
    * @param \Symfony\Component\HttpFoundation\Request $request
-   * @param string|null $jsonFile
    * @return \Symfony\Component\HttpFoundation\Response
    */
-  public static function generate(Request $request, ?string $jsonFile = NULL) {
-    $versionInfo = VersionsFile::read($jsonFile);
+  public static function generate(Request $request) {
+    $versionInfo = \Pingback\VersionsFile::read(VersionsFile::getFileName($request->get('versionsFile', '')));
     $versionInfo = self::downgradeStatuses($versionInfo);
 
     $requestVersion = $request->get('version', '');

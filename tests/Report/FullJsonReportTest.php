@@ -72,9 +72,8 @@ class FullJsonReportTest extends \PHPUnit\Framework\TestCase {
   }
 
   public function testCustomVersionsFile() {
-    $fixtureFile = dirname(__DIR__) . '/ex3.json';
-    $request = new Request(['version' => '5.10.0']);
-    $response = FullJsonReport::generate($request, $fixtureFile);
+    $request = new Request(['version' => '5.10.0', 'versionsFile' => 'ex3.json']);
+    $response = FullJsonReport::generate($request);
 
     $data = json_decode($response->getContent(), TRUE);
     $this->assertArrayHasKey('5.10', $data);

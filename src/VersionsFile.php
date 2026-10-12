@@ -19,6 +19,9 @@ class VersionsFile {
       case 'ex2-dates.json':
         return dirname(__DIR__) . '/tests/ex2-dates.json';
 
+      case 'ex3.json':
+        return dirname(__DIR__) . '/tests/ex3.json';
+
       case 'staging.json':
         return dirname(__DIR__) . '/versions.staging.json';
 
