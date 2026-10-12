@@ -2,12 +2,12 @@
 namespace Pingback\Report;
 
 use Pingback\E as E;
+use Pingback\Responses;
 use Pingback\VersionAnalyzer;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
-class SummaryReport {
+class SummaryReport extends ReportBase {
 
   /**
    * Send an HTML document with the executive summary.
@@ -17,20 +17,19 @@ class SummaryReport {
    */
   public static function generate(Request $request) {
     try {
-      $sr = new SummaryReport($request, \Pingback\VersionsFile::getFileName());
+      $sr = new SummaryReport($request);
       return $sr->handleRequest();
     }
     catch (\Exception $e) {
       error_log(sprintf("SummaryReport failed (%s): %s\n%s", get_class($e), $e->getMessage(), $e->getTraceAsString()));
-      $response = self::createJson([
+      $response = Responses::json([
         'malformed' => [
           'name' => 'malformed',
           'severity' => 'warning',
           'title' => 'Version Check Failed',
           'message' => 'The server failed to report on available versions. Perhaps the request was malformed.',
         ],
-      ]);
-      $response->setStatusCode(500);
+      ], 500);
       return $response;
     }
   }
@@ -47,11 +46,11 @@ class SummaryReport {
   protected $userVer;
 
   /**
-   * @var E
+   * @var \Pingback\E
    */
   protected $e;
 
-  public function __construct(Request $request, $fileName) {
+  public function __construct(Request $request, ?string $fileName = NULL) {
     $this->va = new VersionAnalyzer(\Pingback\VersionsFile::read($fileName));
     $this->userVer = VersionNumber::getPatch($request->get('version', ''));
     $this->e = new E(dirname(dirname(__DIR__)) . '/messages', ['en_US']);
@@ -69,7 +68,7 @@ class SummaryReport {
       $msgs[$msg['name']] = $msg;
     }
 
-    return self::createJson($msgs);
+    return Responses::json($msgs);
   }
 
   /**
@@ -223,7 +222,7 @@ class SummaryReport {
           'https://download.civicrm.org/about/' . $release['version']
         ),
         '{date}' => isset($release['date']) ? htmlentities($release['date']) : '',
-        '{message}' => isset($release['message']) ? $release['message'] : '',
+        '{message}' => $release['message'] ?? '',
       ];
 
       if (empty($release['message'])) {
@@ -252,9 +251,9 @@ class SummaryReport {
       $tsVars = [
         '{branch}' => htmlentities($branchVer),
         '{branchMessage}' => $va->findBranchMessage($branchVer, ''),
-        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']), // htmlentities($firstRelease['version']),
+        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']),
         '{firstDate}' => htmlentities($firstRelease['date']),
-        '{latestVersion}' => _link($latestRelease['version'], 'https://download.civicrm.org/about/' . $latestRelease['version']), // htmlentities($latestRelease['version']),
+        '{latestVersion}' => _link($latestRelease['version'], 'https://download.civicrm.org/about/' . $latestRelease['version']),
         '{latestDate}' => isset($latestRelease['date']) ? htmlentities($latestRelease['date']) : '',
       ];
 
@@ -270,12 +269,6 @@ class SummaryReport {
       return version_compare($a, $b);
     });
     return implode('', $branchVerSnippets);
-  }
-
-  protected static function createJson($output) {
-    return new Response(json_encode($output), 200, [
-      'Content-Type' => 'application/json',
-    ]);
   }
 
 }

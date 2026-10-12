@@ -22,7 +22,7 @@ class BranchStatusCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
 
     $branch = $input->getArgument('branch');
 
@@ -43,7 +43,7 @@ class BranchStatusCommand extends Command {
 
     // Apply --deprecated-date=YYYY-MM-DD and --eol-date=YYYY-MM-DD
     foreach ($this->getStatuses() as $status) {
-      $optName = "{$status}-date";
+      $optName = "$status-date";
       if ($input->hasOption($optName) && $val = $input->getOption($optName)) {
         if (!Date::isDate($val)) {
           throw new \Exception("Malformed date: $val");
@@ -53,6 +53,8 @@ class BranchStatusCommand extends Command {
     }
 
     VersionsFile::write(VersionsFile::getFileName(), $versions);
+
+    return 0;
   }
 
   protected function getStatuses() {

@@ -29,7 +29,7 @@ class ReleaseAddCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
     $releaseVer = $input->getArgument('version');
     VersionNumber::assertWellFormed($releaseVer);
     $branchVer = VersionNumber::getMinor($releaseVer);
@@ -70,10 +70,10 @@ class ReleaseAddCommand extends Command {
    * @throws \Exception
    */
   protected function createReleaseRecord($releaseVer, $date, $security, $message = NULL, $severity = NULL) {
-    $release = array(
+    $release = [
       'version' => $releaseVer,
       'date' => $date == 'now' ? date('Y-m-d') : $date,
-    );
+    ];
 
     if (!empty($message)) {
       $release['message'] = $message;
@@ -99,7 +99,13 @@ class ReleaseAddCommand extends Command {
     return $release;
   }
 
-  protected function addUpdateRelease(
+  /**
+   * @internal
+   * @param $versions
+   * @param $newRelease
+   * @return string
+   */
+  public function addUpdateRelease(
     &$versions,
     $newRelease
   ) {
@@ -107,11 +113,10 @@ class ReleaseAddCommand extends Command {
     $branchVer = VersionNumber::getMinor($releaseVer);
 
     foreach ($versions[$branchVer]['releases'] as $k => $release) {
-      if ($release['version'] == $releaseVer) {
+      if ($release['version'] === $releaseVer) {
         $versions[$branchVer]['releases'][$k] = $newRelease;
         return 'updated';
       }
-
     }
 
     $versions[$branchVer]['releases'][] = $newRelease;

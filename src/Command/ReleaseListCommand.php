@@ -4,9 +4,7 @@ namespace Pingback\Command;
 use Pingback\VersionsFile;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class ReleaseListCommand extends Command {
@@ -18,19 +16,21 @@ class ReleaseListCommand extends Command {
   }
 
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $versions = VersionsFile::read(VersionsFile::getFileName());
+    $versions = VersionsFile::read();
 
-    $rows = array();
+    $rows = [];
     foreach ($versions as $majorVer => $majorVerRec) {
       foreach ($majorVerRec['releases'] as $release) {
-        $rows[] = array($majorVer, $release['version'], $release['date'], isset($release['security']) ? $release['security'] : '');
+        $rows[] = [$majorVer, $release['version'], $release['date'], $release['security'] ?? ''];
       }
     }
 
     $table = new Table($output);
-    $table->setHeaders(array('Major', 'Minor', 'Date', 'Security'));
+    $table->setHeaders(['Major', 'Minor', 'Date', 'Security']);
     $table->setRows($rows);
     $table->render();
+
+    return 0;
   }
 
 }

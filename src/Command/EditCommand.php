@@ -29,10 +29,10 @@ class EditCommand extends Command {
     $this->editor->setValidator(function ($file) {
       $data = json_decode(file_get_contents($file), TRUE);
       if ($data === NULL) {
-        return array(
+        return [
           FALSE,
           "// JSON is malformed. Please resolve syntax errors and then remove this message.\n\n",
-        );
+        ];
       }
       $errors = VersionsFile::validate($data);
       if (!empty($errors)) {
@@ -42,7 +42,7 @@ class EditCommand extends Command {
           . implode("", array_map(fn($msg) => "// - $msg\n", $errors)),
         ];
       }
-      return array(TRUE, '');
+      return [TRUE, ''];
     });
   }
 

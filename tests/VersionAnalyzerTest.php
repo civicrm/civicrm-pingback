@@ -30,10 +30,34 @@ class VersionAnalyzerTest extends \PHPUnit\Framework\TestCase {
     $this->assertEquals('critical', $this->createVA()->findHighestPatchSeverity('4.7.25'));
   }
 
-
   public function testIsSecureVersion() {
     $this->assertFalse($this->createVA()->isSecureVersion('4.7.10'));
     $this->assertTrue($this->createVA()->isSecureVersion('4.7.1000'));
+  }
+
+  public function testFindBranchStatus() {
+    $va = new VersionAnalyzer([
+      '5.9' => ['status' => 'eol'],
+      '5.10' => ['status' => 'stable'],
+      '5.19' => ['status' => 'stable'],
+    ]);
+
+    // An unlisted branch older than the oldest known branch should be EOL
+    $this->assertEquals('eol', $va->findBranchStatus('5.8'));
+
+    // An unlisted branch newer than the newest known branch should be testing
+    $this->assertEquals('testing', $va->findBranchStatus('5.20'));
+
+    // An unlisted branch between known branches should not be testing
+    $this->assertNull($va->findBranchStatus('5.15'));
+
+    $vaTwo = new VersionAnalyzer([
+      '3.8' => ['status' => 'eol'],
+      '3.10' => ['status' => 'stable'],
+    ]);
+    $this->assertEquals('eol', $vaTwo->findBranchStatus('3.7'));
+    $this->assertNull($vaTwo->findBranchStatus('3.9'));
+    $this->assertEquals('testing', $vaTwo->findBranchStatus('3.11'));
   }
 
   /**

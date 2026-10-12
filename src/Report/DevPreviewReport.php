@@ -2,11 +2,10 @@
 namespace Pingback\Report;
 
 use Pingback\E as E;
-use Pingback\VersionAnalyzer;
+use Pingback\Responses;
 use Pingback\VersionsFile;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class DevPreviewReport
@@ -15,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
  * This report provides a developer-oriented preview of how the upgrade messages
  * are rendered across many different versions.
  */
-class DevPreviewReport {
+class DevPreviewReport extends ReportBase {
 
   /**
    * Send an HTML document with the executive summary.
@@ -59,13 +58,13 @@ class DevPreviewReport {
         foreach ($msgs as $version => $verMsgs) {
           $buf[] = self::renderMessages($version, $verMsgs);
         }
-        return new Response(sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf)));
+        return Responses::basicHtml(implode("\n<br/><hr/><br/>\n", $buf));
 
       case 'devPreviewJson':
-        return new Response(json_encode($msgs), 200, ['Content-Type' => 'application/json']);
+        return Responses::json($msgs);
 
       case 'devPreviewCsv':
-        return new Response(self::renderCsv($msgs), 200, ['Content-Type' => 'text/csv']);
+        return Responses::csv(self::buildTable($msgs));
 
       default:
         throw new \RuntimeException('Unrecognized format');
@@ -103,9 +102,9 @@ class DevPreviewReport {
   /**
    * @param array $msgs
    *   Array(string $version => array $msgList)
-   * @return string
+   * @return array
    */
-  public static function renderCsv($msgs) {
+  public static function buildTable($msgs) {
     $rows = [];
     $rows[] = ['tgt.version', 'msg.name', 'msg.severity', 'msg.title', 'msg.message'];
     foreach ($msgs as $version => $verMsgs) {
@@ -113,7 +112,7 @@ class DevPreviewReport {
         $rows[] = [$version, $msg['name'], $msg['severity'], $msg['title'], $msg['message']];
       }
     }
-    return \Pingback\CsvGenerator::create($rows);
+    return $rows;
   }
 
 }

@@ -19,6 +19,9 @@ class VersionsFile {
       case 'ex2-dates.json':
         return dirname(__DIR__) . '/tests/ex2-dates.json';
 
+      case 'ex3.json':
+        return dirname(__DIR__) . '/tests/ex3.json';
+
       case 'staging.json':
         return dirname(__DIR__) . '/versions.staging.json';
 
@@ -38,7 +41,8 @@ class VersionsFile {
    * @return array
    * @throws \Exception
    */
-  public static function read($jsonFile) {
+  public static function read($jsonFile = NULL) {
+    $jsonFile ??= self::getFileName();
     $versions = json_decode(file_get_contents($jsonFile), TRUE);
     if (!$versions) {
       throw new \Exception("Failed to read $jsonFile");
@@ -59,8 +63,7 @@ class VersionsFile {
     }
 
     $versions = self::normalize($versions);
-    $jsOpt = defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : 0;
-    file_put_contents($jsonFile, json_encode($versions, $jsOpt));
+    file_put_contents($jsonFile, json_encode($versions, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
   }
 
   /**

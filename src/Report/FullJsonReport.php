@@ -1,44 +1,39 @@
 <?php
 namespace Pingback\Report;
 
+use Pingback\Responses;
 use Pingback\VersionsFile;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
-class FullJsonReport {
+class FullJsonReport extends ReportBase {
 
   /**
    * Send a list of available versions in JSON format.
    *
    * @param \Symfony\Component\HttpFoundation\Request $request
-   * @return string|\Symfony\Component\HttpFoundation\Response
+   * @return \Symfony\Component\HttpFoundation\Response
    */
   public static function generate(Request $request) {
-    $versionInfo = \Pingback\VersionsFile::read(\Pingback\VersionsFile::getFileName());
+    $versionInfo = \Pingback\VersionsFile::read(VersionsFile::getFileName($request->get('versionsFile', '')));
     $versionInfo = self::downgradeStatuses($versionInfo);
 
     $requestVersion = $request->get('version', '');
 
     if (empty($requestVersion) || !VersionNumber::isWellFormed($requestVersion)) {
       // No valid version specified, just return all info
-      return new Response(json_encode($versionInfo), 200, [
-        'Content-Type' => 'application/json',
-      ]);
+      return Responses::json($versionInfo);
     }
     else {
       // If a version has been specified, we only return info >= to that version
       $version = VersionNumber::getMinor($requestVersion);
-      $output = array();
-      foreach ($versionInfo as $branchVer => $branchDef) {
-        if ($branchVer >= $version) {
-          $output[$branchVer] = $branchDef;
-        }
-      }
+      $output = array_filter(
+        $versionInfo,
+        fn($branchVer) => version_compare($branchVer, $version, '>='),
+        ARRAY_FILTER_USE_KEY
+      );
 
-      return new Response(json_encode($output), 200, [
-        'Content-Type' => 'application/json',
-      ]);
+      return Responses::json($output);
     }
   }
 
@@ -49,9 +44,9 @@ class FullJsonReport {
    */
   public static function downgradeStatuses($versions) {
     // Older clients won't recognize these statuses...
-    $map = array(
+    $map = [
       'deprecated' => 'stable',
-    );
+    ];
 
     $result = [];
     foreach ($versions as $k => $v) {
