@@ -99,7 +99,13 @@ class ReleaseAddCommand extends Command {
     return $release;
   }
 
-  protected function addUpdateRelease(
+  /**
+   * @internal
+   * @param $versions
+   * @param $newRelease
+   * @return string
+   */
+  public function addUpdateRelease(
     &$versions,
     $newRelease
   ) {

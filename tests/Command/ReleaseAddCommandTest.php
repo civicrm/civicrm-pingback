@@ -5,13 +5,7 @@ namespace Pingback\Command;
 class ReleaseAddCommandTest extends \PHPUnit\Framework\TestCase {
 
   public function testAddUpdateReleaseDoesNotLooseMatchDifferentVersions() {
-    $command = new class extends ReleaseAddCommand {
-
-      public function runAddUpdateRelease(&$versions, $newRelease) {
-        return $this->addUpdateRelease($versions, $newRelease);
-      }
-
-    };
+    $command = new ReleaseAddCommand();
 
     $versions = [
       '6.1' => [
@@ -29,7 +23,7 @@ class ReleaseAddCommandTest extends \PHPUnit\Framework\TestCase {
     ];
 
     $newRelease = ['version' => '6.1.1', 'date' => '2025-02-01'];
-    $result = $command->runAddUpdateRelease($versions, $newRelease);
+    $result = $command->addUpdateRelease($versions, $newRelease);
 
     $this->assertEquals('added', $result);
     $this->assertCount(2, $versions['6.1']['releases']);
@@ -38,13 +32,7 @@ class ReleaseAddCommandTest extends \PHPUnit\Framework\TestCase {
   }
 
   public function testAddUpdateReleaseUpdatesMatchingVersion() {
-    $command = new class extends ReleaseAddCommand {
-
-      public function runAddUpdateRelease(&$versions, $newRelease) {
-        return $this->addUpdateRelease($versions, $newRelease);
-      }
-
-    };
+    $command = new ReleaseAddCommand();
 
     $versions = [
       '6.0' => [
@@ -56,7 +44,7 @@ class ReleaseAddCommandTest extends \PHPUnit\Framework\TestCase {
     ];
 
     $newRelease = ['version' => '6.0.0', 'date' => '2026-01-02', 'security' => 'true'];
-    $result = $command->runAddUpdateRelease($versions, $newRelease);
+    $result = $command->addUpdateRelease($versions, $newRelease);
 
     $this->assertEquals('updated', $result);
     $this->assertCount(1, $versions['6.0']['releases']);
