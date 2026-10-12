@@ -50,6 +50,8 @@ class VersionNumber {
    *   Ex: '5.1.2'
    * @param string $b
    *   Ex: '5.2.3'
+   * @param string $operator
+   *   Ex: '>=' or '<'
    * @return mixed
    * @see version_compare()
    */

@@ -46,7 +46,7 @@ class SummaryReport extends ReportBase {
   protected $userVer;
 
   /**
-   * @var E
+   * @var \Pingback\E
    */
   protected $e;
 
@@ -251,9 +251,9 @@ class SummaryReport extends ReportBase {
       $tsVars = [
         '{branch}' => htmlentities($branchVer),
         '{branchMessage}' => $va->findBranchMessage($branchVer, ''),
-        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']), // htmlentities($firstRelease['version']),
+        '{firstVersion}' => _link($firstRelease['version'], 'https://download.civicrm.org/about/' . $firstRelease['version']),
         '{firstDate}' => htmlentities($firstRelease['date']),
-        '{latestVersion}' => _link($latestRelease['version'], 'https://download.civicrm.org/about/' . $latestRelease['version']), // htmlentities($latestRelease['version']),
+        '{latestVersion}' => _link($latestRelease['version'], 'https://download.civicrm.org/about/' . $latestRelease['version']),
         '{latestDate}' => isset($latestRelease['date']) ? htmlentities($latestRelease['date']) : '',
       ];
 

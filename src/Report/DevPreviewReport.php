@@ -3,11 +3,9 @@ namespace Pingback\Report;
 
 use Pingback\E as E;
 use Pingback\Responses;
-use Pingback\VersionAnalyzer;
 use Pingback\VersionsFile;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class DevPreviewReport
@@ -67,7 +65,6 @@ class DevPreviewReport extends ReportBase {
 
       case 'devPreviewCsv':
         return Responses::csv(self::buildTable($msgs));
-        // return new Response(self::buildTable($msgs), 200, ['Content-Type' => 'text/csv']);
 
       default:
         throw new \RuntimeException('Unrecognized format');

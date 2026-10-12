@@ -14,7 +14,7 @@ class BasicReport {
   public static function generate(Request $request) {
     $versionInfo = \Pingback\VersionsFile::read();
     $majors = array_keys($versionInfo);
-    usort($majors, function($a, $b){
+    usort($majors, function($a, $b) {
       return -1 * version_compare($a, $b);
     });
     foreach ($majors as $majorVersion) {

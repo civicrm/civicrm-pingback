@@ -22,7 +22,6 @@ class Process {
     return call_user_func_array('sprintf', $newArgs);
   }
 
-
   /**
    * Determine full path to an external command (by searching PATH).
    *
