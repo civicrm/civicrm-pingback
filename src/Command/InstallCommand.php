@@ -53,23 +53,19 @@ class InstallCommand extends Command {
       throw new \InvalidArgumentException("Invalid database DSN: '$dsn'");
     }
 
-    $host = $parsed['host'] ?? '127.0.0.1';
-    $port = isset($parsed['port']) ? (int) $parsed['port'] : NULL;
-    $user = isset($parsed['user']) ? urldecode($parsed['user']) : '';
-    $pass = isset($parsed['pass']) ? urldecode($parsed['pass']) : '';
-    $dbname = isset($parsed['path']) ? ltrim($parsed['path'], '/') : '';
+    $dbConfig = [
+      'host' => $parsed['host'] ?? '127.0.0.1',
+      'port' => isset($parsed['port']) ? (int) $parsed['port'] : NULL,
+      'user' => isset($parsed['user']) ? urldecode($parsed['user']) : '',
+      'pass' => isset($parsed['pass']) ? urldecode($parsed['pass']) : '',
+      'dbname' => isset($parsed['path']) ? ltrim($parsed['path'], '/') : '',
+    ];
 
-    if (empty($dbname)) {
+    if (empty($dbConfig['dbname'])) {
       throw new \InvalidArgumentException("Database name missing in DSN: '$dsn'");
     }
 
-    return [
-      'host' => $host,
-      'port' => $port,
-      'user' => $user,
-      'pass' => $pass,
-      'dbname' => $dbname,
-    ];
+    return $dbConfig;
   }
 
   /**
