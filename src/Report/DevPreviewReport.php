@@ -60,13 +60,14 @@ class DevPreviewReport extends ReportBase {
         foreach ($msgs as $version => $verMsgs) {
           $buf[] = self::renderMessages($version, $verMsgs);
         }
-        return new Response(sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf)));
+        return Responses::basicHtml(implode("\n<br/><hr/><br/>\n", $buf));
 
       case 'devPreviewJson':
         return Responses::json($msgs);
 
       case 'devPreviewCsv':
-        return new Response(self::renderCsv($msgs), 200, ['Content-Type' => 'text/csv']);
+        return Responses::csv(self::buildTable($msgs));
+        // return new Response(self::buildTable($msgs), 200, ['Content-Type' => 'text/csv']);
 
       default:
         throw new \RuntimeException('Unrecognized format');
@@ -104,9 +105,9 @@ class DevPreviewReport extends ReportBase {
   /**
    * @param array $msgs
    *   Array(string $version => array $msgList)
-   * @return string
+   * @return array
    */
-  public static function renderCsv($msgs) {
+  public static function buildTable($msgs) {
     $rows = [];
     $rows[] = ['tgt.version', 'msg.name', 'msg.severity', 'msg.title', 'msg.message'];
     foreach ($msgs as $version => $verMsgs) {
@@ -114,7 +115,7 @@ class DevPreviewReport extends ReportBase {
         $rows[] = [$version, $msg['name'], $msg['severity'], $msg['title'], $msg['message']];
       }
     }
-    return \Pingback\CsvGenerator::create($rows);
+    return $rows;
   }
 
 }
