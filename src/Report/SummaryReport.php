@@ -2,6 +2,7 @@
 namespace Pingback\Report;
 
 use Pingback\E as E;
+use Pingback\Responses;
 use Pingback\VersionAnalyzer;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,7 +22,7 @@ class SummaryReport extends ReportBase {
     }
     catch (\Exception $e) {
       error_log(sprintf("SummaryReport failed (%s): %s\n%s", get_class($e), $e->getMessage(), $e->getTraceAsString()));
-      $response = self::createJson([
+      $response = Responses::json([
         'malformed' => [
           'name' => 'malformed',
           'severity' => 'warning',
@@ -67,7 +68,7 @@ class SummaryReport extends ReportBase {
       $msgs[$msg['name']] = $msg;
     }
 
-    return self::createJson($msgs);
+    return Responses::json($msgs);
   }
 
   /**

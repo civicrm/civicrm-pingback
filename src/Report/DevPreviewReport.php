@@ -2,6 +2,7 @@
 namespace Pingback\Report;
 
 use Pingback\E as E;
+use Pingback\Responses;
 use Pingback\VersionAnalyzer;
 use Pingback\VersionsFile;
 use Pingback\VersionNumber;
@@ -62,7 +63,7 @@ class DevPreviewReport extends ReportBase {
         return new Response(sprintf("<html><body>\n%s\n</body></html>\n", implode("\n<br/><hr/><br/>\n", $buf)));
 
       case 'devPreviewJson':
-        return self::createJson($msgs);
+        return Responses::json($msgs);
 
       case 'devPreviewCsv':
         return new Response(self::renderCsv($msgs), 200, ['Content-Type' => 'text/csv']);

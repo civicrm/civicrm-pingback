@@ -1,6 +1,7 @@
 <?php
 namespace Pingback\Report;
 
+use Pingback\Responses;
 use Pingback\VersionsFile;
 use Pingback\VersionNumber;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +23,7 @@ class FullJsonReport extends ReportBase {
 
     if (empty($requestVersion) || !VersionNumber::isWellFormed($requestVersion)) {
       // No valid version specified, just return all info
-      return self::createJson($versionInfo);
+      return Responses::json($versionInfo);
     }
     else {
       // If a version has been specified, we only return info >= to that version
@@ -33,7 +34,7 @@ class FullJsonReport extends ReportBase {
         ARRAY_FILTER_USE_KEY
       );
 
-      return self::createJson($output);
+      return Responses::json($output);
     }
   }
 
