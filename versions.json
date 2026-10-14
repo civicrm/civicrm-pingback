@@ -2893,6 +2893,11 @@
             {
                 "version": "6.19.0",
                 "date": "2026-10-07"
+            },
+            {
+                "version": "6.19.1",
+                "date": "2026-10-13",
+                "message": "Fix Regressions in SearchKit, FormBuilder, KCFinder Integration, CKeditor4"
             }
         ]
     }
