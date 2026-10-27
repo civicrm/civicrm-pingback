@@ -93,6 +93,17 @@ class VersionsFile {
           $errors[] = sprintf('Release security flag "%s" is malformed', $release['security']);
         }
       }
+
+      $releases = $versionData['releases'];
+      usort($releases, fn($a, $b) => version_compare($a['version'], $b['version']));
+      for ($i = 1; $i < count($releases); $i++) {
+        $prev = $releases[$i - 1];
+        $release = $releases[$i];
+        if ($release['date'] < $prev['date']) {
+          $errors[] = sprintf('Release "%s" (%s) is dated before release "%s" (%s)',
+            $release['version'], $release['date'], $prev['version'], $prev['date']);
+        }
+      }
     }
 
     return $errors;

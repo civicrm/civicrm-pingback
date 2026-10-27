@@ -57,4 +57,39 @@ class VersionsFileTest extends \PHPUnit\Framework\TestCase {
     $this->assertEquals($expectStatus, $vf[$checkVer]['status']);
   }
 
+  public function testValidateAcceptsPublishedVersions() {
+    $versions = json_decode(file_get_contents(__DIR__ . '/../versions.json'), TRUE);
+    $this->assertEquals([], VersionsFile::validate($versions));
+  }
+
+  public function testValidateRejectsReleaseDatedBeforePreviousRelease() {
+    $versions = [
+      '6.9' => [
+        'status' => 'stable',
+        'releases' => [
+          ['version' => '6.9.0', 'date' => '2025-12-03'],
+          ['version' => '6.9.2', 'date' => '2025-01-07'],
+          ['version' => '6.9.1', 'date' => '2025-12-17'],
+        ],
+      ],
+    ];
+    $this->assertEquals(
+      ['Release "6.9.2" (2025-01-07) is dated before release "6.9.1" (2025-12-17)'],
+      VersionsFile::validate($versions)
+    );
+  }
+
+  public function testValidateAcceptsReleasesOnTheSameDay() {
+    $versions = [
+      '6.10' => [
+        'status' => 'stable',
+        'releases' => [
+          ['version' => '6.10.0', 'date' => '2026-01-07'],
+          ['version' => '6.10.1', 'date' => '2026-01-07'],
+        ],
+      ],
+    ];
+    $this->assertEquals([], VersionsFile::validate($versions));
+  }
+
 }

@@ -2080,7 +2080,7 @@
             },
             {
                 "version": "5.69.6",
-                "date": "2023-06-19",
+                "date": "2024-06-19",
                 "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2024-01 through CIVI-SA-2024-03</a> and one other issue. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
@@ -2558,12 +2558,12 @@
             {
                 "version": "6.7.1",
                 "date": "2025-10-07",
-                "message": "Fix reccent issues involving the upgrade process, editing of \"Events\", and anonymous access to custom forms."
+                "message": "Fix recent issues involving the upgrade process, editing of \"Events\", and anonymous access to custom forms."
             },
             {
                 "version": "6.7.2",
                 "date": "2025-10-30",
-                "message": "Fix reccent issues involving certain imports, opt-out links, and more."
+                "message": "Fix recent issues involving certain imports, opt-out links, and more."
             }
         ]
     },
@@ -2592,7 +2592,7 @@
             },
             {
                 "version": "6.9.2",
-                "date": "2025-01-07",
+                "date": "2026-01-07",
                 "message": "Fix recent issues with install/upgrade on Drupal 10/11."
             }
         ]
