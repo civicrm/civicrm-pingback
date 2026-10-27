@@ -48,6 +48,11 @@ class ReleaseAddCommand extends Command {
     $result = $this->addUpdateRelease($versions, $newRelease);
     $output->writeln("... $result");
 
+    $errors = VersionsFile::validate($versions);
+    if (!empty($errors)) {
+      throw new \Exception("versions.json would become invalid:\n- " . implode("\n- ", $errors));
+    }
+
     VersionsFile::write(VersionsFile::getFileName(), $versions);
 
     if (empty($input->getOption('no-civicrm-org'))) {
