@@ -2598,7 +2598,7 @@
         ]
     },
     "6.10": {
-        "status": "stable",
+        "status": "eol",
         "message": "6.10.x is an <strong><a target=\"_blank\" href=\"https://civicrm.org/esr\">Extended Security Release</a>.</strong>",
         "releases": [
             {
@@ -2839,11 +2839,18 @@
                 "message": "Fix security issue <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-37. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "6.16.6",
+                "date": "2026-10-29",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-38 through to CIVI-SA-2026-52. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     },
     "6.17": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "6.17.0",
@@ -2869,7 +2876,7 @@
         ]
     },
     "6.18": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "6.18.0",
@@ -2903,6 +2910,13 @@
                 "version": "6.19.2",
                 "date": "2026-10-20",
                 "message": "Fix regresssions in SearchKit, FromBuilder, QuickSearch, OpenStreetMaps"
+            },
+            {
+                "version": "6.19.3",
+                "date": "2026-10-29",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-38 through CIVI-SA-2026-52</a>. Also fix some regressions",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
