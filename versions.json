@@ -2842,10 +2842,15 @@
             },
             {
                 "version": "6.16.6",
-                "date": "2026-10-29",
+                "date": "2026-10-28",
                 "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-38 through to CIVI-SA-2026-52. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "6.16.7",
+                "date": "2026-10-29",
+                "message": "Fix Regressions in CiviMail, APIv4, Tags UI, WordPress. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
             }
         ]
     },
@@ -2913,10 +2918,15 @@
             },
             {
                 "version": "6.19.3",
-                "date": "2026-10-29",
+                "date": "2026-10-28",
                 "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-38 through CIVI-SA-2026-52</a>. Also fix some regressions",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "6.19.4",
+                "date": "2026-10-29",
+                "message": "Fix Regressions in CiviMail, APIv4, Tags UI, WordPress."
             }
         ]
     }
