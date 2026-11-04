@@ -2851,6 +2851,11 @@
                 "version": "6.16.7",
                 "date": "2026-10-29",
                 "message": "Fix Regressions in CiviMail, APIv4, Tags UI, WordPress. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
+            },
+            {
+                "version": "6.16.8",
+                "date": "2026-11-03",
+                "message": "Fix Regessions in Batch entry, APiv4, Apiv3, Contact Edit. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
             }
         ]
     },
@@ -2927,6 +2932,11 @@
                 "version": "6.19.4",
                 "date": "2026-10-29",
                 "message": "Fix Regressions in CiviMail, APIv4, Tags UI, WordPress."
+            },
+            {
+                "version": "6.19.5",
+                "date": "2026-11-03",
+                "message": "Fix regressions in CiviMail, APiv3, Apiv4, Batch Entry, Contact Edit, Quicksearch, FTS."
             }
         ]
     }
