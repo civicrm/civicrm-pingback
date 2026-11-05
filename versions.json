@@ -2939,5 +2939,14 @@
                 "message": "Fix regressions in CiviMail, APiv3, Apiv4, Batch Entry, Contact Edit, Quicksearch, FTS."
             }
         ]
+    },
+    "6.20": {
+        "status": "stable",
+        "releases": [
+            {
+                "version": "6.20.0",
+                "date": "2026-11-04"
+            }
+        ]
     }
 }
