@@ -2863,6 +2863,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-53 through to CIVI-SA-2026-81. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
                 "serverity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "6.16.10",
+                "date": "2026-11-18",
+                "message": "Fix regression with formbuilder Forms with extra fields (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
             }
         ]
     },
