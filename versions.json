@@ -2856,6 +2856,13 @@
                 "version": "6.16.8",
                 "date": "2026-11-03",
                 "message": "Fix Regessions in Batch entry, APiv4, Apiv3, Contact Edit. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)"
+            },
+            {
+                "version": "6.16.9",
+                "date": "2026-11-18",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-53 through to CIVI-SA-2026-81. (<a target=\"_blank\" href='https://civicrm.org/esr'>ESR</a>)",
+                "serverity": "critical",
+                "security": "true"
             }
         ]
     },
@@ -2905,7 +2912,7 @@
         ]
     },
     "6.19": {
-        "status": "stable",
+        "status": "eol",
         "releases": [
             {
                 "version": "6.19.0",
@@ -2946,6 +2953,13 @@
             {
                 "version": "6.20.0",
                 "date": "2026-11-04"
+            },
+            {
+                "version": "6.20.1",
+                "date": "2026-11-18",
+                "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-53 through CIVI-SA-2026-81</a>. Also fix some regressions",
+                "severity": "critical",
+                "security": "true"
             }
         ]
     }
