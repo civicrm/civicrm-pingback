@@ -2965,6 +2965,11 @@
                 "message": "Fix security issues <a target=\"_blank\" href='https://civicrm.org/advisory'>CIVI-SA-2026-53 through CIVI-SA-2026-81</a>. Also fix some regressions",
                 "severity": "critical",
                 "security": "true"
+            },
+            {
+                "version": "6.20.2",
+                "date": "2026-11-24",
+                "message": "Fix regressions in Batch Search, Full Text Search, CiviMember, MariaDB 12.3 Compatability and country table db upgrade issue"
             }
         ]
     }
